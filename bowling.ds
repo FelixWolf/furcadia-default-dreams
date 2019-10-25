@@ -1,0 +1,507 @@
+DSPK V01.00 Furcadia
+
+It's the bowling script!  Written by Dr. Cat.  :X)
+
+Starting position
+(0:9) When a furre arrives in the dream,
+        (5:15) move the furre to (24,33), or to someplace nearby if it's occupied.
+
+Ball reset switch
+(0:7) When somebody moves into position (26,34),
+	(3:2) at position (26,34) on the map,
+	(5:4) place object type 164.
+	(5:12) play sound 6 to everyone on the map.
+(0:7) When somebody moves into position (26,34),
+	(4:3) only where an object type 34 is,
+	(5:4) place object type 0.
+	(4:0) clear all filtering,
+	(3:2) at position (24,30) on the map,
+	(5:4) place object type 34.
+	(3:2) at position (26,34) on the map,
+	(5:4) place object type 163.
+	(3:4) within the rectangle (22,17) - (28,20),
+	(4:1) only where the floor is type 42,
+	(5:4) place object type 167.
+
+Automated ball return
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1014) and position (26,31) is not object type 0,
+(1:1014) and position (24,30) is not object type 34,
+	(3:2) at position (26,31) on the map,
+	(5:21) move the object to (24,30).
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1014) and position (26,31) is not object type 0,
+(1:1013) and position (24,30) is object type 34,
+	(3:2) at position (26,31) on the map,
+	(5:21) move the object to (24,32).
+(0:100) When 1 seconds have passed, offset by 0,
+	(3:2) at position (26,30) on the map,
+	(5:21) move the object to (26,31).
+	(3:2) at position (28,29) on the map,
+	(5:21) move the object to (26,30).
+	(3:2) at position (28,28) on the map,
+	(5:21) move the object to (28,29).
+	(3:2) at position (30,27) on the map,
+	(5:21) move the object to (28,28).
+	(3:2) at position (28,26) on the map,
+	(5:21) move the object to (30,27).
+	(3:2) at position (30,25) on the map,
+	(5:21) move the object to (28,26).
+	(3:2) at position (28,24) on the map,
+	(5:21) move the object to (30,25).
+	(3:2) at position (30,23) on the map,
+	(5:21) move the object to (28,24).
+	(3:2) at position (28,22) on the map,
+	(5:21) move the object to (30,23).
+	(3:2) at position (30,21) on the map,
+	(5:21) move the object to (28,22).
+	(3:2) at position (28,20) on the map,
+	(5:21) move the object to (30,21).
+	(3:2) at position (30,19) on the map,
+	(5:21) move the object to (28,20).
+	(3:2) at position (28,18) on the map,
+	(5:21) move the object to (30,19).
+
+Reset pins when ball rolls far enough down return lane.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (30,27) is object type 34,
+	(3:4) within the rectangle (22,17) - (28,20),
+	(4:1) only where the floor is type 42,
+	(5:4) place object type 167.
+	(5:12) play sound 38 to everyone on the map.
+
+Move ball into return lane.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1014) and position (50,11) is not object type 0,
+	(3:2) at position (50,11) on the map,
+	(5:21) move the object to (28,18).
+
+Hit headpin dead on!
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,22) is object type 34,
+	(3:2) at position (24,20) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,22) is object type 34,
+(1:1000) and a random dice roll comes up (90 percent of the time),
+	(3:2) at position (24,19) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 21 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,22) is object type 34,
+(1:1000) and a random dice roll comes up (90 percent of the time),
+	(3:2) at position (26,19) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 22 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,22) is object type 34,
+(1:1000) and a random dice roll comes up (80 percent of the time),
+	(3:2) at position (22,18) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,22) is object type 34,
+(1:1000) and a random dice roll comes up (80 percent of the time),
+	(3:2) at position (24,18) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 27 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,22) is object type 34,
+(1:1000) and a random dice roll comes up (80 percent of the time),
+	(3:2) at position (26,18) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,22) is object type 34,
+(1:1000) and a random dice roll comes up (70 percent of the time),
+	(3:2) at position (22,17) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 21 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,22) is object type 34,
+(1:1000) and a random dice roll comes up (80 percent of the time),
+	(3:2) at position (24,17) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,22) is object type 34,
+(1:1000) and a random dice roll comes up (80 percent of the time),
+	(3:2) at position (26,17) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 22 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,22) is object type 34,
+(1:1000) and a random dice roll comes up (70 percent of the time),
+	(3:2) at position (28,17) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+
+Hit pins one space left of center.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,21) is object type 34,
+(1:1000) and a random dice roll comes up (90 percent of the time),
+	(3:2) at position (24,20) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,21) is object type 34,
+	(3:2) at position (24,19) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 21 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,21) is object type 34,
+(1:1000) and a random dice roll comes up (60 percent of the time),
+	(3:2) at position (26,19) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 22 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,21) is object type 34,
+(1:1000) and a random dice roll comes up (90 percent of the time),
+	(3:2) at position (22,18) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,21) is object type 34,
+(1:1000) and a random dice roll comes up (70 percent of the time),
+	(3:2) at position (24,18) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 27 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,21) is object type 34,
+(1:1000) and a random dice roll comes up (60 percent of the time),
+	(3:2) at position (26,18) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,21) is object type 34,
+(1:1000) and a random dice roll comes up (90 percent of the time),
+	(3:2) at position (22,17) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 21 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,21) is object type 34,
+(1:1000) and a random dice roll comes up (90 percent of the time),
+	(3:2) at position (24,17) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,21) is object type 34,
+(1:1000) and a random dice roll comes up (70 percent of the time),
+	(3:2) at position (26,17) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 22 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,21) is object type 34,
+(1:1000) and a random dice roll comes up (60 percent of the time),
+	(3:2) at position (28,17) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+
+Hit pins one space right of center.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (26,21) is object type 34,
+(1:1000) and a random dice roll comes up (90 percent of the time),
+	(3:2) at position (24,20) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (26,21) is object type 34,
+(1:1000) and a random dice roll comes up (60 percent of the time),
+	(3:2) at position (24,19) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 21 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (26,21) is object type 34,
+	(3:2) at position (26,19) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 22 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (26,21) is object type 34,
+(1:1000) and a random dice roll comes up (60 percent of the time),
+	(3:2) at position (22,18) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (26,21) is object type 34,
+(1:1000) and a random dice roll comes up (70 percent of the time),
+	(3:2) at position (24,18) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 27 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (26,21) is object type 34,
+(1:1000) and a random dice roll comes up (90 percent of the time),
+	(3:2) at position (26,18) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (26,21) is object type 34,
+(1:1000) and a random dice roll comes up (60 percent of the time),
+	(3:2) at position (22,17) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 21 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (26,21) is object type 34,
+(1:1000) and a random dice roll comes up (70 percent of the time),
+	(3:2) at position (24,17) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (26,21) is object type 34,
+(1:1000) and a random dice roll comes up (90 percent of the time),
+	(3:2) at position (26,17) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 22 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (26,21) is object type 34,
+(1:1000) and a random dice roll comes up (90 percent of the time),
+	(3:2) at position (28,17) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+
+Hit pins two spaces left of center.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (22,20) is object type 34,
+(1:1000) and a random dice roll comes up (75 percent of the time),
+	(3:2) at position (24,19) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 21 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (22,20) is object type 34,
+	(3:2) at position (22,18) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (22,20) is object type 34,
+(1:1000) and a random dice roll comes up (80 percent of the time),
+	(3:2) at position (24,18) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 27 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (22,20) is object type 34,
+(1:1000) and a random dice roll comes up (90 percent of the time),
+	(3:2) at position (22,17) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 21 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (22,20) is object type 34,
+(1:1000) and a random dice roll comes up (80 percent of the time),
+	(3:2) at position (24,17) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+
+Hit pins two spaces right of center.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (26,20) is object type 34,
+(1:1000) and a random dice roll comes up (75 percent of the time),
+	(3:2) at position (26,19) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 22 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (26,20) is object type 34,
+(1:1000) and a random dice roll comes up (80 percent of the time),
+	(3:2) at position (24,18) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 27 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (26,20) is object type 34,
+	(3:2) at position (26,18) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (26,20) is object type 34,
+(1:1000) and a random dice roll comes up (90 percent of the time),
+	(3:2) at position (26,17) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 22 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (26,20) is object type 34,
+(1:1000) and a random dice roll comes up (80 percent of the time),
+	(3:2) at position (28,17) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+
+Hit pins three spaces left of center.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (22,19) is object type 34,
+(1:1000) and a random dice roll comes up (30 percent of the time),
+	(3:2) at position (22,18) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (22,19) is object type 34,
+	(3:2) at position (22,17) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 21 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (22,19) is object type 34,
+(1:1000) and a random dice roll comes up (50 percent of the time),
+	(3:2) at position (24,17) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+
+Hit pins three spaces right of center.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (28,19) is object type 34,
+(1:1000) and a random dice roll comes up (30 percent of the time),
+	(3:2) at position (26,18) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (28,19) is object type 34,
+(1:1000) and a random dice roll comes up (50 percent of the time),
+	(3:2) at position (26,17) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 22 to everyone on the map.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (28,19) is object type 34,
+	(3:2) at position (28,17) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 52 to everyone on the map.
+
+Check for strike!
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,22) is object type 34,
+(1:1013) and position (24,20) is object type 0,
+(1:1013) and position (24,19) is object type 0,
+(1:1013) and position (26,19) is object type 0,
+(1:1013) and position (22,18) is object type 0,
+(1:1013) and position (24,18) is object type 0,
+(1:1013) and position (26,18) is object type 0,
+(1:1013) and position (22,17) is object type 0,
+(1:1013) and position (24,17) is object type 0,
+(1:1013) and position (26,17) is object type 0,
+(1:1013) and position (28,17) is object type 0,
+	(5:12) play sound 62 to everyone on the map.
+	(3:2) at position (22,30) on the map,
+	(5:4) place object type 33.
+	(5:12) play sound 14 to everyone on the map.
+
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (24,21) is object type 34,
+(1:1013) and position (24,20) is object type 0,
+(1:1013) and position (24,19) is object type 0,
+(1:1013) and position (26,19) is object type 0,
+(1:1013) and position (22,18) is object type 0,
+(1:1013) and position (24,18) is object type 0,
+(1:1013) and position (26,18) is object type 0,
+(1:1013) and position (22,17) is object type 0,
+(1:1013) and position (24,17) is object type 0,
+(1:1013) and position (26,17) is object type 0,
+(1:1013) and position (28,17) is object type 0,
+	(5:12) play sound 62 to everyone on the map.
+	(3:2) at position (22,30) on the map,
+	(5:4) place object type 53.
+	(5:12) play sound 45 to everyone on the map.
+
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (26,21) is object type 34,
+(1:1013) and position (24,20) is object type 0,
+(1:1013) and position (24,19) is object type 0,
+(1:1013) and position (26,19) is object type 0,
+(1:1013) and position (22,18) is object type 0,
+(1:1013) and position (24,18) is object type 0,
+(1:1013) and position (26,18) is object type 0,
+(1:1013) and position (22,17) is object type 0,
+(1:1013) and position (24,17) is object type 0,
+(1:1013) and position (26,17) is object type 0,
+(1:1013) and position (28,17) is object type 0,
+	(5:12) play sound 62 to everyone on the map.
+	(3:2) at position (22,30) on the map,
+	(5:4) place object type 256.
+	(5:12) play sound 17 to everyone on the map.
+
+Clear ball out to return lane loader.
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1014) and position (22,19) is not object type 0,
+	(3:2) at position (22,19) on the map,
+	(5:21) move the object to (50,11).
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1014) and position (22,20) is not object type 0,
+	(3:2) at position (22,20) on the map,
+	(5:21) move the object to (50,11).
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1014) and position (24,21) is not object type 0,
+	(3:2) at position (24,21) on the map,
+	(5:21) move the object to (50,11).
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1014) and position (24,22) is not object type 0,
+	(3:2) at position (24,22) on the map,
+	(5:21) move the object to (50,11).
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1014) and position (26,21) is not object type 0,
+	(3:2) at position (26,21) on the map,
+	(5:21) move the object to (50,11).
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1014) and position (26,20) is not object type 0,
+	(3:2) at position (26,20) on the map,
+	(5:21) move the object to (50,11).
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1014) and position (28,19) is not object type 0,
+	(3:2) at position (28,19) on the map,
+	(5:21) move the object to (50,11).
+
+Roll ball down the alley!
+(0:100) When 1 seconds have passed, offset by 0,
+	(3:2) at position (22,21) on the map,
+	(5:21) move the object to (22,19).
+	(3:2) at position (22,23) on the map,
+	(5:21) move the object to (22,21).
+	(3:2) at position (22,25) on the map,
+	(5:21) move the object to (22,23).
+	(3:2) at position (22,27) on the map,
+	(5:21) move the object to (22,25).
+
+	(3:2) at position (22,22) on the map,
+	(5:21) move the object to (22,20).
+	(3:2) at position (22,24) on the map,
+	(5:21) move the object to (22,22).
+	(3:2) at position (22,26) on the map,
+	(5:21) move the object to (22,24).
+	(3:2) at position (22,28) on the map,
+	(5:21) move the object to (22,26).
+
+	(3:2) at position (24,23) on the map,
+	(5:21) move the object to (24,21).
+	(3:2) at position (24,25) on the map,
+	(5:21) move the object to (24,23).
+	(3:2) at position (24,27) on the map,
+	(5:21) move the object to (24,25).
+	(3:2) at position (24,29) on the map,
+	(5:21) move the object to (24,27).
+
+	(3:2) at position (24,24) on the map,
+	(5:21) move the object to (24,22).
+	(3:2) at position (24,26) on the map,
+	(5:21) move the object to (24,24).
+	(3:2) at position (24,28) on the map,
+	(5:21) move the object to (24,26).
+
+	(3:2) at position (26,23) on the map,
+	(5:21) move the object to (26,21).
+	(3:2) at position (26,25) on the map,
+	(5:21) move the object to (26,23).
+	(3:2) at position (26,27) on the map,
+	(5:21) move the object to (26,25).
+	(3:2) at position (26,29) on the map,
+	(5:21) move the object to (26,27).
+
+	(3:2) at position (26,22) on the map,
+	(5:21) move the object to (26,20).
+	(3:2) at position (26,24) on the map,
+	(5:21) move the object to (26,22).
+	(3:2) at position (26,26) on the map,
+	(5:21) move the object to (26,24).
+	(3:2) at position (26,28) on the map,
+	(5:21) move the object to (26,26).
+
+	(3:2) at position (28,21) on the map,
+	(5:21) move the object to (28,19).
+	(3:2) at position (28,23) on the map,
+	(5:21) move the object to (28,21).
+	(3:2) at position (28,25) on the map,
+	(5:21) move the object to (28,23).
+	(3:2) at position (28,27) on the map,
+	(5:21) move the object to (28,25).
+
+*Endtriggers* 8888 *Endtriggers*

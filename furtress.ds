@@ -1,0 +1,986 @@
+DSPK V01.00 Furcadia
+
+TEAM FURTRESS by RAFF
+
+*****
+
+ENTRANCE
+
+(0:9) When a furre arrives in the dream,
+	(5:15) move the triggering furre to (62,14), or to someplace nearby if it's occupied.
+	(5:12) play sound 13 to everyone on the map.
+
+*suicide
+(0:19) When somebody uses object type 0,
+(1:17) and they (moved from/are standing at) floor type 182,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 176.
+
+(0:19) When somebody uses object type 0,
+(1:17) and they (moved from/are standing at) floor type 190,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 177.
+
+(0:19) When somebody uses object type 0,
+	(5:15) move the triggering furre to (62,14), or to someplace nearby if it's occupied
+	(5:8) play sound 13 to whoever set off the trigger.
+
+*****
+
+
+RESET FLOOR
+
+*light reset
+(0:1) Whenever somebody moves,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 176.
+
+*dark reset
+(0:1) Whenever somebody moves,
+*(1:117) and they (didn't move from/aren't standing at) floor type 182,
+*(1:117) and they (didn't move from/aren't standing at) floor type 180,
+*(1:117) and they (didn't move from/aren't standing at) floor type 184,
+*(1:117) and they (didn't move from/aren't standing at) floor type 176,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 177.
+
+*****
+
+EXIT MAP
+
+yellow exit
+
+(0:10) When a furre leaves the dream,
+(1:17) and they (moved from/are standing at) floor type 182,
+(3:5) where the triggering furre (moved from/is standing at),
+(5:1) set the floor to type 176.
+
+(0:10) When a furre leaves the dream,
+(1:17) and they (moved from/are standing at) floor type 190,
+(3:5) where the triggering furre (moved from/is standing at),
+(5:1) set the floor to type 177.
+
+red exit
+
+(0:10) When a furre leaves the dream,
+(1:17) and they (moved from/are standing at) floor type 180,
+(3:5) where the triggering furre (moved from/is standing at),
+(5:1) set the floor to type 176.
+
+(0:10) When a furre leaves the dream,
+(1:17) and they (moved from/are standing at) floor type 127,
+(3:5) where the triggering furre (moved from/is standing at),
+(5:1) set the floor to type 177.
+
+blue exit
+
+(0:10) When a furre leaves the dream,
+(1:17) and they (moved from/are standing at) floor type 184,
+(3:5) where the triggering furre (moved from/is standing at),
+(5:1) set the floor to type 176.
+
+(0:10) When a furre leaves the dream,
+(1:17) and they (moved from/are standing at) floor type 185,
+(3:5) where the triggering furre (moved from/is standing at),
+(5:1) set the floor to type 177.
+
+delete weapons
+
+(0:10) When a furre leaves the dream,
+(1:118) and they (didn't move from/aren't standing at) object type 65,
+(1:118) and they (didn't move from/aren't standing at) object type 241,
+(3:5) where the triggering furre (moved from/is standing at),
+(5:4) place object type 0.
+
+*****
+
+*drop on light
+(0:17) When somebody picks up object type 0,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 0.
+	(5:1) set the floor to type 182.
+
+*drop on dark
+(0:17) When somebody picks up object type 0,
+*(1:117) and they (didn't move from/aren't standing at) floor type 176,
+*(1:117) and they (didn't move from/aren't standing at) floor type 182,
+*(1:117) and they (didn't move from/aren't standing at) floor type 180,
+*(1:117) and they (didn't move from/aren't standing at) floor type 184,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 190.
+
+*****
+
+NEUTRAL TEAM:
+
+weapon: object zero
+
+*paint the town yellow
+(0:2) When somebody moves into floor type 176,
+(1:1002) and they are holding item 0 in their paws,
+	(3:6) where the triggering furre moved into,
+	(5:1) set the floor to type 182.
+
+(0:2) When somebody moves into floor type 177,
+(1:1002) and they are holding item 0 in their paws,
+	(3:6) where the triggering furre moved into,
+	(5:1) set the floor to type 190.
+
+*don't lose team color when bumping walls
+(0:2) When somebody moves into floor type 0,
+(1:1002) and they are holding item 0 in their paws,
+(1:17) and they (moved from/are standing at) floor type 176,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 182.
+
+(0:2) When somebody moves into floor type 0,
+(1:1002) and they are holding item 0 in their paws,
+(1:17) and they (moved from/are standing at) floor type 177,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 190.
+
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 0 in their paws,
+(1:17) and they (moved from/are standing at) floor type 182,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 182.
+
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 0 in their paws,
+(1:17) and they (moved from/are standing at) floor type 190,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 190.
+
+*****
+
+RED TEAM:
+
+RED TEAM Heavy Weapons:
+
+weapon: axe, object five sixty-six
+
+*weapon dispenser
+(0:1) Whenever somebody moves,
+	(3:2) at position (36,33) on the map,
+	(5:4) place object type 566.
+
+(0:17) When somebody picks up object type 566,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 180.
+
+*paint the town red
+(0:2) When somebody moves into floor type 176,
+(1:1002) and they are holding item 566 in their paws,
+	(3:6) where the triggering furre moved into,
+	(5:1) set the floor to type 180.
+
+(0:2) When somebody moves into floor type 177,
+(1:1002) and they are holding item 566 in their paws,
+	(3:6) where the triggering furre moved into,
+	(5:1) set the floor to type 127.
+
+*swish!
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 566 in their paws,
+*(1:102) and they didn't move into floor type 0,
+*(1:102) and they didn't move into floor type 180,
+*(1:102) and they didn't move into floor type 127,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+	(5:12) play sound 52 to everyone on the map.
+
+*kill the bastids
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 566 in their paws,
+*(1:102) and they didn't move into floor type 0,
+*(1:102) and they didn't move into floor type 180,
+*(1:102) and they didn't move into floor type 127,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+(1:1000) and a random dice roll comes up (30 percent of the time),
+	(3:6) where the triggering furre moved into,
+	(5:17) move any furre here to (62,14), or to someplace nearby if it's occupied.
+	(5:12) play sound 40 to everyone on the map.
+
+*don't lose team color when bumping walls
+(0:2) When somebody moves into floor type 0,
+(1:1002) and they are holding item 566 in their paws,
+(1:17) and they (moved from/are standing at) floor type 176,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 180.
+
+(0:2) When somebody moves into floor type 0,
+(1:1002) and they are holding item 566 in their paws,
+(1:17) and they (moved from/are standing at) floor type 177,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 127.
+
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 566 in their paws,
+(1:17) and they (moved from/are standing at) floor type 180,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 180.
+
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 566 in their paws,
+(1:17) and they (moved from/are standing at) floor type 127,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 127.
+
+RED TEAM Demolition Man:
+
+demo pack: backpack, object five seventy
+
+*weapon dispenser
+(0:1) Whenever somebody moves,
+	(3:2) at position (34,31) on the map,
+	(5:4) place object type 570.
+
+(0:17) When somebody picks up object type 570,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 180.
+
+*paint the town red
+(0:2) When somebody moves into floor type 176,
+(1:1002) and they are holding item 570 in their paws,
+	(3:6) where the triggering furre moved into,
+	(5:1) set the floor to type 180.
+
+(0:2) When somebody moves into floor type 177,
+(1:1002) and they are holding item 570 in their paws,
+	(3:6) where the triggering furre moved into,
+	(5:1) set the floor to type 127.
+
+*swish!
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 570 in their paws,
+*(1:102) and they didn't move into floor type 0,
+*(1:102) and they didn't move into floor type 180,
+*(1:102) and they didn't move into floor type 127,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+	(5:12) play sound 52 to everyone on the map.
+
+*kill the bastids
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 570 in their paws,
+*(1:102) and they didn't move into floor type 0,
+*(1:102) and they didn't move into floor type 180,
+*(1:102) and they didn't move into floor type 127,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+(1:1000) and a random dice roll comes up (10 percent of the time),
+	(3:6) where the triggering furre moved into,
+	(5:17) move any furre here to (62,14), or to someplace nearby if it's occupied.
+	(5:12) play sound 40 to everyone on the map.
+
+*don't lose team color when bumping walls
+(0:2) When somebody moves into floor type 0,
+(1:1002) and they are holding item 570 in their paws,
+(1:17) and they (moved from/are standing at) floor type 176,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 180.
+
+(0:2) When somebody moves into floor type 0,
+(1:1002) and they are holding item 570 in their paws,
+(1:17) and they (moved from/are standing at) floor type 177,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 127.
+
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 570 in their paws,
+(1:17) and they (moved from/are standing at) floor type 180,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 180.
+
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 570 in their paws,
+(1:17) and they (moved from/are standing at) floor type 127,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 127.
+
+*lay explosives
+(0:19) When somebody uses object type 570,
+(1:18) and they (moved from/are standing at) object type 0,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 15.
+	(5:8) play sound 41 to whoever set off the trigger.
+
+(0:19) When somebody uses object type 570,
+(1:17) and they (moved from/are standing at) floor type 180,
+(1:1000) and a random dice roll comes up (10 percent of the time),
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 176.
+	(5:4) place object type 0.
+	(5:15) move the triggering furre to (62,14), or to someplace nearby if it's occupied.
+	(5:12) play sound 2 to everyone on the map.
+
+(0:19) When somebody uses object type 570,
+(1:17) and they (moved from/are standing at) floor type 127,
+(1:1000) and a random dice roll comes up (10 percent of the time),
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 177.
+	(5:4) place object type 0.
+	(5:15) move the triggering furre to (62,14), or to someplace nearby if it's occupied.
+	(5:12) play sound 2 to everyone on the map.
+
+RED TEAM Engineer:
+
+weapon: pickaxe, object five sixty-eight
+
+*weapon dispenser
+(0:1) Whenever somebody moves,
+	(3:2) at position (34,32) on the map,
+	(5:4) place object type 568.
+
+(0:17) When somebody picks up object type 568,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 180.
+
+*paint the town red
+(0:2) When somebody moves into floor type 176,
+(1:1002) and they are holding item 568 in their paws,
+	(3:6) where the triggering furre moved into,
+	(5:1) set the floor to type 180.
+
+(0:2) When somebody moves into floor type 177,
+(1:1002) and they are holding item 568 in their paws,
+	(3:6) where the triggering furre moved into,
+	(5:1) set the floor to type 127.
+
+*swish!
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 568 in their paws,
+*(1:102) and they didn't move into floor type 0,
+*(1:102) and they didn't move into floor type 180,
+*(1:102) and they didn't move into floor type 127,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+	(5:12) play sound 52 to everyone on the map.
+
+*kill the bastids
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 568 in their paws,
+*(1:102) and they didn't move into floor type 0,
+*(1:102) and they didn't move into floor type 180,
+*(1:102) and they didn't move into floor type 127,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+(1:1000) and a random dice roll comes up (20 percent of the time),
+	(3:6) where the triggering furre moved into,
+	(5:17) move any furre here to (62,14), or to someplace nearby if it's occupied.
+	(5:12) play sound 40 to everyone on the map.
+
+*don't lose team color when bumping walls
+(0:2) When somebody moves into floor type 0,
+(1:1002) and they are holding item 568 in their paws,
+(1:17) and they (moved from/are standing at) floor type 176,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 180.
+
+(0:2) When somebody moves into floor type 0,
+(1:1002) and they are holding item 568 in their paws,
+(1:17) and they (moved from/are standing at) floor type 177,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 127.
+
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 568 in their paws,
+(1:17) and they (moved from/are standing at) floor type 180,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 180.
+
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 568 in their paws,
+(1:17) and they (moved from/are standing at) floor type 127,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 127.
+
+*****
+
+BLUE TEAM
+
+BLUE TEAM Heavy Weapons:
+
+weapon: spiked mace, object five sixty-seven
+
+*weapon dispenser
+(0:1) Whenever somebody moves,
+	(3:2) at position (90,33) on the map,
+	(5:4) place object type 567.
+
+(0:17) When somebody picks up object type 567,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 184.
+
+*paint the town blue
+(0:2) When somebody moves into floor type 176,
+(1:1002) and they are holding item 567 in their paws,
+	(3:6) where the triggering furre moved into,
+	(5:1) set the floor to type 184.
+
+(0:2) When somebody moves into floor type 177,
+(1:1002) and they are holding item 567 in their paws,
+	(3:6) where the triggering furre moved into,
+	(5:1) set the floor to type 185.
+
+*swish!
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 567 in their paws,
+*(1:102) and they didn't move into floor type 0,
+*(1:102) and they didn't move into floor type 184,
+*(1:102) and they didn't move into floor type 185,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+	(5:12) play sound 52 to everyone on the map.
+
+*kill the bastids
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 567 in their paws,
+*(1:102) and they didn't move into floor type 0,
+*(1:102) and they didn't move into floor type 184,
+*(1:102) and they didn't move into floor type 185,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+(1:1000) and a random dice roll comes up (30 percent of the time),
+	(3:6) where the triggering furre moved into,
+	(5:17) move any furre here to (62,14), or to someplace nearby if it's occupied.
+	(5:12) play sound 40 to everyone on the map.
+
+*don't lose team color when bumping walls
+(0:2) When somebody moves into floor type 0,
+(1:1002) and they are holding item 567 in their paws,
+(1:17) and they (moved from/are standing at) floor type 176,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 184.
+
+(0:2) When somebody moves into floor type 0,
+(1:1002) and they are holding item 567 in their paws,
+(1:17) and they (moved from/are standing at) floor type 177,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 185.
+
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 567 in their paws,
+(1:17) and they (moved from/are standing at) floor type 184,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 184.
+
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 567 in their paws,
+(1:17) and they (moved from/are standing at) floor type 185,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 185.
+
+BLUE TEAM Demolition Man:
+
+demo pack: bag, object five seventy one
+
+*weapon dispenser
+(0:1) Whenever somebody moves,
+	(3:2) at position (92,31) on the map,
+	(5:4) place object type 571.
+
+(0:17) When somebody picks up object type 571,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 184.
+
+*paint the town red
+(0:2) When somebody moves into floor type 176,
+(1:1002) and they are holding item 571 in their paws,
+	(3:6) where the triggering furre moved into,
+	(5:1) set the floor to type 184.
+
+(0:2) When somebody moves into floor type 177,
+(1:1002) and they are holding item 571 in their paws,
+	(3:6) where the triggering furre moved into,
+	(5:1) set the floor to type 185.
+
+*swish!
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 571 in their paws,
+*(1:102) and they didn't move into floor type 0,
+*(1:102) and they didn't move into floor type 184,
+*(1:102) and they didn't move into floor type 185,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+	(5:12) play sound 52 to everyone on the map.
+
+*kill the bastids
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 571 in their paws,
+*(1:102) and they didn't move into floor type 0,
+*(1:102) and they didn't move into floor type 184,
+*(1:102) and they didn't move into floor type 185,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+(1:1000) and a random dice roll comes up (10 percent of the time),
+	(3:6) where the triggering furre moved into,
+	(5:17) move any furre here to (62,14), or to someplace nearby if it's occupied.
+	(5:12) play sound 40 to everyone on the map.
+
+*don't lose team color when bumping walls
+(0:2) When somebody moves into floor type 0,
+(1:1002) and they are holding item 571 in their paws,
+(1:17) and they (moved from/are standing at) floor type 176,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 184.
+
+(0:2) When somebody moves into floor type 0,
+(1:1002) and they are holding item 571 in their paws,
+(1:17) and they (moved from/are standing at) floor type 177,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 185.
+
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 571 in their paws,
+(1:17) and they (moved from/are standing at) floor type 184,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 184.
+
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 571 in their paws,
+(1:17) and they (moved from/are standing at) floor type 185,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 185.
+
+*lay explosives
+(0:19) When somebody uses object type 571,
+(1:18) and they (moved from/are standing at) object type 0,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 15.
+	(5:8) play sound 41 to whoever set off the trigger.
+
+(0:19) When somebody uses object type 571,
+(1:17) and they (moved from/are standing at) floor type 184,
+(1:1000) and a random dice roll comes up (10 percent of the time),
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 176.
+	(5:15) move the triggering furre to (62,14), or to someplace nearby if it's occupied.
+	(5:12) play sound 2 to everyone on the map.
+
+(0:19) When somebody uses object type 571,
+(1:17) and they (moved from/are standing at) floor type 185,
+(1:1000) and a random dice roll comes up (10 percent of the time),
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 177.
+	(5:15) move the triggering furre to (62,14), or to someplace nearby if it's occupied.
+	(5:12) play sound 2 to everyone on the map.
+
+BLUE TEAM Engineer:
+
+weapon: shovel, object five sixty-nine
+
+*weapon dispenser
+(0:1) Whenever somebody moves,
+	(3:2) at position (90,32) on the map,
+	(5:4) place object type 569.
+
+(0:17) When somebody picks up object type 569,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 184.
+
+*paint the town blue
+(0:2) When somebody moves into floor type 176,
+(1:1002) and they are holding item 569 in their paws,
+	(3:6) where the triggering furre moved into,
+	(5:1) set the floor to type 184.
+
+(0:2) When somebody moves into floor type 177,
+(1:1002) and they are holding item 569 in their paws,
+	(3:6) where the triggering furre moved into,
+	(5:1) set the floor to type 185.
+
+*swish!
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 569 in their paws,
+*(1:102) and they didn't move into floor type 0,
+*(1:102) and they didn't move into floor type 184,
+*(1:102) and they didn't move into floor type 185,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+	(5:12) play sound 52 to everyone on the map.
+
+*kill the bastids
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 569 in their paws,
+*(1:102) and they didn't move into floor type 0,
+*(1:102) and they didn't move into floor type 184,
+*(1:102) and they didn't move into floor type 185,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+(1:1000) and a random dice roll comes up (20 percent of the time),
+	(3:6) where the triggering furre moved into,
+	(5:17) move any furre here to (62,14), or to someplace nearby if it's occupied.
+	(5:12) play sound 40 to everyone on the map.
+
+*don't lose team color when bumping walls
+(0:2) When somebody moves into floor type 0,
+(1:1002) and they are holding item 569 in their paws,
+(1:17) and they (moved from/are standing at) floor type 176,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 184.
+
+(0:2) When somebody moves into floor type 0,
+(1:1002) and they are holding item 569 in their paws,
+(1:17) and they (moved from/are standing at) floor type 177,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 185.
+
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 569 in their paws,
+(1:17) and they (moved from/are standing at) floor type 184,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 184.
+
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 569 in their paws,
+(1:17) and they (moved from/are standing at) floor type 185,
+*(1:102) and they didn't move into floor type 176,
+*(1:102) and they didn't move into floor type 177,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:1) set the floor to type 185.
+
+*****
+
+detonate explosives
+
+(0:3) When somebody moves into object type 15,
+	(3:6) where the triggering furre moved into,
+	(5:4) place object type 0.
+	(5:12) play sound 24 to everyone on the map.
+
+(0:3) When somebody moves into object type 15,
+(1:2) and they move into floor type 176,
+(1:1004) and they're not holding item 568 in paws,
+(1:1004) and they're not holding item 569 in paws,
+(1:1000) and a random dice roll comes up (67 percent of the time),
+	(3:6) where the triggering furre moved into,
+	(5:1) set the floor to type 176.
+	(5:4) place object type 0.
+	(5:15) move the triggering furre to (62,14), or to someplace nearby if it's occupied.
+	(5:12) play sound 2 to everyone on the map.
+
+(0:3) When somebody moves into object type 15,
+(1:2) and they move into floor type 177,
+(1:1004) and they're not holding item 568 in paws,
+(1:1004) and they're not holding item 569 in paws,
+(1:1000) and a random dice roll comes up (67 percent of the time),
+	(3:6) where the triggering furre moved into,
+	(5:1) set the floor to type 177.
+	(5:4) place object type 0.
+	(5:15) move the triggering furre to (62,14), or to someplace nearby if it's occupied.
+	(5:12) play sound 2 to everyone on the map.
+
+*****
+
+Re-Spawn:
+
+(0:7) When somebody moves into position (60,11),
+	(5:15) move the furre to (92,35), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (60,11),
+*(1:117) and they (didn't move from/aren't standing at) floor type 184,
+	(5:15) move the furre to (34,35), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (66,11),
+	(5:15) move the furre to (34,35), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (66,11),
+*(1:117) and they (didn't move from/aren't standing at) floor type 180,
+	(5:15) move the furre to (92,35), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (60,11),
+	(3:6) where the triggering furre moved into,
+	(5:1) set the floor to type 176.
+
+(0:7) When somebody moves into position (66,11),
+	(3:6) where the triggering furre moved into,
+	(5:1) set the floor to type 176.
+
+*****
+
+TELEPORT GATES
+
+(0:7) When somebody moves into position (42,15),
+	(5:15) move the triggering furre to (84,15), or to someplace nearby if it's occupied.+
+	(5:12) play sound 29 to everyone on the map.
+	(3:2) at position (42,15) on the map,
+	(5:1) set the floor to type 177.
+
+(0:7) When somebody moves into position (42,15),
+(1:17) and they (moved from/are standing at) floor type 182,
+	(3:2) at position (84,15) on the map,
+	(5:1) set the floor to type 190.
+
+(0:7) When somebody moves into position (42,15),
+(1:17) and they (moved from/are standing at) floor type 180,
+	(3:2) at position (84,15) on the map,
+	(5:1) set the floor to type 127.
+
+(0:7) When somebody moves into position (42,15),
+(1:17) and they (moved from/are standing at) floor type 184,
+	(3:2) at position (84,15) on the map,
+	(5:1) set the floor to type 185.
+
+(0:7) When somebody moves into position (84,15),
+	(5:15) move the triggering furre to (42,15), or to someplace nearby if it's occupied.
+	(5:12) play sound 29 to everyone on the map.
+	(3:2) at position (84,15) on the map,
+	(5:1) set the floor to type 177.
+
+(0:7) When somebody moves into position (84,15),
+(1:17) and they (moved from/are standing at) floor type 182,
+	(3:2) at position (42,15) on the map,
+	(5:1) set the floor to type 190.
+
+(0:7) When somebody moves into position (84,15),
+(1:17) and they (moved from/are standing at) floor type 180,
+	(3:2) at position (42,15) on the map,
+	(5:1) set the floor to type 127.
+
+(0:7) When somebody moves into position (84,15),
+(1:17) and they (moved from/are standing at) floor type 184,
+	(3:2) at position (42,15) on the map,
+	(5:1) set the floor to type 185.
+
+*****
+
+SCORING
+
+red flag is object sixty-five
+blue flag is object two forty-one
+
+RED SCORING:
+
+*Capture the Blue Flag
+(0:1) Whenever somebody moves,
+(1:18) and they (moved from/are standing at) object type 241,
+(1:17) and they (moved from/are standing at) floor type 127,
+(1:3) and they move into object type 0,
+*(1:102) and they didn't move into floor type 0,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 0.
+	(3:6) where the triggering furre moved into,
+	(5:4) place object type 241.
+
+(0:1) Whenever somebody moves,
+(1:18) and they (moved from/are standing at) object type 241,
+(1:17) and they (moved from/are standing at) floor type 180,
+(1:3) and they move into object type 0,
+(1:102) and they didn't move into floor type 0,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 0.
+	(3:6) where the triggering furre moved into,
+	(5:4) place object type 241.
+
+*score, replace blue flag
+(0:1) Whenever somebody moves,
+(1:18) and they (moved from/are standing at) object type 241,
+(1:17) and they (moved from/are standing at) floor type 127,
+(1:7) and they move into position (32,34),
+	(5:5) change object type 241 to type 0.
+	(5:12) play sound 62 to everyone on the map.
+	(3:2) at position (106,21) on the map,
+	(5:4) place object type 241.
+
+BLUE SCORING:
+
+*Capture the Red Flag:
+(0:1) Whenever somebody moves,
+(1:18) and they (moved from/are standing at) object type 65,
+(1:17) and they (moved from/are standing at) floor type 185,
+(1:3) and they move into object type 0,
+(1:102) and they didn't move into floor type 0,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 0.
+	(3:6) where the triggering furre moved into,
+	(5:4) place object type 65.
+
+(0:1) Whenever somebody moves,
+(1:18) and they (moved from/are standing at) object type 65,
+(1:17) and they (moved from/are standing at) floor type 184,
+(1:3) and they move into object type 0,
+(1:102) and they didn't move into floor type 0,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 0.
+	(3:6) where the triggering furre moved into,
+	(5:4) place object type 65.
+
+*score, replace the red flag
+(0:1) Whenever somebody moves,
+(1:18) and they (moved from/are standing at) object type 65,
+(1:17) and they (moved from/are standing at) floor type 185,
+(1:7) and they move into position (92,34),
+	(5:5) change object type 65 to type 0.
+	(5:12) play sound 60 to everyone on the map.
+	(3:2) at position (20,21) on the map,
+	(5:4) place object type 65.
+
+SCOREBOARD
+
+*red scores*
+(0:1) Whenever somebody moves,
+(1:18) and they (moved from/are standing at) object type 241,
+(1:17) and they (moved from/are standing at) floor type 127,
+(1:7) and they move into position (32,34),
+	(3:2) at position (2,1) on the map,
+	(5:4) place object type 396.
+
+change first marker from none to red
+(0:1) Whenever somebody moves,
+(1:1013) and position (2,1) is object type 396,
+(1:1013) and position (62,55) is object type 0,
+	(3:2) at position (62,55) on the map,
+	(5:4) place object type 396.
+	(3:2) at position (2,1) on the map,
+	(5:4) place object type 0.
+
+change first marker from blue to red
+(0:1) Whenever somebody moves,
+(1:1013) and position (2,1) is object type 396,
+(1:1013) and position (62,55) is object type 398,
+	(3:2) at position (62,55) on the map,
+	(5:4) place object type 396.
+	(3:2) at position (2,1) on the map,
+	(5:4) place object type 0.
+
+change second marker from none to red
+(0:1) Whenever somebody moves,
+(1:1013) and position (2,1) is object type 396,
+(1:1013) and position (62,55) is object type 396,
+(1:1013) and position (62,56) is object type 0,
+	(3:2) at position (62,56) on the map,
+	(5:4) place object type 396.
+	(3:2) at position (2,1) on the map,
+	(5:4) place object type 0.
+
+change second marker from blue to red
+(0:1) Whenever somebody moves,
+(1:1013) and position (2,1) is object type 396,
+(1:1013) and position (62,55) is object type 396,
+(1:1013) and position (62,56) is object type 398,
+	(3:2) at position (62,56) on the map,
+	(5:4) place object type 396.
+	(3:2) at position (2,1) on the map,
+	(5:4) place object type 0.
+
+red wins
+(0:1) Whenever somebody moves,
+(1:1013) and position (2,1) is object type 396,
+(1:1013) and position (62,55) is object type 396,
+(1:1013) and position (62,56) is object type 396,
+	(5:5) change object type 65 to type 0.
+	(5:5) change object type 241 to type 0.
+	(3:2) at position (20,21) on the map,
+	(5:4) place object type 65.
+	(3:2) at position (106,21) on the map,
+	(5:4) place object type 241.
+	(3:2) at position (62,55) on the map,
+	(5:4) place object type 0.
+	(3:2) at position (62,56) on the map,
+	(5:4) place object type 0.
+	(3:2) at position (64,55) on the map,
+	(5:4) place object type 0.
+	(3:2) at position (2,1) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 64 to everyone on the map.
+
+*****
+
+*blue scores*
+(0:1) Whenever somebody moves,
+(1:18) and they (moved from/are standing at) object type 65,
+(1:17) and they (moved from/are standing at) floor type 185,
+(1:7) and they move into position (92,34),
+	(3:2) at position (2,1) on the map,
+	(5:4) place object type 398.
+
+change first marker from none to blue
+(0:1) Whenever somebody moves,
+(1:1013) and position (2,1) is object type 398,
+(1:1013) and position (62,55) is object type 0,
+	(3:2) at position (62,55) on the map,
+	(5:4) place object type 398.
+	(3:2) at position (2,1) on the map,
+	(5:4) place object type 0.
+
+change first marker from red to blue
+(0:1) Whenever somebody moves,
+(1:1013) and position (2,1) is object type 398,
+(1:1013) and position (62,55) is object type 396,
+	(3:2) at position (62,55) on the map,
+	(5:4) place object type 398.
+	(3:2) at position (2,1) on the map,
+	(5:4) place object type 0.
+
+change second marker from none to blue
+(0:1) Whenever somebody moves,
+(1:1013) and position (2,1) is object type 398,
+(1:1013) and position (62,55) is object type 398,
+(1:1013) and position (62,56) is object type 0,
+	(3:2) at position (62,56) on the map,
+	(5:4) place object type 398.
+	(3:2) at position (2,1) on the map,
+	(5:4) place object type 0.
+
+change second marker from red to blue
+(0:1) Whenever somebody moves,
+(1:1013) and position (2,1) is object type 398,
+(1:1013) and position (62,55) is object type 398,
+(1:1013) and position (62,56) is object type 396,
+	(3:2) at position (62,56) on the map,
+	(5:4) place object type 398.
+	(3:2) at position (2,1) on the map,
+	(5:4) place object type 0.
+
+blue wins
+(0:1) Whenever somebody moves,
+(1:1013) and position (2,1) is object type 398,
+(1:1013) and position (62,55) is object type 398,
+(1:1013) and position (62,56) is object type 398,
+	(5:5) change object type 65 to type 0.
+	(5:5) change object type 241 to type 0.
+	(3:2) at position (20,21) on the map,
+	(5:4) place object type 65.
+	(3:2) at position (106,21) on the map,
+	(5:4) place object type 241.
+	(3:2) at position (62,55) on the map,
+	(5:4) place object type 0.
+	(3:2) at position (62,56) on the map,
+	(5:4) place object type 0.
+	(3:2) at position (64,55) on the map,
+	(5:4) place object type 0.
+	(3:2) at position (2,1) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 61 to everyone on the map.
+
+*****
+
+*Endtriggers* 8888 *Endtriggers*

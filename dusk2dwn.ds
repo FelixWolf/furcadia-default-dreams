@@ -1,0 +1,93 @@
+DSPK V01.00 Furcadia
+
+ENTER DREAM
+  (0:9) When a furre arrives in the dream,
+   (5:15) move the triggering furre to (36,13), or to someplace nearby if it's occupied.
+
+EXIT BUILDING
+  (0:7) When somebody moves into position (8,62),
+   (5:8) play sound 4 to whoever set off the trigger.
+   (5:14) move the triggering furre to (46,12) if there's nobody already there.
+  (0:7) When somebody moves into position (10,63),
+   (5:8) play sound 4 to whoever set off the trigger.
+   (5:14) move the triggering furre to (48,13) if there's nobody already there.
+  (0:7) When somebody moves into position (10,64),
+   (5:8) play sound 4 to whoever set off the trigger.
+   (5:14) move the triggering furre to (48,14) if there's nobody already there.
+  (0:7) When somebody moves into position (12,65),
+   (5:8) play sound 4 to whoever set off the trigger.
+   (5:14) move the triggering furre to (50,15) if there's nobody already there.
+ENTER BUILDING
+  (0:7) When somebody moves into position (48,11),
+   (5:8) play sound 4 to whoever set off the trigger.
+   (5:14) move the triggering furre to (10,61) if there's nobody already there.
+  (0:7) When somebody moves into position (48,12),
+   (5:8) play sound 4 to whoever set off the trigger.
+   (5:14) move the triggering furre to (10,62) if there's nobody already there.
+  (0:7) When somebody moves into position (50,13)
+   (5:8) play sound 4 to whoever set off the trigger.
+   (5:14) move the triggering furre to (12,63) if there's nobody already there.
+  (0:7) When somebody moves into position (50,14),
+   (5:8) play sound 4 to whoever set off the trigger.
+   (5:14) move the triggering furre to (12,64) if there's nobody already there.
+
+SECRET ENTRANCE TO CELL
+  (0:7) When somebody moves into position (46,24)
+   (5:8) play sound 36 to whoever set off the trigger.
+   (5:14) move the triggering furre to (10,52) if there's nobody already there.
+
+USING NOTHING
+(0:0) When everything is starting up
+(5:41) place object type 254 at (0,0)
+            (5:210) set entrytext to {You have found your way to <a href=http://www.furcadia.com/maps/dusk2dawn.jpg>Dusk Till Dawn</a>. A place where the sky is always dark, and so are most of the furres you'll meet. The M16+ Standard applies here. If you don't have parental permission to be here, please leave!}
+(0:31) When a furre says {entryoff},
+   (1:70) and the triggering furre's name is {emerald|flame},
+(0:31) When a furre says {entryoff},
+   (1:70) and the triggering furre's name is {felorin},
+            (5:210) set entrytext to {}
+
+(0:19) When someone uses object type 0 
+(3:5) where the triggering furre (moved from/is standing at),
+(5:23) swap the object with the object at (0,0).
+(4:3) only where object type 254 is
+(3:3) within the diamond (24,25) - (24,72),
+(5:201) emit message {Outside} to any furre present.
+(5:17) move any furre present to (36,15), or to someplace nearby if it's occupied.
+(3:1) everywhere on the whole map
+(5:201) emit message {Central Hall} to any furre present.
+(5:17) move any furre present to (22,51), or to someplace nearby if it's occupied.
+(3:5) where the triggering furre (moved from/is standing at),
+(5:23) swap the object with the object at (0,0).
+
+THE LOOKOUT
+    ENTER
+    (0:7) When somebody moves into position (44,25)
+    (5:8) play sound 45 to whoever set off the trigger.
+    (5:14) move the triggering furre to (64,13) if there's nobody already there.
+    EXIT
+    (0:7) When somebody moves into position (62,14)
+    (5:8) play sound 45 to whoever set off the trigger.
+    (5:14) move the triggering furre to (42,26) if there's nobody already there.
+    UP STAIRS
+    (0:7) When somebody moves into position (40,24)
+    (5:8) play sound 6 to whoever set off the trigger.
+    (5:14) move the triggering furre to (42,19) if there's nobody already there.
+    DOWN STAIRS
+    (0:7) When somebody moves into position (40,20)
+    (5:8) play sound 6 to whoever set off the trigger.
+    (5:14) move the triggering furre to (40,25) if there's nobody already there.
+
+(0:3) When somebody moves into object type 1356,
+      (3:2) at position (0,5) on the map,
+            (5:6) swap object types 1 and 2.
+
+(0:3) When somebody moves into object type 1356,
+   (1:1013) and position (0,5) is object type 1,
+(5:430) jump the animation of all copies of object type 1356 in the dream to step 2.
+
+(0:3) When somebody moves into object type 1356,
+   (1:1013) and position (0,5) is object type 2,
+(5:430) jump the animation of all copies of object type 1356 in the dream to step 0.
+
+
+*Endtriggers* 9999 *Endtriggers*

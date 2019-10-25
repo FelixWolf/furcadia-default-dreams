@@ -1,0 +1,30 @@
+DSPK V01.00 Furcadia
+
+UPON ARRIVAL  
+  (0:9) When a furre arrives in the dream,
+	(5:12) play sound 57 to everyone on the map.
+	(5:15) move the furre to (47,63) if there's nobody already there.
+
+THE FRONT GATE
+  The green lever opens the front door and changes the stone block to a red flag.
+  (0:3) When somebody moves into object type 161,
+             (5:5) change object type 161 to type 162.
+             (5:5) change object type 260 to type 259.
+             (5:5) change object type 65 to type 40.
+  The red lever closes the front door and changes the red flag to a block of stone.
+  (0:3) When somebody moves into object type 162,
+             (5:5) change object type 162 to type 161.
+             (5:5) change object type 259 to type 260.
+             (5:5) change object type 40 to type 65.
+
+THE STAIRS
+  Going downstairs
+  (0:7) When somebody moves into position (32,32),
+	(5:14) move the furre to (74,60) if there's nobody already there.
+
+  Going upstairs
+  (0:7) When somebody moves into position (74,61),
+	(5:14) move the furre to (32,33) if there's nobody already there.
+
+
+*Endtriggers* 8888 *Endtriggers*

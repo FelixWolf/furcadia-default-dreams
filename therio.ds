@@ -1,0 +1,272 @@
+DSPK V01.00 Furcadia
+NEW THERIOPOLIS MAP
+by Raff and Motorhed
+(0:9) When a furre arrives in the dream,
+	(5:15) move the triggering furre to (26,37), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (70,43),
+	(3:2) at position (70,43) on the map,
+	(5:6) swap object types 161 and 162.
+
+(0:7) When somebody moves into position (70,42),
+	(3:2) at position (70,42) on the map,
+	(5:6) swap object types 161 and 162.
+
+(0:7) When somebody moves into position (72,40),
+	(3:2) at position (72,40) on the map,
+	(5:6) swap object types 161 and 162.
+
+(0:7) When somebody moves into position (72,41),
+	(3:2) at position (72,41) on the map,
+	(5:6) swap object types 161 and 162.
+
+(0:7) When somebody moves into position (70,43),
+	(5:8) play sound 24 to whoever set off the trigger.
+
+(0:7) When somebody moves into position (70,42),
+	(5:8) play sound 24 to whoever set off the trigger.
+
+(0:7) When somebody moves into position (72,41),
+	(5:8) play sound 24 to whoever set off the trigger.
+
+(0:7) When somebody moves into position (72,40),
+	(5:8) play sound 24 to whoever set off the trigger.
+
+(0:7) When somebody moves into position (70,43),
+(1:1013) and position (70,44) is object type 482,
+(1:1013) and position (70,43) is object type 162,
+	(3:2) at position (70,44) on the map,
+	(5:4) place object type 483.
+
+(0:7) When somebody moves into position (70,43),
+(1:1013) and position (70,44) is object type 483,
+(1:1013) and position (70,43) is object type 161,
+	(3:2) at position (70,44) on the map,
+	(5:4) place object type 484.
+
+(0:7) When somebody moves into position (70,43),
+(1:1013) and position (70,44) is object type 484,
+(1:1013) and position (70,43) is object type 162,
+	(3:2) at position (70,44) on the map,
+	(5:4) place object type 485.
+
+(0:7) When somebody moves into position (70,43),
+(1:1013) and position (70,43) is object type 161,
+(1:1013) and position (70,44) is object type 485,
+	(3:2) at position (70,44) on the map,
+	(5:4) place object type 486.
+
+(0:7) When somebody moves into position (70,43),
+(1:1013) and position (70,43) is object type 162,
+(1:1013) and position (70,44) is object type 486,
+	(3:2) at position (70,44) on the map,
+	(5:4) place object type 482.
+
+(0:7) When somebody moves into position (70,42),
+(1:1013) and position (72,43) is object type 482,
+(1:1013) and position (70,42) is object type 162,
+	(3:2) at position (72,43) on the map,
+	(5:4) place object type 483.
+
+(0:7) When somebody moves into position (70,42),
+(1:1013) and position (72,43) is object type 483,
+(1:1013) and position (70,42) is object type 161,
+	(3:2) at position (72,43) on the map,
+	(5:4) place object type 484.
+
+(0:7) When somebody moves into position (70,42),
+(1:1013) and position (72,43) is object type 484,
+(1:1013) and position (70,42) is object type 162,
+	(3:2) at position (72,43) on the map,
+	(5:4) place object type 485.
+
+(0:7) When somebody moves into position (70,42),
+(1:1013) and position (70,42) is object type 161,
+(1:1013) and position (72,43) is object type 485,
+	(3:2) at position (72,43) on the map,
+	(5:4) place object type 486.
+
+(0:7) When somebody moves into position (70,42),
+(1:1013) and position (70,42) is object type 162,
+(1:1013) and position (72,43) is object type 486,
+	(3:2) at position (72,43) on the map,
+	(5:4) place object type 482.
+
+(0:7) When somebody moves into position (72,41),
+(1:1013) and position (72,42) is object type 482,
+(1:1013) and position (72,41) is object type 162,
+	(3:2) at position (72,42) on the map,
+	(5:4) place object type 483.
+
+(0:7) When somebody moves into position (72,41),
+(1:1013) and position (72,42) is object type 483,
+(1:1013) and position (72,41) is object type 161,
+	(3:2) at position (72,42) on the map,
+	(5:4) place object type 484.
+
+(0:7) When somebody moves into position (72,41),
+(1:1013) and position (72,42) is object type 484,
+(1:1013) and position (72,41) is object type 162,
+	(3:2) at position (72,42) on the map,
+	(5:4) place object type 485.
+
+(0:7) When somebody moves into position (72,41),
+(1:1013) and position (72,41) is object type 161,
+(1:1013) and position (72,42) is object type 485,
+	(3:2) at position (72,42) on the map,
+	(5:4) place object type 486.
+
+(0:7) When somebody moves into position (72,41),
+(1:1013) and position (72,41) is object type 162,
+(1:1013) and position (72,42) is object type 486,
+	(3:2) at position (72,42) on the map,
+	(5:4) place object type 482.
+
+(0:7) When somebody moves into position (72,40),
+(1:1013) and position (74,41) is object type 482,
+(1:1013) and position (72,40) is object type 162,
+	(3:2) at position (74,41) on the map,
+	(5:4) place object type 483.
+
+(0:7) When somebody moves into position (72,40),
+(1:1013) and position (74,41) is object type 483,
+(1:1013) and position (72,40) is object type 161,
+	(3:2) at position (74,41) on the map,
+	(5:4) place object type 484.
+
+(0:7) When somebody moves into position (72,40),
+(1:1013) and position (74,41) is object type 484,
+(1:1013) and position (72,40) is object type 162,
+	(3:2) at position (74,41) on the map,
+	(5:4) place object type 485.
+
+(0:7) When somebody moves into position (72,40),
+(1:1013) and position (72,40) is object type 161,
+(1:1013) and position (74,41) is object type 485,
+	(3:2) at position (74,41) on the map,
+	(5:4) place object type 486.
+
+(0:7) When somebody moves into position (72,40),
+(1:1013) and position (72,40) is object type 162,
+(1:1013) and position (74,41) is object type 486,
+	(3:2) at position (74,41) on the map,
+	(5:4) place object type 482.
+
+(0:7) When somebody moves into position (74,47),
+(1:1013) and position (70,44) is object type 483,
+(1:1013) and position (72,43) is object type 486,
+(1:1013) and position (72,42) is object type 482,
+(1:1013) and position (74,41) is object type 486,
+	(5:6) swap object types 393 and 394.
+
+(0:7) When somebody moves into position (74,47),
+(1:1013) and position (70,44) is object type 483,
+(1:1013) and position (72,43) is object type 486,
+(1:1013) and position (72,42) is object type 482,
+(1:1013) and position (74,41) is object type 486,
+(5:12) play sound 44 to everyone on the map.
+
+(0:7) When somebody moves into position (74,47),
+	(3:2) at position (70,44) on the map,
+	(5:4) place object type 482.
+(0:7) When somebody moves into position (74,47),
+	(3:2) at position (72,43) on the map,
+	(5:4) place object type 482.
+(0:7) When somebody moves into position (74,47),
+	(3:2) at position (72,42) on the map,
+	(5:4) place object type 482.
+(0:7) When somebody moves into position (74,47),
+	(3:2) at position (74,41) on the map,
+	(5:4) place object type 482.
+(0:7) When somebody moves into position (78,47),
+	(5:6) swap object types 394 and 393.
+(0:7) When somebody moves into position (76,48),
+	(5:6) swap object types 394 and 393.
+(0:7) When somebody moves into position (74,46),
+(1:19) and they (moved from/are standing at) position (76,47),
+	(5:5) change object type 394 to type 393.
+(0:7) When somebody moves into position (76,45),
+(1:19) and they (moved from/are standing at) position (76,46),
+	(5:5) change object type 394 to type 393.
+
+(0:7) When somebody moves into position (20,46),
+(1:1002) and they are holding item 427 in their paws,
+	(3:2) at position (20,48) on the map,
+	(5:4) place object type 421.
+
+// room with full bucket
+(0:7) When somebody moves into position (26,54),
+(1:1002) and they are holding item 421 in their paws,
+	(5:15) move the furre to (26,54), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (26,53),
+(1:1002) and they are holding item 421 in their paws,
+	(5:15) move the furre to (26,53), or to someplace nearby if it's occupied.
+
+// Exit with bucket too
+(0:7) When somebody moves into position (26,53),
+(1:1002) and they are holding item 425 in their paws,
+	(5:15) move the furre to (26,53), or to someplace nearby if it's occupied.
+
+(0:19) When somebody uses object type 425,
+(1:19) and they (are standing at) position (42,54),
+	(3:2) at position (44,53) on the map,
+	(5:4) place object type 50.
+
+(0:7) When somebody moves into position (10,15),
+	(3:2) at position (8,13) on the map,
+	(5:4) place object type 0.
+(0:7) When somebody moves into position (10,15),
+	(3:2) at position (8,14) on the map,
+	(5:4) place object type 391.
+(0:7) When somebody moves into position (8,14),
+	(5:15) move the furre to (10,16), or to someplace nearby if it's occupied.
+(0:7) When somebody moves into position (8,14),
+	(5:15) move the furre to (12,17), or to someplace nearby if it's occupied.
+(0:7) When somebody moves into position (8,14),
+	(3:2) at position (8,14) on the map,
+	(5:4) place object type 0.
+(0:7) When somebody moves into position (8,14),
+	(3:2) at position (10,15) on the map,
+	(5:4) place object type 391.
+(0:7) When somebody moves into position (8,14),
+	(3:2) at position (10,15) on the map,
+	(5:4) place object type 0.
+(0:7) When somebody moves into position (8,14),
+	(3:2) at position (8,13) on the map,
+	(5:4) place object type 391.
+
+(0:7) When somebody moves into position (10,14),
+	(3:2) at position (8,12) on the map,
+	(5:4) place object type 0.
+(0:7) When somebody moves into position (10,14),
+	(3:2) at position (10,13) on the map,
+	(5:4) place object type 391.
+(0:7) When somebody moves into position (10,13),
+	(5:15) move the furre to (12,15), or to someplace nearby if it's occupied.
+(0:7) When somebody moves into position (10,13),
+	(5:15) move the furre to (12,16), or to someplace nearby if it's occupied.
+(0:7) When somebody moves into position (10,13),
+	(3:2) at position (10,13) on the map,
+	(5:4) place object type 0.
+(0:7) When somebody moves into position (10,13),
+	(3:2) at position (10,14) on the map,
+	(5:4) place object type 391.
+(0:7) When somebody moves into position (10,13),
+	(3:2) at position (10,14) on the map,
+	(5:4) place object type 0.
+(0:7) When somebody moves into position (10,13),
+	(3:2) at position (8,12) on the map,
+	(5:4) place object type 391.
+
+(0:19) When somebody uses object type 50,
+	(5:12) play sound 66 to everyone on the map.
+
+(0:19) When somebody uses object type 50,
+	(5:3) swap floor types 32 and 8.
+
+(0:19) When somebody uses object type 50,
+	(5:6) swap object types 385 and 336.
+
+*Endtriggers* 9999 *Endtriggers*
+

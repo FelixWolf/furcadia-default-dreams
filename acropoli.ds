@@ -1,0 +1,259 @@
+DSPK V01.00 Furcadia
+AN ACROPOLIS BY TALZHEMIR
+
+  THE OBELISKS OF DUSK-TO-DAWN
+
+  Beyond the bright Acropolis,
+  Sealed by pillars tall and pink
+  There rots a dry Necropolis,
+  Jujinka's mark holds tight the graves.
+
+  And he who would unleash the Unclean,
+  Seeks out Wyrmme Ruins to the south,
+  Dark Primes' gift can still be seen
+  Sorcery scribed by loathsome slaves.
+  
+  Then follow cruel Theseus's tracks
+  Where poor Minotaur, he slays,
+  The key to the City of the Dead
+  Is the center of the Maze.
+  
+  So travel near, and travel far,
+  Make use of what you do not have.
+  Midian is where the monsters are
+  And in this bar, they raise a "bier".
+
+  They fear Jujinka's green and wholesome sward,
+  And sunrise leaves by Vinca's light made green.
+  For in the jungle stands a hidden shrine,
+  That closes tight again the Gate of Fear.
+
+Tuning Variables
+(0:0)
+*Number of furres before start position transitions.
+            (5:300) set variable %FurreMAX to the value 5.
+*Time Limit for Idle Furres
+            (5:300) set variable %IdleLimit to the value 120.
+            (5:5) change object type 98 to type 1337.
+
+
+
+(0:0) When everything is starting up,
+            (5:111) allow dream pad uploads by everyone.
+
+
+
+
+UPON ARRIVAL  
+(0:0)
+            (5:300) set variable %StartPosNumber to the value 1.
+            (5:300) set variable %FurreNumber to the value 0.
+(0:31) When a furre says {entryoff},
+   (1:70) and the triggering furre's name is {emerald|flame},
+(0:31) When a furre says {entryoff},
+   (1:70) and the triggering furre's name is {felorin},
+            (5:210) set entrytext to {}
+(0:0)
+            (5:210) set entrytext to {You've entered <a href=http://www.furcadia.com/maps/acropolis.jpg>Acropolis</a>, a socializing area for furres that just want to chat, make friends and meet others from around the world. Please, no Roleplaying or Persona Play here. Keep conversation suited for all ages. It's important to respect others, here and everywhere in Furcadia. Use F3 to move between multiple points around the dream.}
+
+
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 1.
+            (5:15) move the triggering furre to (56,104), or to someplace nearby if it's occupied.
+            (5:302) take variable %FurreNumber and add 1 to it.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 2.
+            (5:15) move the triggering furre to (124,36), or to someplace nearby if it's occupied.
+            (5:302) take variable %FurreNumber and add 1 to it.(0:9) When a furre arrives in the dream,
+   (1:200) and variable %StartPosNumber is equal to 3.
+            (5:15) move the triggering furre to (56,36), or to someplace nearby if it's occupied.
+            (5:302) take variable %FurreNumber and add 1 to it.(0:9) When a furre arrives in the dream,
+   (1:200) and variable %StartPosNumber is equal to 4.
+            (5:15) move the triggering furre to (124,104), or to someplace nearby if it's occupied.
+            (5:302) take variable %FurreNumber and add 1 to it.
+
+
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %FurreNumber is equal to %FurreMAX.
+   (1:202) and variable %StartPosNumber is less than 4.
+            (5:302) take variable %StartPosNumber and add 1 to it.
+            (5:300) set variable %FurreNumber to the value 0.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %FurreNumber is equal to %FurreMAX.
+   (1:200) and variable %StartPosNumber is equal to 4.
+            (5:300) set variable %StartPosNumber to the value 1.
+            (5:300) set variable %FurreNumber to the value 0.
+
+Anti Idle
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+(1:81) and the triggering furre is within the diamond (58,97) - (56,110),
+            (5:15) move the triggering furre to (70,90), or to someplace nearby if it's occupied.
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+(1:81) and the triggering furre is within the diamond (56,30) - (58,43),
+            (5:15) move the triggering furre to (70,49), or to someplace nearby if it's occupied.
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+(1:81) and the triggering furre is within the diamond (124,30) - (124,43),
+            (5:15) move the triggering furre to (112,49), or to someplace nearby if it's occupied.
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+(1:81) and the triggering furre is within the diamond (124,97) - (124,110),
+            (5:15) move the triggering furre to (112,91), or to someplace nearby if it's occupied.
+
+
+
+
+ZOOMGATES TO THE FOUR CORNERS
+  EMERALD CITY NORTHEAST TO MEOVANNI
+  (0:7) When somebody moves into position (104,57),
+  (5:8) play sound 80 to whoever set off the trigger.
+  (5:15) move the triggering furre to (120,40), or to someplace nearby if it's occupied.
+  MEOVANNI SOUTHWEST TO EMERALD CITY
+  (0:7) When somebody moves into position (120,41),
+  (5:8) play sound 80 to whoever set off the trigger.
+  (5:15) move the triggering furre to (102,58), or to someplace nearby if it's occupied.
+  EMERALD CITY NORTHWEST TO FURCADIA CON
+  (0:7) When somebody moves into position (78,57),
+  (5:8) play sound 80 to whoever set off the trigger.
+  (5:15) move the triggering furre to (60,40), or to someplace nearby if it's occupied.
+  FURCADIA CON SOUTHWEST TO EMERALD CITY
+  (0:7) When somebody moves into position (62,41),
+  (5:8) play sound 80 to whoever set off the trigger.
+  (5:15) move the triggering furre to (78,58), or to someplace nearby if it's occupied.
+  EMERALD CITY SOUTHWEST TO FURABIAN NIGHTS
+  (0:7) When somebody moves into position (78,83),
+  (5:8) play sound 80 to whoever set off the trigger.
+  (5:15) move the triggering furre to (60,100), or to someplace nearby if it's occupied.
+  FURABIAN NIGHTS NORTHEAST TO EMERALD CITY
+  (0:7) When somebody moves into position (62,99),
+  (5:8) play sound 80 to whoever set off the trigger.
+  (5:15) move the triggering furre to (78,82), or to someplace nearby if it's occupied.
+  EMERALD CITY SOUTHWEST TO VINCA
+  (0:7) When somebody moves into position (104,83),
+  (5:8) play sound 80 to whoever set off the trigger.
+  (5:15) move the triggering furre to (120,100), or to someplace nearby if it's occupied.
+  VINCA NORTHWEST TO EMERALD CITY
+  (0:7) When somebody moves into position (120,99),
+  (5:8) play sound 80 to whoever set off the trigger.
+  (5:15) move the triggering furre to (102,82), or to someplace nearby if it's occupied.
+
+CLUB DUSK-TO-DAWN
+  Going downstairs
+  (0:7) When somebody moves into position (28,40),
+ (5:14) move the furre to (16,139) if there's nobody already there.
+  Going upstairs
+  (0:7) When somebody moves into position (14,140),
+ (5:14) move the furre to (28,41) if there's nobody already there.
+
+  THE CHASM
+  (0:7) When somebody moves into position (188,20),
+ (5:14) move the furre to (26,135) if there's nobody already there.
+  (0:7) When somebody moves into position (26,136),
+ (5:14) move the furre to (190,19) if there's nobody already there.
+
+
+
+THE WYRMME RUINS
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (68,129),
+(1:1012) and position (174,109) is not floor type 8,
+ (3:1) everywhere on the whole map,
+ (5:5) change object type 395 to type 393.
+ (5:12) play sound 62 to everyone on the map.
+ (5:2) change floor type 9 to type 8.
+ (5:15) move the triggering furre to (40,70), or to someplace nearby if it's occupied.
+
+DAEDALUS'S RETREAT
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (120,54),
+(1:1012) and position (174,109) is not floor type 9,
+ (3:1) everywhere on the whole map,
+ (5:5) change object type 393 to type 394.
+ (5:12) play sound 44 to everyone on the map.
+ (5:15) move the triggering furre to (40,70), or to someplace nearby if it's occupied.
+
+PRATCHETT'S JUNGLE
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (160,106),
+(1:1012) and position (174,109) is not floor type 9,
+ (3:1) everywhere on the whole map,
+ (5:5) change object type 394 to type 395.
+ (5:12) play sound 30 to everyone on the map.
+ (5:2) change floor type 8 to type 9.
+ (5:15) move the triggering furre to (40,70), or to someplace nearby if it's occupied.
+
+THERE'S NO PLACE LIKE HOME
+*F3 Spots
+
+(0:0) When everything is starting up
+(5:41) place object type 254 at (0,0)
+
+(0:19) When someone uses object type 0
+  (1:107) and they didn't move into position (120,54),
+  (1:107) and they didn't move into position (68,129),
+  (1:107) and they didn't move into position (160,106),
+(3:5) where the triggering furre (moved from/is standing at),
+(5:23) swap the object with the object at (0,0).
+(4:3) only where object type 254 is
+(3:3) within the diamond (90,58) - (90,82),
+(5:201) emit message {Meo Portal} to any furre present.
+(5:17) move any furre present to (124,36), or to someplace nearby if it's occupied.
+(3:3) within the diamond (124,26) - (124,49),
+(5:201) emit message {Haven Portal} to any furre present.
+(5:17) move any furre present to (56,36), or to someplace nearby if it's occupied.
+(3:3) within the diamond (56,26) - (56,50),
+(5:201) emit message {Naia Portal} to any furre present.
+(5:17) move any furre present to (56,104), or to someplace nearby if it's occupied.
+(3:3) within the diamond (58,91) - (58,115),
+(5:201) emit message {Silver Sponsor Portal} to any furre present.
+(5:17) move any furre present to (124,104), or to someplace nearby if it's occupied.
+(3:3) within the diamond (124,93) - (124,115),
+(5:201) emit message {Old Vinca Portal} to any furre present.
+(5:17) move any furre present to (126,70), or to someplace nearby if it's occupied.
+(3:1) everywhere on the whole map
+(5:201) emit message {Storyteller's Circle} to any furre present.
+(5:17) move any furre present to (90,70), or to someplace nearby if it's occupied.
+(3:5) where the triggering furre (moved from/is standing at),
+(5:23) swap the object with the object at (0,0).
+
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 11,
+            (5:15) move the triggering furre to (124,36), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 12,
+            (5:15) move the triggering furre to (56,36), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 13,
+            (5:15) move the triggering furre to (56,104), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 14,
+            (5:15) move the triggering furre to (124,104), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 15,
+            (5:15) move the triggering furre to (126,70), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 16,
+            (5:15) move the triggering furre to (90,70), or to someplace nearby if it's occupied.
+
+
+JENNIVERE'S ASSAMITE OUBLIETTE
+  (0:7) When somebody moves into position (42,99),
+ (5:14) move the furre to (166,11) if there's nobody already there.
+  (0:7) When somebody moves into position (164,12),
+ (5:14) move the furre to (40,101) if there's nobody already there.
+
+(0:3) When somebody moves into object type 1356,
+      (3:2) at position (0,5) on the map,
+            (5:6) swap object types 1 and 2.
+
+(0:3) When somebody moves into object type 1356,
+   (1:1013) and position (0,5) is object type 1,
+(5:430) jump the animation of all copies of object type 1356 in the dream to step 2.
+
+(0:3) When somebody moves into object type 1356,
+   (1:1013) and position (0,5) is object type 2,
+(5:430) jump the animation of all copies of object type 1356 in the dream to step 0.
+
+*Endtriggers* 8888 *Endtriggers*

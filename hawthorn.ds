@@ -1,0 +1,1739 @@
+DSPK V01.00 Furcadia
+
+Welcome to the Haven for new furres, the 
+place for EVERYONE to find new friends! 
+There's alot to explore and discover here! 
+ _ _ _ Architecture by Sidereal _ _ _ 
+
+Tuning Variables
+(0:0)
+*Number of furres before start position transitions.
+            (5:300) set variable %FurreMAX to the value 5.
+
+            (5:210) set entrytext to {You have wandered off the beaten track into <a href=http://www.furcadia.com/maps/hawthorn.jpg>Hawthorn</a>. This dream is home to some of Furcadia's rougher crowd. Hawthorn earns its M16+ Standard for violence and crude language. This is the place to upload your dream if you wish to explore the more savage side of Furcadia. Those of a sensitive disposition or who are under 16 should not be here.}
+(0:31) When a furre says {entryoff},
+   (1:70) and the triggering furre's name is {emerald|flame},
+(0:31) When a furre says {entryoff},
+   (1:70) and the triggering furre's name is {felorin},
+            (5:210) set entrytext to {}
+
+*F3 Spots
+(0:0) When everything is starting up
+(5:41) place object type 254 at (0,0)
+            (5:111) allow dream pad uploads by everyone.
+
+
+(0:19) When someone uses object type 0 
+(3:5) where the triggering furre (moved from/is standing at),
+(5:23) swap the object with the object at (0,0).
+(4:3) only where object type 254 is
+(3:3) within the diamond (40,48) - (30,70),
+(5:201) emit message {Pongo Tree} to any furre present.
+(5:17) move any furre present to (22,26), or to someplace nearby if it's occupied.
+(3:3) within the diamond (24,17) - (24,35),
+(5:201) emit message {Roller Coaster} to any furre present.
+(5:17) move any furre present to (52,12), or to someplace nearby if it's occupied.
+(3:3) within the diamond (52,6) - (50,18),
+(5:201) emit message {Wet Paws Corner} to any furre present.
+(5:17) move any furre present to (72,48), or to someplace nearby if it's occupied.
+(3:1) everywhere on the whole map
+(5:201) emit message {Watering Hole} to any furre present.
+(5:17) move any furre present to (38,57), or to someplace nearby if it's occupied.
+(3:5) where the triggering furre (moved from/is standing at),
+(5:23) swap the object with the object at (0,0).
+
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 11,
+            (5:15) move the triggering furre to (22,26), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 12,
+            (5:15) move the triggering furre to (52,12), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 13,
+            (5:15) move the triggering furre to (72,48), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 14,
+            (5:15) move the triggering furre to (38,57), or to someplace nearby if it's occupied.
+ARRIVAL
+(0:0)
+            (5:300) set variable %StartPosNumber to the value 1.
+            (5:300) set variable %FurreNumber to the value 0.
+
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 1.
+            (5:15) move the triggering furre to (38,41), or to someplace nearby if it's occupied.
+            (5:302) take variable %FurreNumber and add 1 to it.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 2.
+            (5:15) move the triggering furre to (16,20), or to someplace nearby if it's occupied.
+            (5:302) take variable %FurreNumber and add 1 to it.(0:9) When a furre arrives in the dream,
+   (1:200) and variable %StartPosNumber is equal to 3.
+            (5:15) move the triggering furre to (74,49), or to someplace nearby if it's occupied.
+            (5:302) take variable %FurreNumber and add 1 to it.(0:9) When a furre arrives in the dream,
+   (1:200) and variable %StartPosNumber is equal to 4.
+            (5:15) move the triggering furre to (18,76), or to someplace nearby if it's occupied.
+            (5:302) take variable %FurreNumber and add 1 to it.
+
+
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %FurreNumber is equal to %FurreMAX.
+   (1:202) and variable %StartPosNumber is less than 4.
+            (5:302) take variable %StartPosNumber and add 1 to it.
+            (5:300) set variable %FurreNumber to the value 0.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %FurreNumber is equal to %FurreMAX.
+   (1:200) and variable %StartPosNumber is equal to 4.
+            (5:300) set variable %StartPosNumber to the value 1.
+            (5:300) set variable %FurreNumber to the value 0.
+
+BARREL STOCKING
+(0:2) When somebody moves into floor type 36,
+(1:17) and they (moved from/are standing at) floor type 135,
+(1:1011) and position (4,7) is floor type 1,
+ (3:2) at position (4,7) on the map,
+ (5:1) set the floor to type 0.
+
+(0:7) When somebody moves into position (74,86),
+(1:19) and they (moved from/are standing at) position (76,87),
+(1:1013) and position (74,87) is object type 0,
+ (3:2) at position (74,88) on the map,
+ (5:21) move the object to (74,87).
+
+(0:7) When somebody moves into position (74,86),
+(1:19) and they (moved from/are standing at) position (76,87),
+(1:1012) and position (4,7) is not floor type 0,
+ (3:2) at position (74,88) on the map,
+ (5:4) place object type 60.
+
+(0:7) When somebody moves into position (82,79),
+(1:19) and they (moved from/are standing at) position (82,80),
+(1:1013) and position (80,80) is object type 0,
+ (3:2) at position (82,81) on the map,
+ (5:21) move the object to (80,80).
+
+(0:7) When somebody moves into position (82,79),
+(1:19) and they (moved from/are standing at) position (82,80),
+(1:1012) and position (4,7) is not floor type 0,
+ (3:2) at position (82,81) on the map,
+ (5:4) place object type 60.
+
+(0:2) When somebody moves into floor type 36,
+(1:17) and they (moved from/are standing at) floor type 36,
+(1:3) and they move into object type 0,
+(1:18) and they (moved from/are standing at) object type 60,
+ (3:5) where the triggering furre (moved from/is standing at),
+ (5:4) place object type 0.
+ (3:6) where the triggering furre moved into,
+ (5:4) place object type 60.
+
+(0:2) When somebody moves into floor type 38,
+(1:17) and they (moved from/are standing at) floor type 36,
+(1:3) and they move into object type 0,
+(1:18) and they (moved from/are standing at) object type 60,
+ (3:5) where the triggering furre (moved from/is standing at),
+ (5:4) place object type 0.
+ (3:6) where the triggering furre moved into,
+ (5:4) place object type 60.
+
+SOUPS ON
+(0:2) When somebody moves into floor type 160,
+ (3:6) where the triggering furre moved into,
+ (5:6) swap object types 408 and 36.
+
+SINGLE DRINK
+(0:3) When somebody moves into object type 64,
+(1:17) and they (moved from/are standing at) floor type 157,
+ (3:2) at position (70,73) on the map,
+ (5:6) swap object types 0 and 33.
+
+(0:18) When somebody drops object type 33,
+ (3:5) where the triggering furre (moved from/is standing at),
+ (4:3) only where an object type 33 is,
+ (5:4) place object type 0.
+
+COOKING LEFT
+(0:3) When somebody moves into object type 180,
+(1:2) and they move into floor type 44,
+(1:1000) and a random dice roll comes up (15 percent of the time),
+(1:1013) and position (48,88) is object type 403,
+(1:1014) and position (50,79) is not object type 191,
+ (3:2) at position (46,82) on the map,
+ (5:4) place object type 42.
+ (5:50) set countdown timer 9 to go off in 1 seconds.
+
+DISHES DONE
+(0:3) When somebody moves into object type 192,
+(1:2) and they move into floor type 45,
+(1:1000) and a random dice roll comes up (35 percent of the time),
+(1:1013) and position (50,88) is object type 191,
+ (3:2) at position (50,88) on the map,
+ (5:4) place object type 61.
+ (5:50) set countdown timer 13 to go off in 2 seconds.
+
+TABLE SERVICE
+(0:3) When somebody moves into object type 191,
+(1:2) and they move into floor type 47,
+(1:17) and they (moved from/are standing at) floor type 154,
+(1:1002) and they are holding item 42 in their paws,
+ (3:2) at position (6,7) on the map,
+ (5:1) set the floor to type 5.
+ (4:0) clear all filtering,
+ (3:4) within the rectangle (48,74) - (54,80),
+ (4:1) only where the floor is type 47,
+ (5:4) place object type 61.
+
+(0:3) When somebody moves into object type 61,
+(1:2) and they move into floor type 154,
+(1:1002) and they are holding item 42 in their paws,
+(1:1011) and position (6,7) is floor type 0,
+ (5:8) play sound 66 to whoever set off the trigger.
+
+(0:3) When somebody moves into object type 61,
+(1:2) and they move into floor type 154,
+(1:1012) and position (6,7) is not floor type 0,
+(1:1002) and they are holding item 42 in their paws,
+ (3:6) where the triggering furre moved into,
+ (5:4) place object type 191.
+
+(0:3) When somebody moves into object type 61,
+(1:2) and they move into floor type 154,
+(1:1002) and they are holding item 42 in their paws,
+(1:1011) and position (6,7) is floor type 1,
+ (3:2) at position (6,7) on the map,
+ (5:1) set the floor to type 0.
+
+(0:3) When somebody moves into object type 61,
+(1:2) and they move into floor type 154,
+(1:1002) and they are holding item 42 in their paws,
+(1:1011) and position (6,7) is floor type 2,
+ (3:2) at position (6,7) on the map,
+ (5:1) set the floor to type 1.
+
+(0:3) When somebody moves into object type 61,
+(1:2) and they move into floor type 154,
+(1:1002) and they are holding item 42 in their paws,
+(1:1011) and position (6,7) is floor type 3,
+ (3:2) at position (6,7) on the map,
+ (5:1) set the floor to type 2.
+
+(0:3) When somebody moves into object type 61,
+(1:2) and they move into floor type 154,
+(1:1002) and they are holding item 42 in their paws,
+(1:1011) and position (6,7) is floor type 4,
+ (3:2) at position (6,7) on the map,
+ (5:1) set the floor to type 3.
+
+(0:3) When somebody moves into object type 61,
+(1:2) and they move into floor type 154,
+(1:1002) and they are holding item 42 in their paws,
+(1:1011) and position (6,7) is floor type 5,
+ (3:2) at position (6,7) on the map,
+ (5:1) set the floor to type 4.
+
+COUNTER SERVICE
+(0:3) When somebody moves into object type 61,
+(1:17) and they (moved from/are standing at) floor type 157,
+(1:1011) and position (4,13) is floor type 2,
+ (3:2) at position (4,13) on the map,
+ (5:1) set the floor to type 3.
+ (5:50) set countdown timer 11 to go off in 60 seconds.
+
+(0:3) When somebody moves into object type 61,
+(1:17) and they (moved from/are standing at) floor type 157,
+(1:1011) and position (4,13) is floor type 1,
+ (3:2) at position (4,13) on the map,
+ (5:1) set the floor to type 2.
+
+(0:3) When somebody moves into object type 61,
+(1:17) and they (moved from/are standing at) floor type 157,
+(1:1011) and position (4,13) is floor type 0,
+ (3:2) at position (4,13) on the map,
+ (5:1) set the floor to type 1.
+
+DISHES CLEARED
+(0:3) When somebody moves into object type 191,
+(1:2) and they move into floor type 154,
+(1:1002) and they are holding item 42 in their paws,
+(1:1011) and position (54,93) is floor type 0,
+(1:1013) and position (60,85) is object type 61,
+ (3:6) where the triggering furre moved into,
+ (5:23) swap the object with the object at (60,85).
+ (5:50) set countdown timer 15 to go off in 1 seconds.
+
+(0:3) When somebody moves into object type 191,
+(1:2) and they move into floor type 154,
+(1:1002) and they are holding item 42 in their paws,
+(1:1011) and position (54,93) is floor type 1,
+ (5:8) play sound 66 to whoever set off the trigger.
+
+TABLE CLEANUP GENERAL
+(0:18) When somebody drops object type 42,
+ (4:3) only where an object type 42 is,
+ (5:21) move the object to (46,82).
+
+(0:3) When somebody moves into object type 61,
+(1:17) and they (moved from/are standing at) floor type 157,
+(1:1013) and position (66,80) is object type 60,
+ (3:6) where the triggering furre moved into,
+ (5:4) place object type 191.
+
+(0:3) When somebody moves into object type 191,
+(1:2) and they move into floor type 159,
+(1:17) and they (moved from/are standing at) floor type 157,
+ (3:6) where the triggering furre moved into,
+ (5:4) place object type 61.
+
+CANDLES
+(0:3) When somebody moves into object type 383,
+ (3:6) where the triggering furre moved into,
+ (5:4) place object type 384.
+ (5:8) play sound 65 to whoever set off the trigger.
+(0:3) When somebody moves into object type 384,
+ (3:6) where the triggering furre moved into,
+ (5:4) place object type 383.
+ (5:8) play sound 52 to whoever set off the trigger.
+
+JERK GEAR
+(0:2) When somebody moves into floor type 9,
+(1:117) and they (didn't move from/aren't standing at) floor type 9,
+ (3:6) where the triggering furre moved into,
+ (5:1) set the floor to type 11.
+ (5:50) set countdown timer 12 to go off in 30 seconds.
+
+(0:1) Whenever somebody moves,
+(1:102) and they didn't move into floor type 9,
+(1:102) and they didn't move into floor type 10,
+(1:17) and they (moved from/are standing at) floor type 11,
+ (3:5) where the triggering furre (moved from/is standing at),
+ (5:1) set the floor to type 9.
+
+(0:2) When somebody moves into floor type 9,
+(1:17) and they (moved from/are standing at) floor type 11,
+ (3:5) where the triggering furre (moved from/is standing at),
+ (5:1) set the floor to type 9.
+ (3:6) where the triggering furre moved into,
+ (5:1) set the floor to type 11.
+
+PONGA
+(0:3) When somebody moves into object type 112,
+(1:7) and they move into position (18,39),
+ (3:4) within the rectangle (16,37) - (20,42),
+ (4:8) only where there are no objects,
+ (5:4) place object type 41.
+ (4:0) clear all filtering,
+ (3:2) at position (18,39) on the map,
+ (5:4) place object type 108.
+
+RAPTOR PEN
+(0:3) When somebody moves into object type 385,
+(1:17) and they (moved from/are standing at) floor type 10,
+(1:18) and they (moved from/are standing at) object type 0,
+ (3:5) where the triggering furre (moved from/is standing at),
+ (5:4) place object type 385.
+ (3:6) where the triggering furre moved into,
+ (5:4) place object type 0.
+ (5:8) play sound 9 to whoever set off the trigger.
+
+COASTER EXIT
+(0:7) When somebody moves into position (58,24),
+(1:19) and they (moved from/are standing at) position (58,25),
+ (5:14) move the triggering furre to (58,25) if there's nobody already there.
+
+(0:7) When somebody moves into position (60,25),
+(1:19) and they (moved from/are standing at) position (58,26),
+ (5:14) move the triggering furre to (58,26) if there's nobody already there.
+
+(0:7) When somebody moves into position (60,26),
+(1:19) and they (moved from/are standing at) position (60,27),
+ (5:14) move the triggering furre to (60,27) if there's nobody already there.
+
+(0:7) When somebody moves into position (62,27),
+(1:19) and they (moved from/are standing at) position (60,28),
+ (5:14) move the triggering furre to (60,28) if there's nobody already there.
+
+(0:7) When somebody moves into position (62,28),
+(1:19) and they (moved from/are standing at) position (62,29),
+ (5:14) move the triggering furre to (62,29) if there's nobody already there.
+
+ENTER VEHICLE
+(0:3) When somebody moves into object type 162,
+(1:19) and they (moved from/are standing at) position (72,16),
+(1:1013) and position (74,17) is object type 4,
+(1:1013) and position (72,18) is object type 4,
+(1:1013) and position (72,19) is object type 4,
+(1:1013) and position (70,20) is object type 4,
+(1:1013) and position (70,21) is object type 4,
+  (5:50) set countdown timer 3 to go off in 1 seconds.
+
+(0:3) When somebody moves into object type 3,
+(1:2) and they move into floor type 36,
+ (3:6) where the triggering furre moved into,
+ (5:4) place object type 4.
+
+(0:3) When somebody moves into object type 3,
+(1:17) and they (moved from/are standing at) floor type 36,
+(1:18) and they (moved from/are standing at) object type 4,
+ (3:5) where the triggering furre (moved from/is standing at),
+ (5:4) place object type 3.
+
+(0:2) When somebody moves into floor type 40,
+(1:3) and they move into object type 553,
+(1:17) and they (moved from/are standing at) floor type 36,
+(1:18) and they (moved from/are standing at) object type 4,
+ (3:5) where the triggering furre (moved from/is standing at),
+ (5:4) place object type 3.
+
+(0:2) When somebody moves into floor type 40,
+(1:3) and they move into object type 554,
+(1:17) and they (moved from/are standing at) floor type 36,
+(1:18) and they (moved from/are standing at) object type 4,
+ (3:5) where the triggering furre (moved from/is standing at),
+ (5:4) place object type 3.
+
+COASTER FROM UNDERGROUND TRACKS
+(0:50) When countdown timer 1 goes off,
+ (3:2) at position (74,15) on the map,
+ (5:4) place object type 161.
+ (3:2) at position (60,13) on the map,
+ (5:4) place object type 39.
+ (5:50) set countdown timer 6 to go off in 15 seconds.
+
+OPEN ENTRANCE GATES
+(0:50) When countdown timer 2 goes off,
+ (3:4) within the rectangle (68,15) - (82,25),
+ (4:3) only where an object type 559 is,
+ (5:4) place object type 553.
+ (5:8) play sound 26 to everyone on the map.
+ (5:50) set countdown timer 3 to go off in 60 seconds.
+
+AUTO START RIDE
+(0:50) When countdown timer 3 goes off,
+(1:1014) and position (74,17) is not object type 4,
+ (5:50) set countdown timer 3 to go off in 60 seconds.
+
+(0:50) When countdown timer 3 goes off,
+(1:1013) and position (74,17) is object type 4,
+ (3:4) within the rectangle (68,16) - (74,22),
+ (4:3) only where an object type 3 is,
+ (5:4) place object type 4.
+ (4:0) clear all filtering,
+ (3:4) within the rectangle (68,15) - (82,25),
+ (4:3) only where an object type 553 is,
+ (5:4) place object type 559.
+ (5:17) move any furre present to (74,24), or to someplace nearby if it's occupied.
+ (4:0) clear all filtering,
+ (3:2) at position (74,15) on the map,
+ (5:4) place object type 161.
+ (3:2) at position (74,14) on the map,
+ (5:1) set the floor to type 1.
+ (5:8) play sound 69 to everyone on the map.
+
+COASTER PART FIVE
+(0:50) When countdown timer 4 goes off,
+ (3:2) at position (84,18) on the map,
+ (5:4) place object type 4.
+ (3:2) at position (84,20) on the map,
+ (5:4) place object type 39.
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (84,16) on the map,
+ (5:16) move any furre present to (84,18) if there's nobody already there.
+ (3:2) at position (84,15) on the map,
+ (5:16) move any furre present to (84,16) if there's nobody already there.
+ (3:2) at position (82,14) on the map,
+ (5:16) move any furre present to (84,15) if there's nobody already there.
+ (3:2) at position (82,13) on the map,
+ (5:16) move any furre present to (82,14) if there's nobody already there.
+ (3:2) at position (80,12) on the map,
+ (5:16) move any furre present to (82,13) if there's nobody already there.
+ (3:2) at position (80,11) on the map,
+ (5:21) move the object to (80,12).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (84,20) on the map,
+ (5:21) move the object to (84,22).
+ (5:4) place object type 4.
+ (3:2) at position (84,18) on the map,
+ (5:16) move any furre present to (84,20) if there's nobody already there.
+ (3:2) at position (84,16) on the map,
+ (5:16) move any furre present to (84,18) if there's nobody already there.
+ (3:2) at position (84,15) on the map,
+ (5:16) move any furre present to (84,16) if there's nobody already there.
+ (3:2) at position (82,14) on the map,
+ (5:16) move any furre present to (84,15) if there's nobody already there.
+ (3:2) at position (82,13) on the map,
+ (5:16) move any furre present to (82,14) if there's nobody already there.
+ (3:2) at position (80,12) on the map,
+ (5:21) move the object to (82,13).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (84,22) on the map,
+ (5:21) move the object to (84,24).
+ (5:4) place object type 4.
+ (3:2) at position (84,20) on the map,
+ (5:16) move any furre present to (84,22) if there's nobody already there.
+ (3:2) at position (84,18) on the map,
+ (5:16) move any furre present to (84,20) if there's nobody already there.
+ (3:2) at position (84,16) on the map,
+ (5:16) move any furre present to (84,18) if there's nobody already there.
+ (3:2) at position (84,15) on the map,
+ (5:16) move any furre present to (84,16) if there's nobody already there.
+ (3:2) at position (82,14) on the map,
+ (5:16) move any furre present to (84,15) if there's nobody already there.
+ (3:2) at position (82,13) on the map,
+ (5:21) move the object to (82,14).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (84,24) on the map,
+ (5:21) move the object to (84,26).
+ (5:4) place object type 4.
+ (3:2) at position (84,22) on the map,
+ (5:16) move any furre present to (84,24) if there's nobody already there.
+ (3:2) at position (84,20) on the map,
+ (5:16) move any furre present to (84,22) if there's nobody already there.
+ (3:2) at position (84,18) on the map,
+ (5:16) move any furre present to (84,20) if there's nobody already there.
+ (3:2) at position (84,16) on the map,
+ (5:16) move any furre present to (84,18) if there's nobody already there.
+ (3:2) at position (84,15) on the map,
+ (5:16) move any furre present to (84,16) if there's nobody already there.
+ (3:2) at position (82,14) on the map,
+ (5:21) move the object to (84,15).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (84,26) on the map,
+ (5:21) move the object to (84,28).
+ (5:4) place object type 4.
+ (3:2) at position (84,24) on the map,
+ (5:16) move any furre present to (84,26) if there's nobody already there.
+ (3:2) at position (84,22) on the map,
+ (5:16) move any furre present to (84,24) if there's nobody already there.
+ (3:2) at position (84,20) on the map,
+ (5:16) move any furre present to (84,22) if there's nobody already there.
+ (3:2) at position (84,18) on the map,
+ (5:16) move any furre present to (84,20) if there's nobody already there.
+ (3:2) at position (84,16) on the map,
+ (5:16) move any furre present to (84,18) if there's nobody already there.
+ (3:2) at position (84,15) on the map,
+ (5:21) move the object to (84,16).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (84,28) on the map,
+ (5:21) move the object to (84,30).
+ (5:4) place object type 4.
+ (3:2) at position (84,26) on the map,
+ (5:16) move any furre present to (84,28) if there's nobody already there.
+ (3:2) at position (84,24) on the map,
+ (5:16) move any furre present to (84,26) if there's nobody already there.
+ (3:2) at position (84,22) on the map,
+ (5:16) move any furre present to (84,24) if there's nobody already there.
+ (3:2) at position (84,20) on the map,
+ (5:16) move any furre present to (84,22) if there's nobody already there.
+ (3:2) at position (84,18) on the map,
+ (5:16) move any furre present to (84,20) if there's nobody already there.
+ (3:2) at position (84,16) on the map,
+ (5:21) move the object to (84,18).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (84,30) on the map,
+ (5:21) move the object to (84,32).
+ (5:4) place object type 4.
+ (3:2) at position (84,28) on the map,
+ (5:16) move any furre present to (84,30) if there's nobody already there.
+ (3:2) at position (84,26) on the map,
+ (5:16) move any furre present to (84,28) if there's nobody already there.
+ (3:2) at position (84,24) on the map,
+ (5:16) move any furre present to (84,26) if there's nobody already there.
+ (3:2) at position (84,22) on the map,
+ (5:16) move any furre present to (84,24) if there's nobody already there.
+ (3:2) at position (84,20) on the map,
+ (5:16) move any furre present to (84,22) if there's nobody already there.
+ (3:2) at position (84,18) on the map,
+ (5:21) move the object to (84,20).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (84,32) on the map,
+ (5:21) move the object to (84,33).
+ (5:4) place object type 4.
+ (3:2) at position (84,30) on the map,
+ (5:16) move any furre present to (84,32) if there's nobody already there.
+ (3:2) at position (84,28) on the map,
+ (5:16) move any furre present to (84,30) if there's nobody already there.
+ (3:2) at position (84,26) on the map,
+ (5:16) move any furre present to (84,28) if there's nobody already there.
+ (3:2) at position (84,24) on the map,
+ (5:16) move any furre present to (84,26) if there's nobody already there.
+ (3:2) at position (84,22) on the map,
+ (5:16) move any furre present to (84,24) if there's nobody already there.
+ (3:2) at position (84,20) on the map,
+ (5:21) move the object to (84,22).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (84,33) on the map,
+ (5:21) move the object to (82,34).
+ (5:4) place object type 4.
+ (3:2) at position (84,32) on the map,
+ (5:16) move any furre present to (84,33) if there's nobody already there.
+ (3:2) at position (84,30) on the map,
+ (5:16) move any furre present to (84,32) if there's nobody already there.
+ (3:2) at position (84,28) on the map,
+ (5:16) move any furre present to (84,30) if there's nobody already there.
+ (3:2) at position (84,26) on the map,
+ (5:16) move any furre present to (84,28) if there's nobody already there.
+ (3:2) at position (84,24) on the map,
+ (5:16) move any furre present to (84,26) if there's nobody already there.
+ (3:2) at position (84,22) on the map,
+ (5:21) move the object to (84,24).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (82,34) on the map,
+ (5:21) move the object to (82,35).
+ (5:4) place object type 4.
+ (3:2) at position (84,33) on the map,
+ (5:16) move any furre present to (82,34) if there's nobody already there.
+ (3:2) at position (84,32) on the map,
+ (5:16) move any furre present to (84,33) if there's nobody already there.
+ (3:2) at position (84,30) on the map,
+ (5:16) move any furre present to (84,32) if there's nobody already there.
+ (3:2) at position (84,28) on the map,
+ (5:16) move any furre present to (84,30) if there's nobody already there.
+ (3:2) at position (84,26) on the map,
+ (5:16) move any furre present to (84,28) if there's nobody already there.
+ (3:2) at position (84,24) on the map,
+ (5:21) move the object to (84,26).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (82,35) on the map,
+ (5:21) move the object to (80,36).
+ (5:4) place object type 4.
+ (3:2) at position (82,34) on the map,
+ (5:16) move any furre present to (82,35) if there's nobody already there.
+ (3:2) at position (84,33) on the map,
+ (5:16) move any furre present to (82,34) if there's nobody already there.
+ (3:2) at position (84,32) on the map,
+ (5:16) move any furre present to (84,33) if there's nobody already there.
+ (3:2) at position (84,30) on the map,
+ (5:16) move any furre present to (84,32) if there's nobody already there.
+ (3:2) at position (84,28) on the map,
+ (5:16) move any furre present to (84,30) if there's nobody already there.
+ (3:2) at position (84,26) on the map,
+ (5:21) move the object to (84,28).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (80,36) on the map,
+ (5:21) move the object to (80,35).
+ (5:4) place object type 4.
+ (3:2) at position (82,35) on the map,
+ (5:16) move any furre present to (80,36) if there's nobody already there.
+ (3:2) at position (82,34) on the map,
+ (5:16) move any furre present to (82,35) if there's nobody already there.
+ (3:2) at position (84,33) on the map,
+ (5:16) move any furre present to (82,34) if there's nobody already there.
+ (3:2) at position (84,32) on the map,
+ (5:16) move any furre present to (84,33) if there's nobody already there.
+ (3:2) at position (84,30) on the map,
+ (5:16) move any furre present to (84,32) if there's nobody already there.
+ (3:2) at position (84,28) on the map,
+ (5:21) move the object to (84,30).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (80,35) on the map,
+ (5:21) move the object to (78,34).
+ (5:4) place object type 4.
+ (3:2) at position (80,36) on the map,
+ (5:16) move any furre present to (80,35) if there's nobody already there.
+ (3:2) at position (82,35) on the map,
+ (5:16) move any furre present to (80,36) if there's nobody already there.
+ (3:2) at position (82,34) on the map,
+ (5:16) move any furre present to (82,35) if there's nobody already there.
+ (3:2) at position (84,33) on the map,
+ (5:16) move any furre present to (82,34) if there's nobody already there.
+ (3:2) at position (84,32) on the map,
+ (5:16) move any furre present to (84,33) if there's nobody already there.
+ (3:2) at position (84,30) on the map,
+ (5:21) move the object to (84,32).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:4) within the rectangle (76,17) - (82,25),
+ (4:3) only where an object type 559 is,
+ (5:4) place object type 553.
+
+BIG DROP GATES
+(0:50) When countdown timer 5 goes off,
+ (3:4) within the rectangle (82,14) - (86,20),
+ (5:6) swap object types 187 and 188.
+ (4:0) clear all filtering,
+ (3:4) within the rectangle (56,22) - (64,32),
+ (4:3) only where an object type 560 is,
+ (5:4) place object type 554.
+ (5:8) play sound 55 to everyone on the map.
+ (5:50) set countdown timer 1 to go off in 20 seconds.
+
+COASTER TO UNDERGROUND TRACKS
+(0:50) When countdown timer 6 goes off,
+ (3:4) within the rectangle (56,22) - (64,30),
+ (4:1) only where the floor is type 36,
+ (5:17) move any furre present to (58,29), or to someplace nearby if it's occupied.
+ (4:0) clear all filtering,
+ (3:4) within the rectangle (56,22) - (64,30),
+ (4:1) only where the floor is type 41,
+ (5:17) move any furre present to (60,31), or to someplace nearby if it's occupied.
+ (4:0) clear all filtering,
+ (3:4) within the rectangle (56,22) - (64,32),
+ (4:3) only where an object type 554 is,
+ (5:4) place object type 560.
+ (5:50) set countdown timer 7 to go off in 5 seconds.
+
+(0:50) When countdown timer 7 goes off,
+ (5:8) play sound 48 to everyone on the map.
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (58,23) on the map,
+ (5:21) move the object to (56,22).
+ (3:2) at position (62,28) on the map,
+ (5:21) move the object to (58,23).
+ (3:2) at position (64,29) on the map,
+ (5:21) move the object to (62,28).
+
+(0:50) When countdown timer 8 goes off,
+ (3:2) at position (52,21) on the map,
+ (5:4) place object type 40.
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (52,21) on the map,
+ (5:4) place object type 0.
+
+(0:50) When countdown timer 9 goes off,
+ (3:4) within the rectangle (48,74) - (54,80),
+ (4:1) only where the floor is type 47,
+ (5:4) place object type 191.
+
+(0:50) When countdown timer 9 goes off,
+(1:1013) and position (50,87) is object type 404,
+ (3:2) at position (48,88) on the map,
+ (5:4) place object type 404.
+
+(0:50) When countdown timer 9 goes off,
+(1:1013) and position (50,86) is object type 404,
+ (3:2) at position (50,87) on the map,
+ (5:4) place object type 404.
+
+(0:50) When countdown timer 9 goes off,
+(1:1013) and position (52,85) is object type 404,
+ (3:2) at position (50,86) on the map,
+ (5:4) place object type 404.
+
+(0:50) When countdown timer 9 goes off,
+(1:1013) and position (52,84) is object type 404,
+ (3:2) at position (52,85) on the map,
+ (5:4) place object type 404.
+
+(0:50) When countdown timer 9 goes off,
+(1:1013) and position (52,84) is object type 403,
+ (3:2) at position (52,84) on the map,
+ (5:4) place object type 404.
+
+BARRELS USED
+(0:50) When countdown timer 11 goes off,
+ (4:1) only where the floor is type 96,
+ (5:4) place object type 60.
+
+(0:50) When countdown timer 11 goes off,
+ (3:2) at position (4,13) on the map,
+ (5:1) set the floor to type 0.
+
+(0:50) When countdown timer 11 goes off,
+(1:1013) and position (68,78) is object type 0,
+(1:1013) and position (68,79) is object type 0,
+(1:1013) and position (66,80) is object type 60,
+ (3:2) at position (66,80) on the map,
+ (5:4) place object type 0.
+
+(0:50) When countdown timer 11 goes off,
+(1:1013) and position (68,78) is object type 0,
+(1:1013) and position (68,79) is object type 60,
+ (3:2) at position (68,79) on the map,
+ (5:4) place object type 0.
+
+(0:50) When countdown timer 11 goes off,
+(1:1013) and position (68,78) is object type 60,
+ (3:2) at position (68,78) on the map,
+ (5:4) place object type 0.
+ (3:2) at position (4,7) on the map,
+ (5:1) set the floor to type 1.
+
+(0:50) When countdown timer 12 goes off,
+ (4:1) only where the floor is type 11,
+ (5:17) move any furre present to (18,64), or to someplace nearby if it's occupied.
+
+(0:50) When countdown timer 12 goes off,
+ (4:1) only where the floor is type 11,
+ (5:1) set the floor to type 9.
+
+CONVEYOR BELT
+(0:50) When countdown timer 13 goes off,
+ (3:2) at position (50,88) on the map,
+ (5:23) swap the object with the object at (52,89).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (52,89) on the map,
+ (5:23) swap the object with the object at (52,90).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (52,90) on the map,
+ (5:23) swap the object with the object at (54,91).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (54,91) on the map,
+ (5:23) swap the object with the object at (54,90).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (54,90) on the map,
+ (5:23) swap the object with the object at (56,89).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (56,89) on the map,
+ (5:23) swap the object with the object at (56,88).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (56,88) on the map,
+ (5:23) swap the object with the object at (58,87).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (58,87) on the map,
+ (5:23) swap the object with the object at (58,86).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (58,86) on the map,
+ (5:23) swap the object with the object at (60,85).
+
+(0:50) When countdown timer 13 goes off,
+(1:1011) and position (50,89) is floor type 4,
+ (3:2) at position (50,89) on the map,
+ (5:1) set the floor to type 0.
+ (5:50) set countdown timer 14 to go off in 2 seconds.
+
+(0:50) When countdown timer 13 goes off,
+(1:1011) and position (50,89) is floor type 3,
+ (3:2) at position (50,89) on the map,
+ (5:1) set the floor to type 4.
+
+(0:50) When countdown timer 13 goes off,
+(1:1011) and position (50,89) is floor type 2,
+ (3:2) at position (50,89) on the map,
+ (5:1) set the floor to type 3.
+
+(0:50) When countdown timer 13 goes off,
+(1:1011) and position (50,89) is floor type 1,
+ (3:2) at position (50,89) on the map,
+ (5:1) set the floor to type 2.
+
+(0:50) When countdown timer 13 goes off,
+(1:1011) and position (50,89) is floor type 0,
+ (3:2) at position (50,89) on the map,
+ (5:1) set the floor to type 1.
+ (3:2) at position (54,93) on the map,
+ (5:1) set the floor to type 0.
+
+DISHES STOCKED
+(0:50) When countdown timer 14 goes off,
+(1:1013) and position (52,85) is object type 403,
+ (3:2) at position (52,84) on the map,
+ (5:4) place object type 403.
+
+(0:50) When countdown timer 14 goes off,
+(1:1013) and position (50,86) is object type 403,
+ (3:2) at position (52,85) on the map,
+ (5:4) place object type 403.
+
+(0:50) When countdown timer 14 goes off,
+(1:1013) and position (50,87) is object type 403,
+ (3:2) at position (50,86) on the map,
+ (5:4) place object type 403.
+
+(0:50) When countdown timer 14 goes off,
+(1:1013) and position (48,88) is object type 403,
+ (3:2) at position (50,87) on the map,
+ (5:4) place object type 403.
+
+(0:50) When countdown timer 14 goes off,
+(1:1013) and position (48,88) is object type 404,
+ (3:2) at position (48,88) on the map,
+ (5:4) place object type 403.
+
+CONVEYOR BELT
+(0:50) When countdown timer 15 goes off,
+(1:1013) and position (60,85) is object type 191,
+(1:1013) and position (58,86) is object type 61,
+ (3:2) at position (60,85) on the map,
+ (5:23) swap the object with the object at (58,86).
+ (5:1000) redraw the screen and show everything that's just changed.
+(0:50) When countdown timer 15 goes off,
+(1:1013) and position (58,87) is object type 61,
+ (3:2) at position (58,86) on the map,
+ (5:23) swap the object with the object at (58,87).
+ (5:1000) redraw the screen and show everything that's just changed.
+(0:50) When countdown timer 15 goes off,
+(1:1013) and position (56,88) is object type 61,
+ (3:2) at position (58,87) on the map,
+ (5:23) swap the object with the object at (56,88).
+ (5:1000) redraw the screen and show everything that's just changed.
+(0:50) When countdown timer 15 goes off,
+(1:1013) and position (56,89) is object type 61,
+ (3:2) at position (56,88) on the map,
+ (5:23) swap the object with the object at (56,89).
+ (5:1000) redraw the screen and show everything that's just changed.
+(0:50) When countdown timer 15 goes off,
+(1:1013) and position (54,90) is object type 61,
+ (3:2) at position (56,89) on the map,
+ (5:23) swap the object with the object at (54,90).
+ (5:1000) redraw the screen and show everything that's just changed.
+(0:50) When countdown timer 15 goes off,
+(1:1013) and position (54,91) is object type 61,
+ (3:2) at position (54,90) on the map,
+ (5:23) swap the object with the object at (54,91).
+ (5:1000) redraw the screen and show everything that's just changed.
+(0:50) When countdown timer 15 goes off,
+(1:1013) and position (52,90) is object type 61,
+ (3:2) at position (54,91) on the map,
+ (5:23) swap the object with the object at (52,90).
+ (5:1000) redraw the screen and show everything that's just changed.
+(0:50) When countdown timer 15 goes off,
+(1:1013) and position (52,89) is object type 61,
+ (3:2) at position (52,90) on the map,
+ (5:23) swap the object with the object at (52,89).
+ (5:1000) redraw the screen and show everything that's just changed.
+(0:50) When countdown timer 15 goes off,
+(1:1013) and position (50,88) is object type 61,
+ (3:2) at position (52,89) on the map,
+ (5:23) swap the object with the object at (50,88).
+ (5:1000) redraw the screen and show everything that's just changed.
+
+(0:50) When countdown timer 15 goes off,
+(1:1011) and position (54,93) is floor type 0,
+ (5:50) set countdown timer 15 to go off in 2 seconds.
+
+THE DIP PART I
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (78,33) is object type 39,
+ (3:2) at position (78,33) on the map,
+ (5:21) move the object to (76,32).
+ (5:4) place object type 4.
+ (3:2) at position (78,34) on the map,
+ (5:16) move any furre present to (78,33) if there's nobody already there.
+ (3:2) at position (80,35) on the map,
+ (5:16) move any furre present to (78,34) if there's nobody already there.
+ (3:2) at position (80,36) on the map,
+ (5:16) move any furre present to (80,35) if there's nobody already there.
+ (3:2) at position (82,35) on the map,
+ (5:16) move any furre present to (80,36) if there's nobody already there.
+ (3:2) at position (82,34) on the map,
+ (5:16) move any furre present to (82,35) if there's nobody already there.
+ (3:2) at position (84,33) on the map,
+ (5:21) move the object to (82,34).
+
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (78,34) is object type 39,
+ (3:2) at position (78,34) on the map,
+ (5:21) move the object to (78,33).
+ (5:4) place object type 4.
+ (3:2) at position (80,35) on the map,
+ (5:16) move any furre present to (78,34) if there's nobody already there.
+ (3:2) at position (80,36) on the map,
+ (5:16) move any furre present to (80,35) if there's nobody already there.
+ (3:2) at position (82,35) on the map,
+ (5:16) move any furre present to (80,36) if there's nobody already there.
+ (3:2) at position (82,34) on the map,
+ (5:16) move any furre present to (82,35) if there's nobody already there.
+ (3:2) at position (84,33) on the map,
+ (5:16) move any furre present to (82,34) if there's nobody already there.
+ (3:2) at position (84,32) on the map,
+ (5:21) move the object to (84,33).
+
+NEW COASTER PART III
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (74,17) is object type 39,
+ (3:2) at position (74,15) on the map,
+ (5:4) place object type 162.
+ (3:2) at position (68,21) on the map,
+ (5:21) move the object to (68,22).
+ (3:2) at position (74,17) on the map,
+ (5:21) move the object to (74,16).
+ (5:4) place object type 3.
+ (5:50) set countdown timer 2 to go off in 3 seconds.
+
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (72,18) is object type 39,
+ (3:2) at position (68,21) on the map,
+ (5:4) place object type 40.
+ (3:2) at position (72,18) on the map,
+ (5:21) move the object to (74,17).
+ (5:4) place object type 3.
+
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (72,19) is object type 39,
+ (3:2) at position (72,19) on the map,
+ (5:21) move the object to (72,18).
+ (5:4) place object type 3.
+
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (70,20) is object type 39,
+ (3:2) at position (70,20) on the map,
+ (5:21) move the object to (72,19).
+ (5:4) place object type 3.
+
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (70,21) is object type 39,
+ (3:2) at position (70,21) on the map,
+ (5:21) move the object to (70,20).
+ (5:4) place object type 3.
+
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (68,22) is object type 39,
+ (3:2) at position (68,22) on the map,
+ (5:21) move the object to (70,21).
+ (5:4) place object type 3.
+
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (68,21) is object type 39,
+ (3:2) at position (68,21) on the map,
+ (5:21) move the object to (68,22).
+ (5:4) place object type 3.
+
+COASTER PART FOUR
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (84,16) is object type 39,
+ (3:4) within the rectangle (82,14) - (86,20),
+ (5:6) swap object types 187 and 188.
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (84,16) on the map,
+ (5:21) move the object to (84,18).
+ (5:4) place object type 4.
+ (3:2) at position (84,15) on the map,
+ (5:16) move any furre present to (84,16) if there's nobody already there.
+ (3:2) at position (82,14) on the map,
+ (5:16) move any furre present to (84,15) if there's nobody already there.
+ (3:2) at position (82,13) on the map,
+ (5:16) move any furre present to (82,14) if there's nobody already there.
+ (3:2) at position (80,12) on the map,
+ (5:16) move any furre present to (82,13) if there's nobody already there.
+ (3:2) at position (80,11) on the map,
+ (5:16) move any furre present to (80,12) if there's nobody already there.
+ (3:2) at position (78,12) on the map,
+ (5:21) move the object to (80,11).
+ (4:0) clear all filtering,
+  (5:50) set countdown timer 4 to go off in 1 seconds.
+
+COASTER PART SIX
+(0:100) When 1 seconds have passed, offset by 0,
+(1:1013) and position (74,32) is object type 39,
+ (3:2) at position (74,32) on the map,
+ (5:21) move the object to (74,33).
+ (5:4) place object type 4.
+ (3:2) at position (76,31) on the map,
+ (5:16) move any furre present to (74,32) if there's nobody already there.
+ (3:2) at position (76,32) on the map,
+ (5:16) move any furre present to (76,31) if there's nobody already there.
+ (3:2) at position (78,33) on the map,
+ (5:16) move any furre present to (76,32) if there's nobody already there.
+ (3:2) at position (78,34) on the map,
+ (5:16) move any furre present to (78,33) if there's nobody already there.
+ (3:2) at position (80,35) on the map,
+ (5:16) move any furre present to (78,34) if there's nobody already there.
+ (3:2) at position (80,36) on the map,
+ (5:21) move the object to (80,35).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (74,33) on the map,
+ (5:21) move the object to (72,34).
+ (5:4) place object type 4.
+ (3:2) at position (74,32) on the map,
+ (5:16) move any furre present to (74,33) if there's nobody already there.
+ (3:2) at position (76,31) on the map,
+ (5:16) move any furre present to (74,32) if there's nobody already there.
+ (3:2) at position (76,32) on the map,
+ (5:16) move any furre present to (76,31) if there's nobody already there.
+ (3:2) at position (78,33) on the map,
+ (5:16) move any furre present to (76,32) if there's nobody already there.
+ (3:2) at position (78,34) on the map,
+ (5:16) move any furre present to (78,33) if there's nobody already there.
+ (3:2) at position (80,35) on the map,
+ (5:21) move the object to (78,34).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (72,34) on the map,
+ (5:21) move the object to (72,35).
+ (5:4) place object type 4.
+ (3:2) at position (74,33) on the map,
+ (5:16) move any furre present to (72,34) if there's nobody already there.
+ (3:2) at position (74,32) on the map,
+ (5:16) move any furre present to (74,33) if there's nobody already there.
+ (3:2) at position (76,31) on the map,
+ (5:16) move any furre present to (74,32) if there's nobody already there.
+ (3:2) at position (76,32) on the map,
+ (5:16) move any furre present to (76,31) if there's nobody already there.
+ (3:2) at position (78,33) on the map,
+ (5:16) move any furre present to (76,32) if there's nobody already there.
+ (3:2) at position (78,34) on the map,
+ (5:21) move the object to (78,33).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (72,35) on the map,
+ (5:21) move the object to (70,36).
+ (5:4) place object type 4.
+ (3:2) at position (72,34) on the map,
+ (5:16) move any furre present to (72,35) if there's nobody already there.
+ (3:2) at position (74,33) on the map,
+ (5:16) move any furre present to (72,34) if there's nobody already there.
+ (3:2) at position (74,32) on the map,
+ (5:16) move any furre present to (74,33) if there's nobody already there.
+ (3:2) at position (76,31) on the map,
+ (5:16) move any furre present to (74,32) if there's nobody already there.
+ (3:2) at position (76,32) on the map,
+ (5:16) move any furre present to (76,31) if there's nobody already there.
+ (3:2) at position (78,33) on the map,
+ (5:21) move the object to (76,32).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (70,36) on the map,
+ (5:21) move the object to (70,35).
+ (5:4) place object type 4.
+ (3:2) at position (72,35) on the map,
+ (5:16) move any furre present to (70,36) if there's nobody already there.
+ (3:2) at position (72,34) on the map,
+ (5:16) move any furre present to (72,35) if there's nobody already there.
+ (3:2) at position (74,33) on the map,
+ (5:16) move any furre present to (72,34) if there's nobody already there.
+ (3:2) at position (74,32) on the map,
+ (5:16) move any furre present to (74,33) if there's nobody already there.
+ (3:2) at position (76,31) on the map,
+ (5:16) move any furre present to (74,32) if there's nobody already there.
+ (3:2) at position (76,32) on the map,
+ (5:21) move the object to (76,31).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (70,35) on the map,
+ (5:21) move the object to (68,34).
+ (5:4) place object type 4.
+ (3:2) at position (70,36) on the map,
+ (5:16) move any furre present to (70,35) if there's nobody already there.
+ (3:2) at position (72,35) on the map,
+ (5:16) move any furre present to (70,36) if there's nobody already there.
+ (3:2) at position (72,34) on the map,
+ (5:16) move any furre present to (72,35) if there's nobody already there.
+ (3:2) at position (74,33) on the map,
+ (5:16) move any furre present to (72,34) if there's nobody already there.
+ (3:2) at position (74,32) on the map,
+ (5:16) move any furre present to (74,33) if there's nobody already there.
+ (3:2) at position (76,31) on the map,
+ (5:21) move the object to (74,32).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (68,34) on the map,
+ (5:21) move the object to (68,33).
+ (5:4) place object type 4.
+ (3:2) at position (70,35) on the map,
+ (5:16) move any furre present to (68,34) if there's nobody already there.
+ (3:2) at position (70,36) on the map,
+ (5:16) move any furre present to (70,35) if there's nobody already there.
+ (3:2) at position (72,35) on the map,
+ (5:16) move any furre present to (70,36) if there's nobody already there.
+ (3:2) at position (72,34) on the map,
+ (5:16) move any furre present to (72,35) if there's nobody already there.
+ (3:2) at position (74,33) on the map,
+ (5:16) move any furre present to (72,34) if there's nobody already there.
+ (3:2) at position (74,32) on the map,
+ (5:21) move the object to (74,33).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (68,33) on the map,
+ (5:21) move the object to (66,32).
+ (5:4) place object type 4.
+ (3:2) at position (68,34) on the map,
+ (5:16) move any furre present to (68,33) if there's nobody already there.
+ (3:2) at position (70,35) on the map,
+ (5:16) move any furre present to (68,34) if there's nobody already there.
+ (3:2) at position (70,36) on the map,
+ (5:16) move any furre present to (70,35) if there's nobody already there.
+ (3:2) at position (72,35) on the map,
+ (5:16) move any furre present to (70,36) if there's nobody already there.
+ (3:2) at position (72,34) on the map,
+ (5:16) move any furre present to (72,35) if there's nobody already there.
+ (3:2) at position (74,33) on the map,
+ (5:21) move the object to (72,34).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (66,32) on the map,
+ (5:21) move the object to (66,31).
+ (5:4) place object type 4.
+ (3:2) at position (68,33) on the map,
+ (5:16) move any furre present to (66,32) if there's nobody already there.
+ (3:2) at position (68,34) on the map,
+ (5:16) move any furre present to (68,33) if there's nobody already there.
+ (3:2) at position (70,35) on the map,
+ (5:16) move any furre present to (68,34) if there's nobody already there.
+ (3:2) at position (70,36) on the map,
+ (5:16) move any furre present to (70,35) if there's nobody already there.
+ (3:2) at position (72,35) on the map,
+ (5:16) move any furre present to (70,36) if there's nobody already there.
+ (3:2) at position (72,34) on the map,
+ (5:21) move the object to (72,35).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (66,31) on the map,
+ (5:21) move the object to (64,30).
+ (5:4) place object type 4.
+ (3:2) at position (66,32) on the map,
+ (5:16) move any furre present to (66,31) if there's nobody already there.
+ (3:2) at position (68,33) on the map,
+ (5:16) move any furre present to (66,32) if there's nobody already there.
+ (3:2) at position (68,34) on the map,
+ (5:16) move any furre present to (68,33) if there's nobody already there.
+ (3:2) at position (70,35) on the map,
+ (5:16) move any furre present to (68,34) if there's nobody already there.
+ (3:2) at position (70,36) on the map,
+ (5:16) move any furre present to (70,35) if there's nobody already there.
+ (3:2) at position (72,35) on the map,
+ (5:21) move the object to (70,36).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (64,30) on the map,
+ (5:21) move the object to (64,29).
+ (5:4) place object type 4.
+ (3:2) at position (66,31) on the map,
+ (5:16) move any furre present to (64,30) if there's nobody already there.
+ (3:2) at position (66,32) on the map,
+ (5:16) move any furre present to (66,31) if there's nobody already there.
+ (3:2) at position (68,33) on the map,
+ (5:16) move any furre present to (66,32) if there's nobody already there.
+ (3:2) at position (68,34) on the map,
+ (5:16) move any furre present to (68,33) if there's nobody already there.
+ (3:2) at position (70,35) on the map,
+ (5:16) move any furre present to (68,34) if there's nobody already there.
+ (3:2) at position (70,36) on the map,
+ (5:21) move the object to (70,35).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (64,29) on the map,
+ (5:21) move the object to (62,28).
+ (5:4) place object type 4.
+ (3:2) at position (64,30) on the map,
+ (5:16) move any furre present to (64,29) if there's nobody already there.
+ (3:2) at position (66,31) on the map,
+ (5:16) move any furre present to (64,30) if there's nobody already there.
+ (3:2) at position (66,32) on the map,
+ (5:16) move any furre present to (66,31) if there's nobody already there.
+ (3:2) at position (68,33) on the map,
+ (5:16) move any furre present to (66,32) if there's nobody already there.
+ (3:2) at position (68,34) on the map,
+ (5:16) move any furre present to (68,33) if there's nobody already there.
+ (3:2) at position (70,35) on the map,
+ (5:21) move the object to (68,34).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (62,28) on the map,
+ (5:21) move the object to (62,27).
+ (5:4) place object type 4.
+ (3:2) at position (64,29) on the map,
+ (5:16) move any furre present to (62,28) if there's nobody already there.
+ (3:2) at position (64,30) on the map,
+ (5:16) move any furre present to (64,29) if there's nobody already there.
+ (3:2) at position (66,31) on the map,
+ (5:16) move any furre present to (64,30) if there's nobody already there.
+ (3:2) at position (66,32) on the map,
+ (5:16) move any furre present to (66,31) if there's nobody already there.
+ (3:2) at position (68,33) on the map,
+ (5:16) move any furre present to (66,32) if there's nobody already there.
+ (3:2) at position (68,34) on the map,
+ (5:21) move the object to (68,33).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (62,27) on the map,
+ (5:21) move the object to (60,26).
+ (5:4) place object type 4.
+ (3:2) at position (62,28) on the map,
+ (5:16) move any furre present to (62,27) if there's nobody already there.
+ (3:2) at position (64,29) on the map,
+ (5:16) move any furre present to (62,28) if there's nobody already there.
+ (3:2) at position (64,30) on the map,
+ (5:16) move any furre present to (64,29) if there's nobody already there.
+ (3:2) at position (66,31) on the map,
+ (5:16) move any furre present to (64,30) if there's nobody already there.
+ (3:2) at position (66,32) on the map,
+ (5:16) move any furre present to (66,31) if there's nobody already there.
+ (3:2) at position (68,33) on the map,
+ (5:21) move the object to (66,32).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (60,26) on the map,
+ (5:21) move the object to (60,25).
+ (5:4) place object type 4.
+ (3:2) at position (62,27) on the map,
+ (5:16) move any furre present to (60,26) if there's nobody already there.
+ (3:2) at position (62,28) on the map,
+ (5:16) move any furre present to (62,27) if there's nobody already there.
+ (3:2) at position (64,29) on the map,
+ (5:16) move any furre present to (62,28) if there's nobody already there.
+ (3:2) at position (64,30) on the map,
+ (5:16) move any furre present to (64,29) if there's nobody already there.
+ (3:2) at position (66,31) on the map,
+ (5:16) move any furre present to (64,30) if there's nobody already there.
+ (3:2) at position (66,32) on the map,
+ (5:21) move the object to (66,31).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (60,25) on the map,
+ (5:21) move the object to (58,24).
+ (5:4) place object type 4.
+ (3:2) at position (60,26) on the map,
+ (5:16) move any furre present to (60,25) if there's nobody already there.
+ (3:2) at position (62,27) on the map,
+ (5:16) move any furre present to (60,26) if there's nobody already there.
+ (3:2) at position (62,28) on the map,
+ (5:16) move any furre present to (62,27) if there's nobody already there.
+ (3:2) at position (64,29) on the map,
+ (5:16) move any furre present to (62,28) if there's nobody already there.
+ (3:2) at position (64,30) on the map,
+ (5:16) move any furre present to (64,29) if there's nobody already there.
+ (3:2) at position (66,31) on the map,
+ (5:21) move the object to (64,30).
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (58,23) on the map,
+ (5:4) place object type 39.
+ (3:2) at position (58,24) on the map,
+ (5:4) place object type 4.
+ (3:2) at position (60,25) on the map,
+ (5:16) move any furre present to (58,24) if there's nobody already there.
+ (3:2) at position (60,26) on the map,
+ (5:16) move any furre present to (60,25) if there's nobody already there.
+ (3:2) at position (62,27) on the map,
+ (5:16) move any furre present to (60,26) if there's nobody already there.
+ (3:2) at position (62,28) on the map,
+ (5:16) move any furre present to (62,27) if there's nobody already there.
+ (3:2) at position (64,29) on the map,
+ (5:4) place object type 40.
+ (5:16) move any furre present to (62,28) if there's nobody already there.
+ (5:1000) redraw the screen and show everything that's just changed.
+ (3:2) at position (64,30) on the map,
+ (5:4) place object type 0.
+ (3:2) at position (74,15) on the map,
+ (5:4) place object type 162.
+ (4:0) clear all filtering,
+ (5:50) set countdown timer 5 to go off in 5 seconds.
+
+THE DIP PART II
+(0:100) When 2 seconds have passed, offset by 0,
+(1:1013) and position (76,31) is object type 39,
+ (3:2) at position (76,31) on the map,
+ (5:21) move the object to (74,32).
+ (5:4) place object type 4.
+ (3:2) at position (76,32) on the map,
+ (5:16) move any furre present to (76,31) if there's nobody already there.
+ (3:2) at position (78,33) on the map,
+ (5:16) move any furre present to (76,32) if there's nobody already there.
+ (3:2) at position (78,34) on the map,
+ (5:16) move any furre present to (78,33) if there's nobody already there.
+ (3:2) at position (80,35) on the map,
+ (5:16) move any furre present to (78,34) if there's nobody already there.
+ (3:2) at position (80,36) on the map,
+ (5:16) move any furre present to (80,35) if there's nobody already there.
+ (3:2) at position (82,35) on the map,
+ (5:21) move the object to (80,36).
+
+(0:100) When 2 seconds have passed, offset by 0,
+(1:1013) and position (76,32) is object type 39,
+ (3:2) at position (76,32) on the map,
+ (5:21) move the object to (76,31).
+ (5:4) place object type 4.
+ (3:2) at position (78,33) on the map,
+ (5:16) move any furre present to (76,32) if there's nobody already there.
+ (3:2) at position (78,34) on the map,
+ (5:16) move any furre present to (78,33) if there's nobody already there.
+ (3:2) at position (80,35) on the map,
+ (5:16) move any furre present to (78,34) if there's nobody already there.
+ (3:2) at position (80,36) on the map,
+ (5:16) move any furre present to (80,35) if there's nobody already there.
+ (3:2) at position (82,35) on the map,
+ (5:16) move any furre present to (80,36) if there's nobody already there.
+ (3:2) at position (82,34) on the map,
+ (5:21) move the object to (82,35).
+
+INTO UNDERGROUND PART THREE
+(0:100) When 2 seconds have passed, offset by 0,
+(1:1013) and position (52,21) is object type 39,
+ (3:2) at position (52,21) on the map,
+ (5:4) place object type 4.
+ (5:8) play sound 5 to everyone on the map.
+ (4:0) clear all filtering,
+ (5:50) set countdown timer 8 to go off in 3 seconds.
+
+(0:100) When 2 seconds have passed, offset by 0,
+(1:1013) and position (50,22) is object type 39,
+ (3:2) at position (50,22) on the map,
+ (5:21) move the object to (52,21).
+ (3:2) at position (56,22) on the map,
+ (5:4) place object type 0.
+
+(0:100) When 2 seconds have passed, offset by 0,
+(1:1013) and position (52,23) is object type 39,
+ (3:2) at position (52,23) on the map,
+ (5:21) move the object to (50,22).
+ (3:2) at position (58,23) on the map,
+ (5:21) move the object to (56,22).
+
+COASTER PART TWO
+(0:100) When 2 seconds have passed, offset by 0,
+(1:1013) and position (84,15) is object type 39,
+ (3:2) at position (84,15) on the map,
+ (5:21) move the object to (84,16).
+ (5:4) place object type 4.
+ (3:2) at position (82,14) on the map,
+ (5:16) move any furre present to (84,15) if there's nobody already there.
+ (3:2) at position (82,13) on the map,
+ (5:16) move any furre present to (82,14) if there's nobody already there.
+ (3:2) at position (80,12) on the map,
+ (5:16) move any furre present to (82,13) if there's nobody already there.
+ (3:2) at position (80,11) on the map,
+ (5:16) move any furre present to (80,12) if there's nobody already there.
+ (3:2) at position (78,12) on the map,
+ (5:16) move any furre present to (80,11) if there's nobody already there.
+ (3:2) at position (78,13) on the map,
+ (5:21) move the object to (78,12).
+
+(0:100) When 2 seconds have passed, offset by 0,
+(1:1013) and position (82,14) is object type 39,
+ (3:2) at position (82,14) on the map,
+ (5:21) move the object to (84,15).
+ (5:4) place object type 4.
+ (3:2) at position (82,13) on the map,
+ (5:16) move any furre present to (82,14) if there's nobody already there.
+ (3:2) at position (80,12) on the map,
+ (5:16) move any furre present to (82,13) if there's nobody already there.
+ (3:2) at position (80,11) on the map,
+ (5:16) move any furre present to (80,12) if there's nobody already there.
+ (3:2) at position (78,12) on the map,
+ (5:16) move any furre present to (80,11) if there's nobody already there.
+ (3:2) at position (78,13) on the map,
+ (5:16) move any furre present to (78,12) if there's nobody already there.
+ (3:2) at position (76,14) on the map,
+ (5:21) move the object to (78,13).
+
+(0:100) When 2 seconds have passed, offset by 0,
+(1:1013) and position (82,13) is object type 39,
+ (3:2) at position (82,13) on the map,
+ (5:21) move the object to (82,14).
+ (5:4) place object type 4.
+ (3:2) at position (80,12) on the map,
+ (5:16) move any furre present to (82,13) if there's nobody already there.
+ (3:2) at position (80,11) on the map,
+ (5:16) move any furre present to (80,12) if there's nobody already there.
+ (3:2) at position (78,12) on the map,
+ (5:16) move any furre present to (80,11) if there's nobody already there.
+ (3:2) at position (78,13) on the map,
+ (5:16) move any furre present to (78,12) if there's nobody already there.
+ (3:2) at position (76,14) on the map,
+ (5:16) move any furre present to (78,13) if there's nobody already there.
+ (3:2) at position (76,15) on the map,
+ (5:21) move the object to (76,14).
+
+(0:100) When 2 seconds have passed, offset by 0,
+(1:1013) and position (80,12) is object type 39,
+ (3:2) at position (80,12) on the map,
+ (5:21) move the object to (82,13).
+ (5:4) place object type 4.
+ (3:2) at position (80,11) on the map,
+ (5:16) move any furre present to (80,12) if there's nobody already there.
+ (3:2) at position (78,12) on the map,
+ (5:16) move any furre present to (80,11) if there's nobody already there.
+ (3:2) at position (78,13) on the map,
+ (5:16) move any furre present to (78,12) if there's nobody already there.
+ (3:2) at position (76,14) on the map,
+ (5:16) move any furre present to (78,13) if there's nobody already there.
+ (3:2) at position (76,15) on the map,
+ (5:16) move any furre present to (76,14) if there's nobody already there.
+ (3:2) at position (74,16) on the map,
+ (5:21) move the object to (76,15).
+
+(0:100) When 2 seconds have passed, offset by 0,
+(1:1013) and position (80,11) is object type 39,
+ (3:2) at position (80,11) on the map,
+ (5:21) move the object to (80,12).
+ (5:4) place object type 4.
+ (3:2) at position (78,12) on the map,
+ (5:16) move any furre present to (80,11) if there's nobody already there.
+ (3:2) at position (78,13) on the map,
+ (5:16) move any furre present to (78,12) if there's nobody already there.
+ (3:2) at position (76,14) on the map,
+ (5:16) move any furre present to (78,13) if there's nobody already there.
+ (3:2) at position (76,15) on the map,
+ (5:16) move any furre present to (76,14) if there's nobody already there.
+ (3:2) at position (74,16) on the map,
+ (5:16) move any furre present to (76,15) if there's nobody already there.
+ (3:2) at position (74,17) on the map,
+ (5:21) move the object to (74,16).
+
+NEW COASTER PART II
+(0:100) When 2 seconds have passed, offset by 0,
+(1:1013) and position (66,20) is object type 39,
+ (3:2) at position (66,20) on the map,
+ (5:21) move the object to (68,21).
+
+(0:100) When 2 seconds have passed, offset by 0,
+(1:1013) and position (66,19) is object type 39,
+ (3:2) at position (66,19) on the map,
+ (5:21) move the object to (66,20).
+
+(0:100) When 2 seconds have passed, offset by 0,
+(1:1013) and position (64,18) is object type 39,
+ (3:2) at position (64,18) on the map,
+ (5:21) move the object to (66,19).
+
+(0:100) When 2 seconds have passed, offset by 0,
+(1:1013) and position (64,17) is object type 39,
+ (3:2) at position (64,17) on the map,
+ (5:21) move the object to (64,18).
+
+CONVEYOR BELT CHECK
+(0:100) When 2 seconds have passed, offset by 1,
+(1:1011) and position (54,93) is floor type 0,
+(1:1013) and position (50,88) is object type 191,
+(1:1013) and position (52,89) is object type 191,
+(1:1013) and position (52,90) is object type 191,
+(1:1013) and position (54,91) is object type 191,
+(1:1013) and position (54,90) is object type 191,
+(1:1013) and position (56,89) is object type 191,
+(1:1013) and position (56,88) is object type 191,
+(1:1013) and position (58,87) is object type 191,
+(1:1013) and position (58,86) is object type 191,
+(1:1013) and position (60,85) is object type 191,
+ (3:2) at position (54,93) on the map,
+ (5:1) set the floor to type 1.
+
+INTO UNDERGROUND PART TWO
+(0:100) When 3 seconds have passed, offset by 0,
+(1:1013) and position (52,22) is object type 39,
+ (3:2) at position (52,22) on the map,
+ (5:21) move the object to (52,23).
+ (3:2) at position (58,23) on the map,
+ (5:21) move the object to (56,22).
+ (3:2) at position (58,24) on the map,
+ (5:21) move the object to (58,23).
+
+(0:100) When 3 seconds have passed, offset by 0,
+(1:1013) and position (54,21) is object type 39,
+ (3:2) at position (54,21) on the map,
+ (5:21) move the object to (52,22).
+ (3:2) at position (58,24) on the map,
+ (5:21) move the object to (56,22).
+ (3:2) at position (60,25) on the map,
+ (5:21) move the object to (58,24).
+
+(0:100) When 3 seconds have passed, offset by 0,
+(1:1013) and position (54,20) is object type 39,
+ (3:2) at position (54,20) on the map,
+ (5:21) move the object to (54,21).
+ (3:2) at position (60,25) on the map,
+ (5:21) move the object to (56,22).
+ (3:2) at position (60,26) on the map,
+ (5:21) move the object to (60,25).
+
+COASTER START PART II
+(0:100) When 3 seconds have passed, offset by 0,
+(1:1013) and position (78,12) is object type 39,
+ (3:2) at position (78,12) on the map,
+ (5:21) move the object to (80,11).
+ (5:4) place object type 4.
+ (3:2) at position (78,13) on the map,
+ (5:16) move any furre present to (78,12) if there's nobody already there.
+ (3:2) at position (76,14) on the map,
+ (5:16) move any furre present to (78,13) if there's nobody already there.
+ (3:2) at position (76,15) on the map,
+ (5:16) move any furre present to (76,14) if there's nobody already there.
+ (3:2) at position (74,16) on the map,
+ (5:16) move any furre present to (76,15) if there's nobody already there.
+ (3:2) at position (74,17) on the map,
+ (5:16) move any furre present to (74,16) if there's nobody already there.
+ (3:2) at position (72,18) on the map,
+ (5:21) move the object to (74,17).
+
+(0:100) When 3 seconds have passed, offset by 0,
+(1:1013) and position (78,13) is object type 39,
+ (3:2) at position (78,13) on the map,
+ (5:21) move the object to (78,12).
+ (5:4) place object type 4.
+ (3:2) at position (76,14) on the map,
+ (5:16) move any furre present to (78,13) if there's nobody already there.
+ (3:2) at position (76,15) on the map,
+ (5:16) move any furre present to (76,14) if there's nobody already there.
+ (3:2) at position (74,16) on the map,
+ (5:16) move any furre present to (76,15) if there's nobody already there.
+ (3:2) at position (74,17) on the map,
+ (5:16) move any furre present to (74,16) if there's nobody already there.
+ (3:2) at position (72,18) on the map,
+ (5:16) move any furre present to (74,17) if there's nobody already there.
+ (3:2) at position (72,19) on the map,
+ (5:21) move the object to (72,18).
+
+(0:100) When 3 seconds have passed, offset by 0,
+(1:1013) and position (76,14) is object type 39,
+ (3:2) at position (76,14) on the map,
+ (5:21) move the object to (78,13).
+ (5:4) place object type 4.
+ (3:2) at position (76,15) on the map,
+ (5:16) move any furre present to (76,14) if there's nobody already there.
+ (3:2) at position (74,16) on the map,
+ (5:16) move any furre present to (76,15) if there's nobody already there.
+ (3:2) at position (74,17) on the map,
+ (5:16) move any furre present to (74,16) if there's nobody already there.
+ (3:2) at position (72,18) on the map,
+ (5:16) move any furre present to (74,17) if there's nobody already there.
+ (3:2) at position (72,19) on the map,
+ (5:16) move any furre present to (72,18) if there's nobody already there.
+ (3:2) at position (70,20) on the map,
+ (5:21) move the object to (72,19).
+
+NEW COASTER PART I
+(0:100) When 3 seconds have passed, offset by 0,
+(1:1013) and position (62,16) is object type 39,
+ (3:2) at position (62,16) on the map,
+ (5:21) move the object to (64,17).
+
+(0:100) When 3 seconds have passed, offset by 0,
+(1:1013) and position (62,15) is object type 39,
+ (3:2) at position (62,15) on the map,
+ (5:21) move the object to (62,16).
+
+(0:100) When 3 seconds have passed, offset by 0,
+(1:1013) and position (60,14) is object type 39,
+ (3:2) at position (60,14) on the map,
+ (5:21) move the object to (62,15).
+
+(0:100) When 3 seconds have passed, offset by 0,
+(1:1013) and position (60,13) is object type 39,
+ (3:2) at position (60,13) on the map,
+ (5:21) move the object to (60,14).
+
+COASTER START PART I
+(0:100) When 4 seconds have passed, offset by 0,
+(1:1013) and position (76,15) is object type 39,
+ (3:2) at position (76,15) on the map,
+ (5:21) move the object to (76,14).
+ (5:4) place object type 4.
+ (3:2) at position (74,16) on the map,
+ (5:16) move any furre present to (76,15) if there's nobody already there.
+ (3:2) at position (74,17) on the map,
+ (5:16) move any furre present to (74,16) if there's nobody already there.
+ (3:2) at position (72,18) on the map,
+ (5:16) move any furre present to (74,17) if there's nobody already there.
+ (3:2) at position (72,19) on the map,
+ (5:16) move any furre present to (72,18) if there's nobody already there.
+ (3:2) at position (70,20) on the map,
+ (5:16) move any furre present to (72,19) if there's nobody already there.
+ (3:2) at position (70,21) on the map,
+ (5:21) move the object to (70,20).
+
+(0:100) When 4 seconds have passed, offset by 0,
+(1:1011) and position (74,14) is floor type 1,
+ (3:2) at position (74,16) on the map,
+ (5:21) move the object to (76,15).
+ (5:4) place object type 4.
+ (3:2) at position (74,17) on the map,
+ (5:16) move any furre present to (74,16) if there's nobody already there.
+ (3:2) at position (72,18) on the map,
+ (5:16) move any furre present to (74,17) if there's nobody already there.
+ (3:2) at position (72,19) on the map,
+ (5:16) move any furre present to (72,18) if there's nobody already there.
+ (3:2) at position (70,20) on the map,
+ (5:16) move any furre present to (72,19) if there's nobody already there.
+ (3:2) at position (70,21) on the map,
+ (5:16) move any furre present to (70,20) if there's nobody already there.
+ (3:2) at position (68,22) on the map,
+ (5:21) move the object to (70,21).
+ (3:2) at position (74,14) on the map,
+ (5:1) set the floor to type 0.
+
+INTO UNDERGROUND PART ONE
+(0:100) When 4 seconds have passed, offset by 0,
+(1:1013) and position (56,21) is object type 39,
+ (3:2) at position (56,21) on the map,
+ (5:21) move the object to (54,20).
+ (3:2) at position (60,26) on the map,
+ (5:21) move the object to (56,22).
+ (3:2) at position (62,27) on the map,
+ (5:21) move the object to (60,26).
+
+(0:100) When 4 seconds have passed, offset by 0,
+(1:1013) and position (56,22) is object type 39,
+ (3:2) at position (56,22) on the map,
+ (5:21) move the object to (56,21).
+ (3:2) at position (62,27) on the map,
+ (5:21) move the object to (56,22).
+ (3:2) at position (62,28) on the map,
+ (5:21) move the object to (62,27).
+
+PONGA CLEARANCE FLOWERS
+(0:100) When 180 seconds have passed, offset by 0,
+(1:1013) and position (18,39) is object type 108,
+ (3:2) at position (18,39) on the map,
+ (5:4) place object type 109.
+
+ON EMPTY
+(0:100) When 300 seconds have passed, offset by 0,
+(1:1014) and position (68,78) is not object type 60,
+(1:1014) and position (68,79) is not object type 60,
+(1:1014) and position (66,80) is not object type 60,
+ (3:4) within the rectangle (64,67) - (70,75),
+ (4:3) only where an object type 191 is,
+ (5:4) place object type 61.
+
+PONGA CLEARANCE CLEAR AND GROW
+(0:100) When 360 seconds have passed, offset by 0,
+(1:1013) and position (18,39) is object type 109,
+ (3:4) within the rectangle (8,9) - (88,39),
+ (4:3) only where an object type 41 is,
+ (5:4) place object type 0.
+ (4:0) clear all filtering,
+ (3:2) at position (18,39) on the map,
+ (5:4) place object type 110.
+
+(0:100) When 540 seconds have passed, offset by 0,
+(1:1013) and position (18,39) is object type 110,
+ (3:4) within the rectangle (8,40) - (86,92),
+ (4:3) only where an object type 41 is,
+ (5:4) place object type 0.
+ (4:0) clear all filtering,
+ (3:2) at position (18,39) on the map,
+ (5:4) place object type 111.
+
+BARREL PLACE
+(0:100) When 600 seconds have passed, offset by 0,
+ (4:1) only where the floor is type 96,
+ (5:4) place object type 60.
+
+PONGA FRUITS
+(0:100) When 720 seconds have passed, offset by 0,
+(1:1013) and position (18,39) is object type 111,
+ (3:2) at position (18,39) on the map,
+ (5:4) place object type 112.
+
+
+THE FURREWASH 
+      (0:100) When 2 seconds have passed, offset by 0,
+      (3:4) within the rectangle (30,45) - (38,53),
+      (5:2) change floor type 171 to type 170.
+      (5:2) change floor type 151 to type 171.
+      (5:2) change floor type 150 to type 151.
+      (5:2) change floor type 162 to type 150.
+      (5:2) change floor type 160 to type 162.
+      (5:2) change floor type 170 to type 160.
+
+   A grating goes "Plip". 
+   (0:2) When somebody moves into floor type 160,
+   (1:81) and the triggering furre is within the diamond (34,45) - (34,53),
+      (5:8) play sound 34 to everyone on the map.
+   A dark quilt carpet goes "Drip".
+   (0:2) When somebody moves into floor type 151,
+   (1:81) and the triggering furre is within the diamond (34,45) - (34,53),
+      (5:8) play sound 32 to everyone on the map.
+*   A light quilt carpet goes "Drip2".
+   (0:2) When somebody moves into floor type 150,
+   (1:81) and the triggering furre is within the diamond (34,45) - (34,53),
+      (5:8) play sound 74 to everyone on the map.
+   A white carpet goes "".
+   (0:2) When somebody moves into floor type 171,
+   (1:81) and the triggering furre is within the diamond (34,45) - (34,53),
+      (5:8) play sound 35 to everyone on the map.
+   The center dot goes "drop".
+   (0:2) When somebody moves into floor type 178,
+   (1:81) and the triggering furre is within the diamond (34,45) - (34,53),
+      (5:8) play sound 33 to everyone on the map.
+
+   The OPEN hole drops you into the water!
+   (0:2) When somebody moves into floor type 162,
+      (5:8) play sound 37 to everyone on the map.
+      (5:15) move the triggering furre to (76,40), or to someplace nearby if it's occupied.
+
+RESTAURANT BOOTH
+   (0:3) When somebody moves into object type 37,
+   (1:15) and the triggering furre is facing southwest (down and left),
+   (0:3) When somebody moves into object type 37,
+   (1:14) and the triggering furre is facing southeast (down and right),
+   (5:15) move the triggering furre to (56,67), or to someplace nearby if it's occupied.
+   (0:3) When somebody moves into object type 37,
+   (1:13) and the triggering furre is facing northeast (up and right),
+   (0:3) When somebody moves into object type 37,
+   (1:16) and the triggering furre is facing northwest (up and left),
+   (5:15) move the triggering furre to (54,61), or to someplace nearby if it's occupied.
+
+*   (0:17) When somebody picks up object type 0,
+*   (1:19) and they (moved from/are standing at) position (34,49),
+
+*Endtriggers* 9999 *Endtriggers*
+
+
+       

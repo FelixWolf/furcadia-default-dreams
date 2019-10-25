@@ -1,0 +1,1636 @@
+DSPK V01.00 Furcadia
+MEOVANNI VILLAGE August First, TwoK
+
+// New Stuff - Prevent furres from hoarding pillows
+
+// Timer triggers in buildings where one could block
+0:7 22, 57 5:50 10 30
+0:7 22, 56 5:50 11 30
+0:7 28, 51 5:50 12 30
+0:7 32, 59 5:50 13 30
+0:7 30, 61 5:50 14 30
+0:7 28, 50 5:50 15 30
+0:7 32, 60 5:50 16 30
+0:7 30, 62 5:50 17 30
+0:7 62,106 5:50 18 30
+0:7 56, 99 5:50 19 30
+0:7 54, 99 5:50 20 30
+0:7 64,108 5:50 21 30
+0:7 64,110 5:50 22 30
+
+0:7 26,125 5:50 23 30
+0:7 26,124 5:50 24 30
+0:7 24,112 5:50 25 30
+0:7 24,124 5:50 26 30
+0:7 26,123 5:50 27 30
+0:7 24,113 5:50 28 30
+
+
+// Timer Actions - teleport furres if time's up
+
+0:50 10 3:2 22, 57 5:17 22, 63
+0:50 11 3:2 22, 56 5:17 22, 50
+0:50 12 3:2 28, 51 5:17 22, 50
+0:50 13 3:2 32, 59 5:17 22, 50
+0:50 14 3:2 30, 61 5:17 22, 50
+0:50 15 3:2 28, 50 5:17 30, 45
+0:50 16 3:2 32, 60 5:17 36, 66
+0:50 17 3:2 30, 62 5:17 36, 66
+0:50 18 3:2 62,106 5:17 58,103
+0:50 19 3:2 56, 99 5:17 58,103
+0:50 20 3:2 54, 99 5:17 46,100
+0:50 21 3:2 64,108 5:17 70,108
+0:50 22 3:2 64,110 5:17 70,108
+
+0:50 23 3:2 26,125 5:17 32,122
+0:50 24 3:2 26,124 5:17 32,122
+0:50 25 3:2 24,112 5:17 30,106
+0:50 26 3:2 24,124 5:17 18,116
+0:50 27 3:2 26,123 5:17 18,116
+0:50 28 3:2 24,113 5:17 18,116
+
+// Arrival
+(0:0)
+            (5:300) set variable %StartPosNumber to the value 1.
+            (5:300) set variable %FurreNumber to the value 0.
+            (5:300) set variable %FurreMAX to the value 5.
+            (5:300) set variable %MessageStick to the value 0.
+            (5:210) set entrytext to {<a href=http://www.furcadia.com/maps/meovannivillage.jpg>Meovanni</a> is for friendly conversations and Persona Play - free-form "Let's Pretend" with just one rule, The Consent Rule: If someone else pretends something has happened to you, you don't have to play along unless you want to. If you don't, just ignore it and act like  it never happened to you. Thanks! Use F3 to move between multiple points around the dream.}
+(0:31) When a furre says {entryoff},
+   (1:70) and the triggering furre's name is {emerald|flame},
+(0:31) When a furre says {entryoff},
+   (1:70) and the triggering furre's name is {felorin},
+            (5:210) set entrytext to {}
+
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 1.
+            (5:15) move the triggering furre to (54,42), or to someplace nearby if it's occupied.
+            (5:302) take variable %FurreNumber and add 1 to it.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 2.
+            (5:15) move the triggering furre to (66,116), or to someplace nearby if it's occupied.
+            (5:302) take variable %FurreNumber and add 1 to it.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 3.
+            (5:15) move the triggering furre to (20,64), or to someplace nearby if it's occupied.
+            (5:302) take variable %FurreNumber and add 1 to it.
+
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %FurreNumber is equal to %FurreMAX.
+   (1:202) and variable %StartPosNumber is less than 3.
+            (5:302) take variable %StartPosNumber and add 1 to it.
+            (5:300) set variable %FurreNumber to the value 0.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %FurreNumber is equal to %FurreMAX.
+   (1:200) and variable %StartPosNumber is equal to 3.
+            (5:300) set variable %StartPosNumber to the value 1.
+            (5:300) set variable %FurreNumber to the value 0.
+
+
+
+*F3 Spots
+
+(0:0) When everything is starting up
+(5:41) place object type 254 at (0,0)
+
+(0:19) When someone uses object type 0 
+(3:5) where the triggering furre (moved from/is standing at),
+(5:23) swap the object with the object at (0,0).
+(4:3) only where object type 254 is
+(3:3) within the diamond (68,37) - (68,54),
+(5:201) emit message {Equine Alley} to any furre present.
+(5:17) move any furre present to (18,18), or to someplace nearby if it's occupied.
+(3:3) within the diamond (16,4) - (18,24),
+(5:201) emit message {Leo Park} to any furre present.
+(5:17) move any furre present to (20,66), or to someplace nearby if it's occupied.
+(3:3) within the diamond (20,58) - (22,95),
+(5:201) emit message {Meovanni Stage} to any furre present.
+(5:17) move any furre present to (48,117), or to someplace nearby if it's occupied.
+(3:1) everywhere on the whole map
+(5:201) emit message {Wisdom Tree} to any furre present.
+(5:17) move any furre present to (64,43), or to someplace nearby if it's occupied.
+(3:5) where the triggering furre (moved from/is standing at),
+(5:23) swap the object with the object at (0,0).
+
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 11,
+            (5:15) move the triggering furre to (18,18), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 12,
+            (5:15) move the triggering furre to (20,66), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 13,
+            (5:15) move the triggering furre to (48,117), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 14,
+            (5:15) move the triggering furre to (64,43), or to someplace nearby if it's occupied.
+
+// OSTRIX CHIRRUPS
+(0:3) When somebody moves into object type 302,
+        (5:8) play sound 19 to whoever set off the trigger.
+
+// THEATRE MEOVANNI
+
+  GET ON STAGE
+  (0:7) When somebody moves into position (64,109),
+  (5:14) move the triggering furre to (62,106) if there's nobody already there.
+  5:50 18 30
+  0:7 54 100 1:19 54 99 5:14 56 99 5:50 19 30
+
+  GET OFF STAGE
+  (0:7) When somebody moves into position (64,107),
+  (5:14) move the triggering furre to (64,110) if there's nobody already there.
+  5:50 22 30
+  0:7 54 98 1:19 56 99 5:14 54 99 5:50 20 30
+
+
+// Stage Curtains - Redone by Nikodemus
+
+// Open Curtains:
+  0:19 0 1:17 32 1:1011 62 99 183 1:1013 54 108 202 3:2 62 99 5:1 182 5:50 50 5
+  0:50 50 3:2 54 108 5:4 0 5:50 51 1 
+  0:50 51 3:2 54 107 5:4 0 3:2 56 109 5:4 0 5:50 52 1 
+  0:50 52 3:2 52 106 5:4 0 3:2 56 110 5:4 0 5:50 53 1 
+  0:50 53 3:2 52 105 5:4 0 3:2 58 111 5:4 0 3:2 62 99 5:1 180 5:50 54 60 
+// one minute before curtains can be closed --------------------------^^
+  0:50 54 3:2 62 99 5:1 183
+
+// Close Curtains
+  0:19 0 1:17 32 1:1011 62 99 183 1:1013 54 108 0 3:2 62 99 5:1 182 5:50 60 5
+  0:50 60 3:2 52 105 5:4 202 3:2 58 111 5:4 202 5:50 61 1 
+  0:50 61 3:2 52 106 5:4 202 3:2 56 110 5:4 202 5:50 62 1 
+  0:50 62 3:2 54 107 5:4 202 3:2 56 109 5:4 202 5:50 63 1 
+  0:50 63 3:2 54 108 5:4 202 3:2 62 99 5:1 180 5:50 64 60 
+// five minutes before curtains can be opened again ---^^^
+  0:50 64 3:2 62 99 5:1 183
+
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %MessageStick is equal to 0,
+            (5:312) set variable %EmitMessage to the total of rolling 1 dice with 233 sides plus 0.
+            (5:300) set variable %MessageStick to the value 1.
+            (5:50) set countdown timer 200 to go off in 60 seconds.
+
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 1.
+            (5:200) emit message {The Wisdom Tree speaks: How much more grievous are the consequences of anger than the causes of it. -Marcus Aurelius} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 2.
+            (5:200) emit message {The Wisdom Tree intones: Speak when you are angry and you will make the best speech you will ever regret. -Ambrose Bierce} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 3.
+            (5:200) emit message {The Wisdom Tree imparts: Holding on to anger is like grasping a hot coal with the intent of throwing it at someone else; you are the one who gets burned. -Buddha} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 4.
+            (5:200) emit message {The Wisdom Tree: For every minute you remain angry, you give up sixty seconds of peace of mind. -Ralph Waldo Emerson} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 5.
+            (5:200) emit message {The Wisdom Tree says: Always write angry letters to your enemies. Never mail them. -James Fallows} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 6.
+            (5:200) emit message {The Wisdom Tree speaks: If a small thing has the power to make you angry, does that not indicate something about your size? -Sydney J. Harris} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 7.
+            (5:200) emit message {The Wisdom Tree intones: He who angers you conquers you. -Elizabeth Kenny} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 8.
+            (5:200) emit message {The Wisdom Tree: No furre can think clearly when his fists are clenched. -George Jean Nathan} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 9.
+            (5:200) emit message {The Wisdom Tree says: You can't help getting older, but you don't have to get old. -George Burns} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 10.
+            (5:200) emit message {The Wisdom Tree says: An archaeologist is the best husband a fefurre can have. The older she gets the more interested he is in her. -Agatha Christie} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 11.
+            (5:200) emit message {The Wisdom Tree speaks: Creativity is allowing yourself to make mistakes. Art is knowing which ones to keep. -Scott Adams} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 12.
+            (5:200) emit message {The Wisdom Tree intones: The aim of art is to represent not the outward appearance of things, but their inward significance. -Aristotle} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 13.
+            (5:200) emit message {The Wisdom Tree imparts: Be daring, be different, be impractical, be anything that will assert integrity of purpose and imaginative vision against the play-it-safers, the creatures of the commonplace, the slaves of the ordinary. -Cecil Beaton} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 14.
+            (5:200) emit message {The Wisdom Tree: Photograph: a picture painted by the sun without instruction in art. -Ambrose Bierce} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 15.
+            (5:200) emit message {The Wisdom Tree speaks: All great deeds and all great thoughts have a ridiculous beginning. Great works are often born on a street corner or in a restaurant's revolving door. -Albert Camus} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 16.
+            (5:200) emit message {The Wisdom Tree intones: Without freedom, no art; art lives only on the restraints it imposes on itself, and dies of all others. -Albert Camus} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 17.
+            (5:200) emit message {The Wisdom Tree speaks: Great art picks up where nature ends. -Marc Chagall} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 18.
+            (5:200) emit message {The Wisdom Tree says: To be satisfied with a little, is the greatest wisdom; and he that increaseth his riches, increaseth his cares; but a contented mind is a hidden treasure, and trouble findeth it not. -Akhenaton} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 19.
+            (5:200) emit message {The Wisdom Tree intones: Patience is the companion of wisdom. -Saint Augustine} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 20.
+            (5:200) emit message {The Wisdom Tree imparts: Learning sleeps and snores in libraries, but wisdom is everywhere, wide awake, on tiptoe. -Josh Billings} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 21.
+            (5:200) emit message {The Wisdom Tree: In seeking wisdom thou art wise; in imagining that thou hast attained it - thou art a fool. -Lord Chesterfield} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 22.
+            (5:200) emit message {The Wisdom Tree speaks: Common sense in an uncommon degree is what the world calls wisdom. -Samuel Taylor Coleridge} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 23.
+            (5:200) emit message {The Wisdom Tree intones: By three methods we may learn wisdom: First, by reflection, which is noblest; Second, by imitation, which is easiest; and third by experience, which is the bitterest. -Confucius} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 24.
+            (5:200) emit message {The Wisdom Tree imparts: The wisdom of the wise and the experience of the ages are perpetuated by quotations. -Benjamin Disraeli} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 25.
+            (5:200) emit message {The Wisdom Tree: The doors of wisdom are never shut. -Benjamin Franklin} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 26.
+            (5:200) emit message {The Wisdom Tree speaks: Wisdom stands at the turn in the road and calls upon us publicly, but we consider it false and despise its adherents. -Kahlil Gibran} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 27.
+            (5:200) emit message {The Wisdom Tree intones: The young furre knows the rules, but the old furre knows the exceptions. -Oliver Wendell Holmes} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 28.
+            (5:200) emit message {The Wisdom Tree imparts: Every furre is a damn fool for at least five minutes every day; wisdom consists in not exceeding the limit. -Elbert Hubbard} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 29.
+            (5:200) emit message {The Wisdom Tree: He dares to be a fool, and that is the first step in the direction of wisdom. -James Gibbons Huneker} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 30.
+            (5:200) emit message {The Wisdom Tree speaks: The art of being wise is the art of knowing what to overlook. -William James} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 31.
+            (5:200) emit message {The Wisdom Tree intones: Wisdom is knowing what to do next; virtue is doing it. -David Starr Jordan} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 32.
+            (5:200) emit message {The Wisdom Tree imparts: Never does nature say one thing and wisdom another. -Juvenal} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 33.
+            (5:200) emit message {The Wisdom Tree: Wisdom is the reward you get for a lifetime of listening when you'd have preferred to talk. -Doug Larson} to whoever set off the trigger.
+(0:7) When somebody moves into position (48,74),
+   (1:200) and variable %EmitMessage is equal to 34.
+            (5:200) emit message {The Wisdom Tree intones: Wisdom is the quality that keeps you from getting into situations where you need it. -Doug Larson} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 35.
+            (5:200) emit message {The Wisdom Tree imparts: It requires wisdom to understand wisdom: the music is nothing if the audience is deaf. -Walter Lippmann} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 36.
+            (5:200) emit message {The Wisdom Tree speaks: He who devotes sixteen hours a day to hard study may become at sixty as wise as he thought himself at twenty. -Mary Wilson Little} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 37.
+            (5:200) emit message {The Wisdom Tree intones: The older I grow the more I distrust the familiar doctrine that age brings wisdom. -H. L. Mencken} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 38.
+            (5:200) emit message {The Wisdom Tree speaks: Does wisdom perhaps appear on the earth as a raven which is inspired by the smell of carrion? -Friedrich Nietzsche} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 39.
+            (5:200) emit message {The Wisdom Tree: The more sand that has escaped from the hourglass of our life, the clearer we should see through it. -Jean Paul} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 40.
+            (5:200) emit message {The Wisdom Tree says: No furre was ever wise by chance. -Lucius Annaeus Seneca} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 41.
+            (5:200) emit message {The Wisdom Tree speaks: We are made wise not by the recollection of our past, but by the responsibility for our future. -George Bernard Shaw} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 42.
+            (5:200) emit message {The Wisdom Tree intones: Some folks are wise and some are otherwise. -Tobias Smollett} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 43.
+            (5:200) emit message {The Wisdom Tree imparts: Wisdom begins in wonder. -Socrates} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 44.
+            (5:200) emit message {The Wisdom Tree: The only true wisdom is in knowing you know nothing. -Socrates} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 45.
+            (5:200) emit message {The Wisdom Tree says: Wisdom outweighs any wealth. -Sophocles} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 46.
+            (5:200) emit message {The Wisdom Tree says: When I can look life in the eyes, grown calm and very coldly wise, life will have given me the truth, and taken in exchange - my youth. -Sara Teasdale} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 47.
+            (5:200) emit message {The Wisdom Tree speaks: All this worldly wisdom was once the unamiable heresy of some wise furre. -Henry David Thoreau} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 48.
+            (5:200) emit message {The Wisdom Tree intones: Wisdom begins at the end. -Daniel Webster} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 49.
+            (5:200) emit message {The Wisdom Tree imparts: Wisdom doesn't necessarily come with age. Sometimes age just shows up all by itself. -Tom Wilson} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 50.
+            (5:200) emit message {The Wisdom Tree: Turn your wounds into wisdom. -Oprah Winfrey} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 51
+            (5:200) emit message {The Wisdom Tree says: Lying in bed would be an altogether perfect and supreme experience if only one had a colored pencil long enough to draw on the ceiling. -Gilbert K. Chesterton} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 52.
+            (5:200) emit message {The Wisdom Tree speaks: Art, like morality, consists in drawing the line somewhere. -Gilbert K. Chesterton} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 53.
+            (5:200) emit message {The Wisdom Tree intones: Modern art is what happens when painters stop looking at girls and persuade themselves that they have a better idea. -John Ciardi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 54.
+            (5:200) emit message {The Wisdom Tree imparts: Art produces ugly things which frequently become more beautiful with time. Fashion, on the other hand, produces beautiful things which always become ugly with time. -Jean Cocteau} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 55.
+            (5:200) emit message {The Wisdom Tree: An artist cannot fail; it is a success to be one. -Charles Horton Cooley} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 56.
+            (5:200) emit message {The Wisdom Tree says: One should never criticize his own work except in a fresh and hopeful mood. The self-criticism of a tired mind is suicide. -Charles Horton Cooley} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 57.
+            (5:200) emit message {The Wisdom Tree speaks: Drawing is the honesty of the art. There is no possibility of cheating. It is either good or bad. -Salvador Dali} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 58.
+            (5:200) emit message {The Wisdom Tree intones: Painting is easy when you don't know how, but very difficult when you do. -Edgar Degas} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 59.
+            (5:200) emit message {The Wisdom Tree imparts: Art is the stored honey of the furre soul, gathered on wings of misery and travail. -Theodore Dreiser} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 60.
+            (5:200) emit message {The Wisdom Tree: Are you really sure that a floor can't also be a ceiling? -M. C. Escher} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 61.
+            (5:200) emit message {The Wisdom Tree speaks: Only those who attempt the absurd will achieve the impossible. I think it's in my basement... let me go upstairs and check. -M. C. Escher} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 62.
+            (5:200) emit message {The Wisdom Tree intones: We adore chaos because we love to produce order. -M. C. Escher} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 63.
+            (5:200) emit message {The Wisdom Tree imparts: Artists can color the sky red because they know it's blue. Those of us who aren't artists must color things the way they really are or people might think we're stupid. -Jules Feiffer} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 64.
+            (5:200) emit message {The Wisdom Tree: Of all lies, art is the least untrue. -Gustave Flaubert} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 65.
+            (5:200) emit message {The Wisdom Tree speaks: What garlic is to salad, insanity is to art. -Augustus Saint-Gaudens} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 66.
+            (5:200) emit message {The Wisdom Tree intones: There is always a heavy demand for fresh mediocrity. In every generation the least cultivated taste has the largest appetite. -Paul Gauguin} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 67.
+            (5:200) emit message {The Wisdom Tree imparts: Art is a step from what is obvious and well-known toward what is arcane and concealed. -Kahlil Gibran} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 68.
+            (5:200) emit message {The Wisdom Tree: The moment you cheat for the sake of beauty, you know you're an artist. -David Hockney} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 69.
+            (5:200) emit message {The Wisdom Tree says: Everyone has talent. What is rare is the courage to follow that talent to the dark place where it leads. -Erica Jong} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 70.
+            (5:200) emit message {The Wisdom Tree speaks: I don't paint things. I only paint the difference between things. -Henri Matisse} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 71.
+            (5:200) emit message {The Wisdom Tree intones: Ads are the cave art of the twentieth century. -Marshall McLuhan} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 72.
+            (5:200) emit message {The Wisdom Tree imparts: A furre paints with his brains and not with his hands. -Michelangelo} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 73.
+            (5:200) emit message {The Wisdom Tree: The artist belongs to his work, not the work to the artist. -Novalis} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 74.
+            (5:200) emit message {The Wisdom Tree speaks: Every science has for its basis a system of principles as fixed and unalterable as those by which the universe is regulated and governed. Man cannot make principles; he can only discover them. -Thomas Paine} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 75.
+            (5:200) emit message {The Wisdom Tree intones: Some painters transform the sun into a yellow spot, others transform a yellow spot into the sun. -Pablo Picasso} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 76.
+            (5:200) emit message {The Wisdom Tree imparts: The purpose of art is washing the dust of daily life off our souls. -Pablo Picasso} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 77.
+            (5:200) emit message {The Wisdom Tree: Every child is an artist. The problem is how to remain an artist once we grow up. -Pablo Picasso} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 78.
+            (5:200) emit message {The Wisdom Tree speaks: We all know that art is not truth. Art is a lie that makes us realize the truth. -Pablo Picasso} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 79.
+            (5:200) emit message {The Wisdom Tree intones: Painting is silent poetry, and poetry is painting that speaks. -Plutarch} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 80.
+            (5:200) emit message {The Wisdom Tree imparts: Our natures are a lot like oil, mix us with anything else, and we strive to swim on top. -Joan Rivers} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 81.
+            (5:200) emit message {The Wisdom Tree: Art is the only way to run away without leaving home. -Twyla Tharp} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 82.
+            (5:200) emit message {The Wisdom Tree speaks: The buttocks are the most aesthetically pleasing part of the body because they are non-functional. Although they conceal an essential orifice, these pointless globes are as near as the furre form can ever come to abstract art. -Kenneth Tynan} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 83.
+            (5:200) emit message {The Wisdom Tree speaks: An artist is someone who produces things that people don't need to have but that he - for some reason - thinks it would be a good idea to give them. -Andy Warhol} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 84.
+            (5:200) emit message {The Wisdom Tree intones: No great artist ever sees things as they really are. If he did, he would cease to be an artist. -Oscar Wilde} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 85.
+            (5:200) emit message {The Wisdom Tree imparts: Wit is educated insolence. -Aristotle} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 86.
+            (5:200) emit message {The Wisdom Tree: There is nobody so irritating as somebody with less intelligence and more sense than we have. -Don Herold} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 87.
+            (5:200) emit message {The Wisdom Tree says: Every true genius is bound to be naive. -Friedrich Schiller} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 88.
+            (5:200) emit message {The Wisdom Tree speaks: Furres, who are almost unique in having the ability to learn from the experience of others, are also remarkable for their apparent disinclination to do so. -Douglas Adams} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 89.
+            (5:200) emit message {The Wisdom Tree intones: Good judgment comes from experience, and often experience comes from bad judgment. -Rita Mae Brown} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 90.
+            (5:200) emit message {The Wisdom Tree imparts: If we could sell our experiences for what they cost us, we'd all be millionaires. -Abigail Van Buren} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 91.
+            (5:200) emit message {The Wisdom Tree: Life is the art of drawing without an eraser. -John W. Gardner} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 92.
+            (5:200) emit message {The Wisdom Tree speaks: Everything has been said before, but since nobody listens we have to keep going back and beginning all over again. -Andre Gide} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 93.
+            (5:200) emit message {The Wisdom Tree intones: Life must be understood backwards; but... it must be lived forward. -Soren Kierkegaard} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 94.
+            (5:200) emit message {The Wisdom Tree imparts: Do you know the difference between education and experience? Education is when you read the fine print; experience is what you get when you don't. -Pete Seeger} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 95.
+            (5:200) emit message {The Wisdom Tree: A furre who carries a cat by the tail learns something he can learn in no other way. -Mark Twain} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 96.
+            (5:200) emit message {The Wisdom Tree says: Dreams have only one owner at a time. That's why dreamers are lonely. -Erma Bombeck} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 97.
+            (5:200) emit message {The Wisdom Tree speaks: It takes a lot of courage to show your dreams to someone else. -Erma Bombeck} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 98.
+            (5:200) emit message {The Wisdom Tree intones: If you take responsibility for yourself you will develop a hunger to accomplish your dreams. -Les Brown} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 99.
+            (5:200) emit message {The Wisdom Tree imparts: Myths are public dreams, dreams are private myths. -Joseph Campbell} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 100.
+            (5:200) emit message {The Wisdom Tree: Dreams are today's answers to tomorrow's questions. -Edgar Cayce} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 101.
+            (5:200) emit message {The Wisdom Tree speaks: All our dreams can come true, if we have the courage to pursue them. -Walt Disney} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 102.
+            (5:200) emit message {The Wisdom Tree intones: People need dreams, there's as much nourishment in 'em as food. -Dorothy Gilman} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 103.
+            (5:200) emit message {The Wisdom Tree imparts: Dream no small dreams for they have no power to move the hearts of men. -Johann Wolfgang von Goethe} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 104.
+            (5:200) emit message {The Wisdom Tree: Hold fast to dreams, for if dreams die, life is a broken winged bird that cannot fly. -Langston Hughes} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 105.
+            (5:200) emit message {The Wisdom Tree speaks: All men dream, but not equally. Those who dream by night in the dusty recesses of their minds, wake in the day to find that it was vanity: but the dreamers of the day are dangerous men, for they may act on their dreams with open eyes, to make them possible. -Thomas E. Lawrence} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 106.
+            (5:200) emit message {The Wisdom Tree intones: Living in dreams of yesterday, we find ourselves still dreaming of impossible future conquests. -Charles Lindbergh} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 107.
+            (5:200) emit message {The Wisdom Tree imparts: One of the most adventurous things left us is to go to bed. For no one can lay a hand on our dreams. -E. V. Lucas} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 108.
+            (5:200) emit message {The Wisdom Tree: Those who have compared our life to a dream were right... we were sleeping wake, and waking sleep. -Michel de Montaigne} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 109.
+            (5:200) emit message {The Wisdom Tree speaks: Dreams are necessary to life. -Anais Nin} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 110.
+            (5:200) emit message {The Wisdom Tree intones: Dreams are illustrations... from the book your soul is writing about you. -Marsha Norman} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 111.
+            (5:200) emit message {The Wisdom Tree imparts: Only in our dreams are we free. The rest of the time we need wages. -Terry Pratchett} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 112.
+            (5:200) emit message {The Wisdom Tree: So many of our dreams at first seem impossible, then they seem improbable, and then, when we summon the will, they soon become inevitable. -Christopher Reeve} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 113.
+            (5:200) emit message {The Wisdom Tree says: The future belongs to those who believe in the beauty of their dreams. -Eleanor Roosevelt} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 114.
+            (5:200) emit message {The Wisdom Tree says: Reality is wrong. Dreams are for real. -Tupac Shakur} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 115.
+            (5:200) emit message {The Wisdom Tree speaks: Dreams are true while they last, and do we not live in dreams? -Alfred Lord Tennyson} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 116.
+            (5:200) emit message {The Wisdom Tree intones: I tell people I'm too stupid to know what's impossible. I have ridiculously large dreams, and half the time they come true. -Debi Thomas} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 117.
+            (5:200) emit message {The Wisdom Tree imparts: Our truest life is when we are in dreams awake. -Henry David Thoreau} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 118.
+            (5:200) emit message {The Wisdom Tree: Dreams are the touchstones of our character. -Henry David Thoreau} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 119.
+            (5:200) emit message {The Wisdom Tree says: If one advances confidently in the direction of his dreams, and endeavors to live the life which he has imagined, he will meet with success unexpected in common hours. -Henry David Thoreau} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 120.
+            (5:200) emit message {The Wisdom Tree: Dreams are renewable. No matter what our age or condition, thereare still untapped possibilities within us and new beauty waitingto be born. -Dale Turner} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 121.
+            (5:200) emit message {The Wisdom Tree says: The best way to make your dreams come true is to wake up. -Paul Valery} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 122.
+            (5:200) emit message {The Wisdom Tree speaks: I think we dream so we don't have to be apart so long. If we're in each other's dreams, we can play together all night. -Bill Watterson} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 123.
+            (5:200) emit message {The Wisdom Tree intones: In dreams begins responsibility. -William Butler Yeats} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 124.
+            (5:200) emit message {The Wisdom Tree imparts: Friendship... is not something you learn in school. But if you haven't learned the meaning of friendship, you really haven't learned anything. -Muhammad Ali} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 125.
+            (5:200) emit message {The Wisdom Tree: There is nothing on this earth more to be prized than true friendship. -Saint Thomas Aquinas} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 126.
+            (5:200) emit message {The Wisdom Tree speaks: Friendship is a single soul dwelling in two bodies. -Aristotle} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 127.
+            (5:200) emit message {The Wisdom Tree intones: I value the friend who for me finds time on his calendar, but I cherish the friend who for me does not consult his calendar. -Robert Brault} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 128.
+            (5:200) emit message {The Wisdom Tree imparts: It's the friends you can call up at 4 a.m. that matter. -Marlene Dietrich} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 129.
+            (5:200) emit message {The Wisdom Tree: I have friends in overalls whose friendship I would not swap for the favor of the kings of the world. -Thomas A. Edison} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 130.
+            (5:200) emit message {The Wisdom Tree speaks: The only way to have a friend is to be one. -Ralph Waldo Emerson} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 131.
+            (5:200) emit message {The Wisdom Tree intones: It is one of the blessings of old friends that you can afford to be stupid with them. -Ralph Waldo Emerson} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 132.
+            (5:200) emit message {The Wisdom Tree imparts: A true friend never gets in your way unless you happen to be going down. -Arnold H. Glasow} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 133.
+            (5:200) emit message {The Wisdom Tree: Since there is nothing so well worth having as friends, never lose a chance to make them. -Francesco Guicciardini} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 134.
+            (5:200) emit message {The Wisdom Tree speaks: A friend is one who knows you and loves you just the same. -Elbert Hubbard} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 135.
+            (5:200) emit message {The Wisdom Tree intones: The friend is the furre who knows all about you, and still likes you. -Elbert Hubbard} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 136
+            (5:200) emit message {The Wisdom Tree imparts: Yes'm, old friends is always best, 'less you can catch a new one that's fit to make an old one out of. -Sarah Orne Jewett} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 137.
+            (5:200) emit message {The Wisdom Tree: The real test of friendship is: can you literally do nothing with the other person? Can you enjoy those moments of life that are utterly simple? -Eugene Kennedy} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 138.
+            (5:200) emit message {The Wisdom Tree speaks: Friendship is unnecessary, like philosophy, like art... It has no survival value; rather it is one of those things that give value to survival. -C. S. Lewis} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 139.
+            (5:200) emit message {The Wisdom Tree intones: Many a person has held close, throughout their entire lives, two friends that always remained strange to one another, because one of them attracted by virtue of similarity, the other by difference. -Emil Ludwig} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 140.
+            (5:200) emit message {The Wisdom Tree imparts: Courage is resistance to fear, mastery of fear, not absence of fear. -Mark Twain} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 141.
+            (5:200) emit message {The Wisdom Tree: It is important to our friends to believe that we are unreservedly frank with them, and important to friendship that we are not. -Mignon McLaughlin} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 142.
+            (5:200) emit message {The Wisdom Tree says: If it's very painful for you to criticize your friends - you're safe in doing it. But if you take the slightest pleasure in it, that's the time to hold your tongue. -Alice Duer Miller} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 143.
+            (5:200) emit message {The Wisdom Tree speaks: You can always tell a real friend: when you've made a fool of yourself he doesn't feel you've done a permanent job. -Laurence J. Peter} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 144.
+            (5:200) emit message {The Wisdom Tree intones: I don't need a friend who changes when I change and who nods when I nod; my shadow does that much better. -Plutarch} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 145.
+            (5:200) emit message {The Wisdom Tree imparts: Silences make the real conversations between friends. Not the saying but the never needing to say is what counts. -Margaret Lee Runbeck} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 146.
+            (5:200) emit message {The Wisdom Tree: The most I can do for my friend is simply be his friend. -Henry David Thoreau} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 147.
+            (5:200) emit message {The Wisdom Tree says: True friends stab you in the front. -Oscar Wilde} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 148.
+            (5:200) emit message {The Wisdom Tree says: Be courteous to all, but intimate with few, and let those few be well tried before you give them your confidence. -George Washington} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 149.
+            (5:200) emit message {The Wisdom Tree speaks: Lots of people want to ride with you in the limo, but what you want is someone who will take the bus with you when the limo breaks down. -Oprah Winfrey} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 150.
+            (5:200) emit message {The Wisdom Tree intones: All love shifts and changes. I don't know if you can be wholeheartedly in love all the time. -Julie Andrews} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 151.
+            (5:200) emit message {The Wisdom Tree imparts: Love takes up where knowledge leaves off. -Saint Thomas Aquinas} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 152.
+            (5:200) emit message {The Wisdom Tree: For all life is a dream, and dreams themselves are only dreams. -Pedro Calderon de la Barca} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 153.
+            (5:200) emit message {The Wisdom Tree says: The best proof of love is trust. -Joyce Brothers} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 154.
+            (5:200) emit message {The Wisdom Tree speaks: To enlarge or illustrate this power and effect of love is to set a candle in the sun. -Robert Burton} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 155.
+            (5:200) emit message {The Wisdom Tree intones: Love is life. And if you miss love, you miss life. -Leo Buscaglia} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 156.
+            (5:200) emit message {The Wisdom Tree imparts: Love is always bestowed as a gift - freely, willingly and without expectation. We don't love to be loved; we love to love. -Leo Buscaglia} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 157.
+            (5:200) emit message {The Wisdom Tree: A loving heart is the beginning of all knowledge. -Thomas Carlyle} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 158.
+            (5:200) emit message {The Wisdom Tree says: Where there is great love, there are always wishes. -Willa Cather} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 159.
+            (5:200) emit message {The Wisdom Tree speaks: The way to love anything is to realize that it may be lost. -Gilbert K. Chesterton} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 160.
+            (5:200) emit message {The Wisdom Tree intones: A baby is born with a need to be loved - and never outgrows it. -Frank A. Clark} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 161.
+            (5:200) emit message {The Wisdom Tree imparts: Friendship often ends in love; but love in friendship - never. -Charles Caleb Colton} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 162.
+            (5:200) emit message {The Wisdom Tree: Come live with me, and be my love, And we will some new pleasures prove, Of golden sands, and crystal brooks, With silken lines, and silver hooks. -John Donne} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 163.
+            (5:200) emit message {The Wisdom Tree speaks: You will find as you look back upon your life that the moments when you have truly lived are the moments when you have done things in the spirit of love. -Henry Drummond} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 164.
+            (5:200) emit message {The Wisdom Tree intones: To love abundantly is to live abundantly, and to love forever is to live forever. -Henry Drummond} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 165.
+            (5:200) emit message {The Wisdom Tree imparts: Love is love's reward. -John Dryden} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 166.
+            (5:200) emit message {The Wisdom Tree: You cannot be lonely if you like the person you're alone with. -Wayne Dyer} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 167.
+            (5:200) emit message {The Wisdom Tree says: Time is too slow for those who wait, too swift for those who fear, too long for those who grieve, too short for those who rejoice, but for those who love, time is eternity. -Henry Van Dyke} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 168.
+            (5:200) emit message {The Wisdom Tree says: You don't have to go looking for love when it's where you come from. -Werner Erhard} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 169.
+            (5:200) emit message {The Wisdom Tree speaks: Loving is not just looking at each other, it's looking in the same direction. -Antoine de Saint-Exupery} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 170.
+            (5:200) emit message {The Wisdom Tree intones: The hardest of all is learning to be a well of affection, and not a fountain; to show them we love them not when we feel like it, but when they do. -Nan Fairbrother} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 171.
+            (5:200) emit message {The Wisdom Tree imparts: In love the paradox occurs that two beings become one and yet remain two. -Erich Fromm} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 172.
+            (5:200) emit message {The Wisdom Tree: Immature love says: 'I love you because I need you.' Mature love says 'I need you because I love you.' -Erich Fromm} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 173.
+            (5:200) emit message {The Wisdom Tree says: Love is an irresistible desire to be irresistibly desired. -Robert Frost} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 174.
+            (5:200) emit message {The Wisdom Tree speaks: Love is metaphysical gravity. -R. Buckminster Fuller} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 175.
+            (5:200) emit message {The Wisdom Tree intones: Love is a game that two can play and both win. -Eva Gabor} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 176.
+            (5:200) emit message {The Wisdom Tree imparts: Where there is love there is life. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 177.
+            (5:200) emit message {The Wisdom Tree: A 'No' uttered from the deepest conviction is better than a 'Yes' merely uttered to please, or worse, to avoid trouble. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 178.
+            (5:200) emit message {The Wisdom Tree speaks: A coward is incapable of exhibiting love; it is the prerogative of the brave. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 179.
+            (5:200) emit message {The Wisdom Tree speaks: Don't go around saying the world owes you a living. The world owes you nothing. It was here first. -Mark Twain} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 180.
+            (5:200) emit message {The Wisdom Tree intones: A small body of determined spirits fired by an unquenchable faith in their mission can alter the course of history. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 181.
+            (5:200) emit message {The Wisdom Tree imparts: An eye for an eye makes us all blind. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 182.
+            (5:200) emit message {The Wisdom Tree: Anger and intolerance are the enemies of correct understanding. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 183.
+            (5:200) emit message {The Wisdom Tree speaks: Be the change that you want to see in the world. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 184.
+            (5:200) emit message {The Wisdom Tree intones: Constant development is the law of life, and a furre who always tries to maintain his dogmas in order to appear consistent drives himself into a false position. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 185.
+            (5:200) emit message {The Wisdom Tree imparts: Evil is, good or truth misplaced. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 186.
+            (5:200) emit message {The Wisdom Tree: First they ignore you, then they laugh at you, then they fight you, then you win. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 187.
+            (5:200) emit message {The Wisdom Tree says: Freedom is never dear at any price. It is the breath of life. What would a furre not pay for living? -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 188.
+            (5:200) emit message {The Wisdom Tree speaks: Happiness is when what you think, what you say, and what you do are in harmony. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 189.
+            (5:200) emit message {The Wisdom Tree intones: Healthy discontent is the prelude to progress. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 190.
+            (5:200) emit message {The Wisdom Tree imparts: I believe that a furre is the strongest soldier for daring to die unarmed. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 191.
+            (5:200) emit message {The Wisdom Tree: Imitation is the sincerest flattery. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 192.
+            (5:200) emit message {The Wisdom Tree says: In a gentle way, you can shake the world. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 193.
+            (5:200) emit message {The Wisdom Tree speaks: It is health that is real wealth and not pieces of gold and silver. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 194.
+            (5:200) emit message {The Wisdom Tree intones: It is unwise to be too sure of one's own wisdom. It is healthy to be reminded that the strongest might weaken and the wisest might err. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 195.
+            (5:200) emit message {The Wisdom Tree imparts: Live as if you were to die tomorrow. Learn as if you were to live forever. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 196.
+            (5:200) emit message {The Wisdom Tree: Moral authority is never retained by any attempt to hold on to it. It comes without seeking and is retained without effort. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 197.
+            (5:200) emit message {The Wisdom Tree speaks: Nearly everything you do is of no importance, but it is important that you do it. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 198.
+            (5:200) emit message {The Wisdom Tree intones: The difference between what we do and what we are capable of doing would suffice to solve most of the world's problem. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 199.
+            (5:200) emit message {The Wisdom Tree imparts: The greatness of a nation can be judged by the way its animals are treated. -Mohandas Gandhi} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 200.
+            (5:200) emit message {The Wisdom Tree: Anger is an acid that can do more harm to the vessel in which it is stored than to anything on which it is poured. -Mark Twain} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 201.
+            (5:200) emit message {The Wisdom Tree says: A person who never made a mistake never tried anything new. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 202.
+            (5:200) emit message {The Wisdom Tree speaks: Any fool can make things bigger, more complex, and more violent. It takes a touch of genius-and a lot of courage-to move in the opposite direction. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 203.
+            (5:200) emit message {The Wisdom Tree intones: Any furre who can drive safely while kissing a pretty girl is simply not giving the kiss the attention it deserves. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 204.
+            (5:200) emit message {The Wisdom Tree imparts: Anyone who doesn't take truth seriously in small matters cannot be trusted in large ones either. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 205.
+            (5:200) emit message {The Wisdom Tree: Common sense is the collection of prejudices acquired by age eighteen. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 206.
+            (5:200) emit message {The Wisdom Tree says: Education is what remains after one has forgotten what one has learned in school. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 207.
+            (5:200) emit message {The Wisdom Tree says: Everything that can be counted does not necessarily count; everything that counts cannot necessarily be counted. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 208.
+            (5:200) emit message {The Wisdom Tree speaks: Few are those who see with their own eyes and feel with their own hearts. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 209.
+            (5:200) emit message {The Wisdom Tree intones: Force always attracts men of low morality. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 210.
+            (5:200) emit message {The Wisdom Tree imparts: He who can no longer pause to wonder and stand rapt in awe, is as good as dead; his eyes are closed. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 211.
+            (5:200) emit message {The Wisdom Tree: I am enough of an artist to draw freely upon my imagination. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 212.
+            (5:200) emit message {The Wisdom Tree speaks: I never think of the future - it comes soon enough. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 213.
+            (5:200) emit message {The Wisdom Tree intones: If A equals success, then the formula is: A = X + Y + Z, X is work. Y is play. Z is keep your mouth shut. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 214.
+            (5:200) emit message {The Wisdom Tree imparts: Insanity: doing the same thing over and over again and expecting different results. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 215.
+            (5:200) emit message {The Wisdom Tree: Intellectuals solve problems, geniuses prevent them. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 216.
+            (5:200) emit message {The Wisdom Tree says: It is the supreme art of the teacher to awaken joy in creative expression and knowledge. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 217.
+            (5:200) emit message {The Wisdom Tree speaks: Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 218.
+            (5:200) emit message {The Wisdom Tree intones: Logic will get you from A to B. Imagination will take you everywhere. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 219.
+            (5:200) emit message {The Wisdom Tree imparts: Once we accept our limits, we go beyond them. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 220.
+            (5:200) emit message {The Wisdom Tree: Only two things are infinite, the universe and furre stupidity, and I'm not sure about the former. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 221.
+            (5:200) emit message {The Wisdom Tree says: Reality is merely an illusion, albeit a very persistent one. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 222.
+            (5:200) emit message {The Wisdom Tree says: The difference between stupidity and genius is that genius has its limits. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 223.
+            (5:200) emit message {The Wisdom Tree speaks: The most incomprehensible thing about the world is that it is comprehensible. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 224.
+            (5:200) emit message {The Wisdom Tree intones: The only reason for time is so that everything doesn't happen at once. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 225.
+            (5:200) emit message {The Wisdom Tree imparts: The pursuit of truth and beauty is a sphere of activity in which we are permitted to remain children all our lives. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 226.
+            (5:200) emit message {The Wisdom Tree: Be careful about reading health books. You may die of a misprint. -Mark Twain} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 227.
+            (5:200) emit message {The Wisdom Tree says: The whole of science is nothing more than a refinement of everyday thinking. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 228.
+            (5:200) emit message {The Wisdom Tree says: The world is a dangerous place to live; not because of the people who are evil, but because of the people who don't do anything about it. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 229.
+            (5:200) emit message {The Wisdom Tree speaks: There comes a time when the mind takes a higher plane of knowledge but can never prove how it got there. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 230.
+            (5:200) emit message {The Wisdom Tree intones: Try not to become a furre of success, but rather try to become a furre of value. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 231.
+            (5:200) emit message {The Wisdom Tree imparts: When you are courting a nice girl an hour seems like a second. When you sit on a red-hot cinder a second seems like an hour. That's relativity. -Albert Einstein} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 232.
+            (5:200) emit message {The Wisdom Tree: A lie can travel half way around the world while the truth is putting on its shoes. -Mark Twain} to whoever set off the trigger.
+(0:7) When somebody moves into position (68,47),
+   (1:200) and variable %EmitMessage is equal to 233.
+            (5:200) emit message {The Wisdom Tree intones: A person who won't read has no advantage over one who can't read. -Mark Twain} to whoever set off the trigger.
+
+(0:50) When countdown timer 200 goes off,
+            (5:300) set variable %MessageStick to the value 0.
+
+(0:0) When everything is starting up,
+            (5:300) set variable %MSGTime to the value 1.
+
+(0:101) When the time is %MSGTime:00 FST
+   (1:202) and variable %MSGTime is less than 19,
+            (5:301) copy the value of variable %MSGTime into variable %MSGTimeTwo.
+            (5:312) set variable %MSGTime to the total of rolling 1 dice with 4 sides plus %MSGTimeTwo.
+            (5:312) set variable %SpeakMessage to the total of rolling 1 dice with 233 sides plus 0.
+            (5:50) set countdown timer 201 to go off in 1 seconds.
+(0:101) When the time is %MSGTime:00 FST
+   (1:201) and variable %MSGTime is greater than 18,
+            (5:300) set variable %MSGTime to the value 0.
+            (5:313) set variable %MSGTime to the total of rolling 1 dice with 4 sides minus 0.
+            (5:312) set variable %SpeakMessage to the total of rolling 1 dice with 233 sides plus 0.
+            (5:50) set countdown timer 201 to go off in 1 seconds.
+
+
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 1.
+            (5:202) emit message {The Wisdom Tree says: How much more grievous are the consequences of anger than the causes of it. -Marcus Aurelius}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 2.
+            (5:202) emit message {The Wisdom Tree speaks: Speak when you are angry and you will make the best speech you will ever regret. -Ambrose Bierce}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 3.
+            (5:202) emit message {The Wisdom Tree intones: Holding on to anger is like grasping a hot coal with the intent of throwing it at someone else; you are the one who gets burned. -Buddha}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 4.
+            (5:202) emit message {The Wisdom Tree imparts: For every minute you remain angry, you give up sixty seconds of peace of mind. -Ralph Waldo Emerson}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 5.
+            (5:202) emit message {The Wisdom Tree: Always write angry letters to your enemies. Never mail them. -James Fallows}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 6.
+            (5:202) emit message {The Wisdom Tree speaks: If a small thing has the power to make you angry, does that not indicate something about your size? -Sydney J. Harris}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 7.
+            (5:202) emit message {The Wisdom Tree intones: He who angers you conquers you. -Elizabeth Kenny}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 8.
+            (5:202) emit message {The Wisdom Tree imparts: No furre can think clearly when his fists are clenched. -George Jean Nathan}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 9.
+            (5:202) emit message {The Wisdom Tree: You can't help getting older, but you don't have to get old. -George Burns}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 10.
+            (5:202) emit message {The Wisdom Tree says: An archaeologist is the best husband a fefurre can have. The older she gets the more interested he is in her. -Agatha Christie}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 11.
+            (5:202) emit message {The Wisdom Tree says: Creativity is allowing yourself to make mistakes. Art is knowing which ones to keep. -Scott Adams}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 12.
+            (5:202) emit message {The Wisdom Tree speaks: The aim of art is to represent not the outward appearance of things, but their inward significance. -Aristotle}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 13.
+            (5:202) emit message {The Wisdom Tree intones: Be daring, be different, be impractical, be anything that will assert integrity of purpose and imaginative vision against the play-it-safers, the creatures of the commonplace, the slaves of the ordinary. -Cecil Beaton}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 14.
+            (5:202) emit message {The Wisdom Tree imparts: Photograph: a picture painted by the sun without instruction in art. -Ambrose Bierce}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 15.
+            (5:202) emit message {The Wisdom Tree: All great deeds and all great thoughts have a ridiculous beginning. Great works are often born on a street corner or in a restaurant's revolving door. -Albert Camus}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 16.
+            (5:202) emit message {The Wisdom Tree says: Without freedom, no art; art lives only on the restraints it imposes on itself, and dies of all others. -Albert Camus}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 17.
+            (5:202) emit message {The Wisdom Tree says: Great art picks up where nature ends. -Marc Chagall}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 18.
+            (5:202) emit message {The Wisdom Tree speaks: To be satisfied with a little, is the greatest wisdom; and he that increaseth his riches, increaseth his cares; but a contented mind is a hidden treasure, and trouble findeth it not. -Akhenaton}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 19.
+            (5:202) emit message {The Wisdom Tree intones: Patience is the companion of wisdom. -Saint Augustine}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 20.
+            (5:202) emit message {The Wisdom Tree imparts: Learning sleeps and snores in libraries, but wisdom is everywhere, wide awake, on tiptoe. -Josh Billings}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 21.
+            (5:202) emit message {The Wisdom Tree: In seeking wisdom thou art wise; in imagining that thou hast attained it - thou art a fool. -Lord Chesterfield}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 22.
+            (5:202) emit message {The Wisdom Tree says: Common sense in an uncommon degree is what the world calls wisdom. -Samuel Taylor Coleridge}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 23.
+            (5:202) emit message {The Wisdom Tree speaks: By three methods we may learn wisdom: First, by reflection, which is noblest; Second, by imitation, which is easiest; and third by experience, which is the bitterest. -Confucius}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 24.
+            (5:202) emit message {The Wisdom Tree intones: The wisdom of the wise and the experience of the ages are perpetuated by quotations. -Benjamin Disraeli}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 25.
+            (5:202) emit message {The Wisdom Tree imparts: The doors of wisdom are never shut. -Benjamin Franklin}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 26.
+            (5:202) emit message {The Wisdom Tree: Wisdom stands at the turn in the road and calls upon us publicly, but we consider it false and despise its adherents. -Kahlil Gibran}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 27.
+            (5:202) emit message {The Wisdom Tree speaks: The young furre knows the rules, but the old furre knows the exceptions. -Oliver Wendell Holmes}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 28.
+            (5:202) emit message {The Wisdom Tree intones: Every furre is a damn fool for at least five minutes every day; wisdom consists in not exceeding the limit. -Elbert Hubbard}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 29.
+            (5:202) emit message {The Wisdom Tree imparts: He dares to be a fool, and that is the first step in the direction of wisdom. -James Gibbons Huneker}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 30.
+            (5:202) emit message {The Wisdom Tree: The art of being wise is the art of knowing what to overlook. -William James}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 31.
+            (5:202) emit message {The Wisdom Tree says: Wisdom is knowing what to do next; virtue is doing it. -David Starr Jordan}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 32.
+            (5:202) emit message {The Wisdom Tree speaks: Never does nature say one thing and wisdom another. -Juvenal}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 33.
+            (5:202) emit message {The Wisdom Tree intones: Wisdom is the reward you get for a lifetime of listening when you'd have preferred to talk. -Doug Larson}to every furre who can see (68,47).
+(0:7) When somebody moves into position (48,74),
+   (1:200) and variable %SpeakMessage is equal to 34.
+            (5:202) emit message {The Wisdom Tree imparts: Wisdom is the quality that keeps you from getting into situations where you need it. -Doug Larson}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 35.
+            (5:202) emit message {The Wisdom Tree: It requires wisdom to understand wisdom: the music is nothing if the audience is deaf. -Walter Lippmann}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 36.
+            (5:202) emit message {The Wisdom Tree speaks: He who devotes sixteen hours a day to hard study may become at sixty as wise as he thought himself at twenty. -Mary Wilson Little}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 37.
+            (5:202) emit message {The Wisdom Tree intones: The older I grow the more I distrust the familiar doctrine that age brings wisdom. -H. L. Mencken}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 38.
+            (5:202) emit message {The Wisdom Tree imparts: Does wisdom perhaps appear on the earth as a raven which is inspired by the smell of carrion? -Friedrich Nietzsche}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 39.
+            (5:202) emit message {The Wisdom Tree: The more sand that has escaped from the hourglass of our life, the clearer we should see through it. -Jean Paul}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 40.
+            (5:202) emit message {The Wisdom Tree says: No furre was ever wise by chance. -Lucius Annaeus Seneca}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 41.
+            (5:202) emit message {The Wisdom Tree says: We are made wise not by the recollection of our past, but by the responsibility for our future. -George Bernard Shaw}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 42.
+            (5:202) emit message {The Wisdom Tree speaks: Some folks are wise and some are otherwise. -Tobias Smollett}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 43.
+            (5:202) emit message {The Wisdom Tree intones: Wisdom begins in wonder. -Socrates}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 44.
+            (5:202) emit message {The Wisdom Tree imparts: The only true wisdom is in knowing you know nothing. -Socrates}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 45.
+            (5:202) emit message {The Wisdom Tree: Wisdom outweighs any wealth. -Sophocles}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 46.
+            (5:202) emit message {The Wisdom Tree says: When I can look life in the eyes, grown calm and very coldly wise, life will have given me the truth, and taken in exchange - my youth. -Sara Teasdale}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 47.
+            (5:202) emit message {The Wisdom Tree speaks: All this worldly wisdom was once the unamiable heresy of some wise furre. -Henry David Thoreau}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 48.
+            (5:202) emit message {The Wisdom Tree intones: Wisdom begins at the end. -Daniel Webster}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 49.
+            (5:202) emit message {The Wisdom Tree imparts: Wisdom doesn't necessarily come with age. Sometimes age just shows up all by itself. -Tom Wilson}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 50.
+            (5:202) emit message {The Wisdom Tree: Turn your wounds into wisdom. -Oprah Winfrey}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 51
+            (5:202) emit message {The Wisdom Tree says: Lying in bed would be an altogether perfect and supreme experience if only one had a colored pencil long enough to draw on the ceiling. -Gilbert K. Chesterton}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 52.
+            (5:202) emit message {The Wisdom Tree says: Art, like morality, consists in drawing the line somewhere. -Gilbert K. Chesterton}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 53.
+            (5:202) emit message {The Wisdom Tree speaks: Modern art is what happens when painters stop looking at girls and persuade themselves that they have a better idea. -John Ciardi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 54.
+            (5:202) emit message {The Wisdom Tree intones: Art produces ugly things which frequently become more beautiful with time. Fashion, on the other hand, produces beautiful things which always become ugly with time. -Jean Cocteau}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 55.
+            (5:202) emit message {The Wisdom Tree imparts: An artist cannot fail; it is a success to be one. -Charles Horton Cooley}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 56.
+            (5:202) emit message {The Wisdom Tree: One should never criticize his own work except in a fresh and hopeful mood. The self-criticism of a tired mind is suicide. -Charles Horton Cooley}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 57.
+            (5:202) emit message {The Wisdom Tree says: Drawing is the honesty of the art. There is no possibility of cheating. It is either good or bad. -Salvador Dali}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 58.
+            (5:202) emit message {The Wisdom Tree speaks: Painting is easy when you don't know how, but very difficult when you do. -Edgar Degas}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 59.
+            (5:202) emit message {The Wisdom Tree intones: Art is the stored honey of the furre soul, gathered on wings of misery and travail. -Theodore Dreiser}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 60.
+            (5:202) emit message {The Wisdom Tree imparts: Are you really sure that a floor can't also be a ceiling? -M. C. Escher}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 61.
+            (5:202) emit message {The Wisdom Tree: Only those who attempt the absurd will achieve the impossible. I think it's in my basement... let me go upstairs and check. -M. C. Escher}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 62.
+            (5:202) emit message {The Wisdom Tree says: We adore chaos because we love to produce order. -M. C. Escher}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 63.
+            (5:202) emit message {The Wisdom Tree speaks: Artists can color the sky red because they know it's blue. Those of us who aren't artists must color things the way they really are or people might think we're stupid. -Jules Feiffer}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 64.
+            (5:202) emit message {The Wisdom Tree intones: Of all lies, art is the least untrue. -Gustave Flaubert}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 65.
+            (5:202) emit message {The Wisdom Tree imparts: What garlic is to salad, insanity is to art. -Augustus Saint-Gaudens}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 66.
+            (5:202) emit message {The Wisdom Tree: There is always a heavy demand for fresh mediocrity. In every generation the least cultivated taste has the largest appetite. -Paul Gauguin}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 67.
+            (5:202) emit message {The Wisdom Tree says: Art is a step from what is obvious and well-known toward what is arcane and concealed. -Kahlil Gibran}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 68.
+            (5:202) emit message {The Wisdom Tree speaks: The moment you cheat for the sake of beauty, you know you're an artist. -David Hockney}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 69.
+            (5:202) emit message {The Wisdom Tree intones: Everyone has talent. What is rare is the courage to follow that talent to the dark place where it leads. -Erica Jong}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 70.
+            (5:202) emit message {The Wisdom Tree imparts: I don't paint things. I only paint the difference between things. -Henri Matisse}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 71.
+            (5:202) emit message {The Wisdom Tree: Ads are the cave art of the twentieth century. -Marshall McLuhan}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 72.
+            (5:202) emit message {The Wisdom Tree speaks: A furre paints with his brains and not with his hands. -Michelangelo}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 73.
+            (5:202) emit message {The Wisdom Tree intones: The artist belongs to his work, not the work to the artist. -Novalis}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 74.
+            (5:202) emit message {The Wisdom Tree imparts: Every science has for its basis a system of principles as fixed and unalterable as those by which the universe is regulated and governed. Man cannot make principles; he can only discover them. -Thomas Paine}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 75.
+            (5:202) emit message {The Wisdom Tree: Some painters transform the sun into a yellow spot, others transform a yellow spot into the sun. -Pablo Picasso}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 76.
+            (5:202) emit message {The Wisdom Tree speaks: The purpose of art is washing the dust of daily life off our souls. -Pablo Picasso}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 77.
+            (5:202) emit message {The Wisdom Tree intones: Every child is an artist. The problem is how to remain an artist once we grow up. -Pablo Picasso}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 78.
+            (5:202) emit message {The Wisdom Tree imparts: We all know that art is not truth. Art is a lie that makes us realize the truth. -Pablo Picasso}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 79.
+            (5:202) emit message {The Wisdom Tree: Painting is silent poetry, and poetry is painting that speaks. -Plutarch}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 80.
+            (5:202) emit message {The Wisdom Tree says: Our natures are a lot like oil, mix us with anything else, and we strive to swim on top. -Joan Rivers}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 81.
+            (5:202) emit message {The Wisdom Tree says: Art is the only way to run away without leaving home. -Twyla Tharp}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 82.
+            (5:202) emit message {The Wisdom Tree speaks: The buttocks are the most aesthetically pleasing part of the body because they are non-functional. Although they conceal an essential orifice, these pointless globes are as near as the furre form can ever come to abstract art. -Kenneth Tynan}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 83.
+            (5:202) emit message {The Wisdom Tree intones: An artist is someone who produces things that people don't need to have but that he - for some reason - thinks it would be a good idea to give them. -Andy Warhol}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 84.
+            (5:202) emit message {The Wisdom Tree imparts: No great artist ever sees things as they really are. If he did, he would cease to be an artist. -Oscar Wilde}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 85.
+            (5:202) emit message {The Wisdom Tree: Wit is educated insolence. -Aristotle}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 86.
+            (5:202) emit message {The Wisdom Tree says: There is nobody so irritating as somebody with less intelligence and more sense than we have. -Don Herold}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 87.
+            (5:202) emit message {The Wisdom Tree speaks: Every true genius is bound to be naive. -Friedrich Schiller}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 88.
+            (5:202) emit message {The Wisdom Tree intones: Furres, who are almost unique in having the ability to learn from the experience of others, are also remarkable for their apparent disinclination to do so. -Douglas Adams}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 89.
+            (5:202) emit message {The Wisdom Tree imparts: Good judgment comes from experience, and often experience comes from bad judgment. -Rita Mae Brown}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 90.
+            (5:202) emit message {The Wisdom Tree: If we could sell our experiences for what they cost us, we'd all be millionaires. -Abigail Van Buren}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 91.
+            (5:202) emit message {The Wisdom Tree says: Life is the art of drawing without an eraser. -John W. Gardner}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 92.
+            (5:202) emit message {The Wisdom Tree speaks: Everything has been said before, but since nobody listens we have to keep going back and beginning all over again. -Andre Gide}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 93.
+            (5:202) emit message {The Wisdom Tree intones: Life must be understood backwards; but... it must be lived forward. -Soren Kierkegaard}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 94.
+            (5:202) emit message {The Wisdom Tree imparts: Do you know the difference between education and experience? Education is when you read the fine print; experience is what you get when you don't. -Pete Seeger}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 95.
+            (5:202) emit message {The Wisdom Tree: A furre who carries a cat by the tail learns something he can learn in no other way. -Mark Twain}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 96.
+            (5:202) emit message {The Wisdom Tree says: Dreams have only one owner at a time. That's why dreamers are lonely. -Erma Bombeck}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 97.
+            (5:202) emit message {The Wisdom Tree speaks: It takes a lot of courage to show your dreams to someone else. -Erma Bombeck}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 98.
+            (5:202) emit message {The Wisdom Tree intones: If you take responsibility for yourself you will develop a hunger to accomplish your dreams. -Les Brown}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 99.
+            (5:202) emit message {The Wisdom Tree imparts: Myths are public dreams, dreams are private myths. -Joseph Campbell}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 100.
+            (5:202) emit message {The Wisdom Tree: Dreams are today's answers to tomorrow's questions. -Edgar Cayce}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 101.
+            (5:202) emit message {The Wisdom Tree speaks: All our dreams can come true, if we have the courage to pursue them. -Walt Disney}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 102.
+            (5:202) emit message {The Wisdom Tree intones: People need dreams, there's as much nourishment in 'em as food. -Dorothy Gilman}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 103.
+            (5:202) emit message {The Wisdom Tree imparts: Dream no small dreams for they have no power to move the hearts of men. -Johann Wolfgang von Goethe}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 104.
+            (5:202) emit message {The Wisdom Tree: Hold fast to dreams, for if dreams die, life is a broken winged bird that cannot fly. -Langston Hughes}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 105.
+            (5:202) emit message {The Wisdom Tree says: All men dream, but not equally. Those who dream by night in the dusty recesses of their minds, wake in the day to find that it was vanity: but the dreamers of the day are dangerous men, for they may act on their dreams with open eyes, to make them possible. -Thomas E. Lawrence}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 106.
+            (5:202) emit message {The Wisdom Tree speaks: Living in dreams of yesterday, we find ourselves still dreaming of impossible future conquests. -Charles Lindbergh}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 107.
+            (5:202) emit message {The Wisdom Tree intones: One of the most adventurous things left us is to go to bed. For no one can lay a hand on our dreams. -E. V. Lucas}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 108.
+            (5:202) emit message {The Wisdom Tree imparts: Those who have compared our life to a dream were right... we were sleeping wake, and waking sleep. -Michel de Montaigne}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 109.
+            (5:202) emit message {The Wisdom Tree: Dreams are necessary to life. -Anais Nin}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 110.
+            (5:202) emit message {The Wisdom Tree says: Dreams are illustrations... from the book your soul is writing about you. -Marsha Norman}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 111.
+            (5:202) emit message {The Wisdom Tree says: Only in our dreams are we free. The rest of the time we need wages. -Terry Pratchett}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 112.
+            (5:202) emit message {The Wisdom Tree speaks: So many of our dreams at first seem impossible, then they seem improbable, and then, when we summon the will, they soon become inevitable. -Christopher Reeve}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 113.
+            (5:202) emit message {The Wisdom Tree intones: The future belongs to those who believe in the beauty of their dreams. -Eleanor Roosevelt}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 114.
+            (5:202) emit message {The Wisdom Tree imparts: Reality is wrong. Dreams are for real. -Tupac Shakur}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 115.
+            (5:202) emit message {The Wisdom Tree: Dreams are true while they last, and do we not live in dreams? -Alfred Lord Tennyson}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 116.
+            (5:202) emit message {The Wisdom Tree says: I tell people I'm too stupid to know what's impossible. I have ridiculously large dreams, and half the time they come true. -Debi Thomas}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 117.
+            (5:202) emit message {The Wisdom Tree says: Our truest life is when we are in dreams awake. -Henry David Thoreau}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 118.
+            (5:202) emit message {The Wisdom Tree speaks: Dreams are the touchstones of our character. -Henry David Thoreau}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 119.
+            (5:202) emit message {The Wisdom Tree intones: If one advances confidently in the direction of his dreams, and endeavors to live the life which he has imagined, he will meet with success unexpected in common hours. -Henry David Thoreau}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 120.
+            (5:202) emit message {The Wisdom Tree imparts: Dreams are renewable. No matter what our age or condition, thereare still untapped possibilities within us and new beauty waitingto be born. -Dale Turner}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 121.
+            (5:202) emit message {The Wisdom Tree: The best way to make your dreams come true is to wake up. -Paul Valery}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 122.
+            (5:202) emit message {The Wisdom Tree says: I think we dream so we don't have to be apart so long. If we're in each other's dreams, we can play together all night. -Bill Watterson}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 123.
+            (5:202) emit message {The Wisdom Tree says: In dreams begins responsibility. -William Butler Yeats}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 124.
+            (5:202) emit message {The Wisdom Tree speaks: Friendship... is not something you learn in school. But if you haven't learned the meaning of friendship, you really haven't learned anything. -Muhammad Ali}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 125.
+            (5:202) emit message {The Wisdom Tree intones: There is nothing on this earth more to be prized than true friendship. -Saint Thomas Aquinas}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 126.
+            (5:202) emit message {The Wisdom Tree imparts: Friendship is a single soul dwelling in two bodies. -Aristotle}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 127.
+            (5:202) emit message {The Wisdom Tree: I value the friend who for me finds time on his calendar, but I cherish the friend who for me does not consult his calendar. -Robert Brault}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 128.
+            (5:202) emit message {The Wisdom Tree says: It's the friends you can call up at 4 a.m. that matter. -Marlene Dietrich}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 129.
+            (5:202) emit message {The Wisdom Tree says: I have friends in overalls whose friendship I would not swap for the favor of the kings of the world. -Thomas A. Edison}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 130.
+            (5:202) emit message {The Wisdom Tree speaks: The only way to have a friend is to be one. -Ralph Waldo Emerson}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 131.
+            (5:202) emit message {The Wisdom Tree intones: It is one of the blessings of old friends that you can afford to be stupid with them. -Ralph Waldo Emerson}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 132.
+            (5:202) emit message {The Wisdom Tree imparts: A true friend never gets in your way unless you happen to be going down. -Arnold H. Glasow}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 133.
+            (5:202) emit message {The Wisdom Tree: Since there is nothing so well worth having as friends, never lose a chance to make them. -Francesco Guicciardini}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 134.
+            (5:202) emit message {The Wisdom Tree says: A friend is one who knows you and loves you just the same. -Elbert Hubbard}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 135.
+            (5:202) emit message {The Wisdom Tree speaks: The friend is the furre who knows all about you, and still likes you. -Elbert Hubbard}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 136
+            (5:202) emit message {The Wisdom Tree intones: Yes'm, old friends is always best, 'less you can catch a new one that's fit to make an old one out of. -Sarah Orne Jewett}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 137.
+            (5:202) emit message {The Wisdom Tree imparts: The real test of friendship is: can you literally do nothing with the other person? Can you enjoy those moments of life that are utterly simple? -Eugene Kennedy}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 138.
+            (5:202) emit message {The Wisdom Tree: Friendship is unnecessary, like philosophy, like art... It has no survival value; rather it is one of those things that give value to survival. -C. S. Lewis}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 139.
+            (5:202) emit message {The Wisdom Tree says: Many a person has held close, throughout their entire lives, two friends that always remained strange to one another, because one of them attracted by virtue of similarity, the other by difference. -Emil Ludwig}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 140.
+            (5:202) emit message {The Wisdom Tree speaks: Buy land, they're not making it anymore. -Mark Twain}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 141.
+            (5:202) emit message {The Wisdom Tree intones: It is important to our friends to believe that we are unreservedly frank with them, and important to friendship that we are not. -Mignon McLaughlin}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 142.
+            (5:202) emit message {The Wisdom Tree imparts: If it's very painful for you to criticize your friends - you're safe in doing it. But if you take the slightest pleasure in it, that's the time to hold your tongue. -Alice Duer Miller}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 143.
+            (5:202) emit message {The Wisdom Tree: You can always tell a real friend: when you've made a fool of yourself he doesn't feel you've done a permanent job. -Laurence J. Peter}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 144.
+            (5:202) emit message {The Wisdom Tree speaks: I don't need a friend who changes when I change and who nods when I nod; my shadow does that much better. -Plutarch}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 145.
+            (5:202) emit message {The Wisdom Tree intones: Silences make the real conversations between friends. Not the saying but the never needing to say is what counts. -Margaret Lee Runbeck}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 146.
+            (5:202) emit message {The Wisdom Tree imparts: The most I can do for my friend is simply be his friend. -Henry David Thoreau}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 147.
+            (5:202) emit message {The Wisdom Tree: True friends stab you in the front. -Oscar Wilde}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 148.
+            (5:202) emit message {The Wisdom Tree says: Be courteous to all, but intimate with few, and let those few be well tried before you give them your confidence. -George Washington}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 149.
+            (5:202) emit message {The Wisdom Tree speaks: Lots of people want to ride with you in the limo, but what you want is someone who will take the bus with you when the limo breaks down. -Oprah Winfrey}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 150.
+            (5:202) emit message {The Wisdom Tree intones: All love shifts and changes. I don't know if you can be wholeheartedly in love all the time. -Julie Andrews}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 151.
+            (5:202) emit message {The Wisdom Tree imparts: Love takes up where knowledge leaves off. -Saint Thomas Aquinas}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 152.
+            (5:202) emit message {The Wisdom Tree: For all life is a dream, and dreams themselves are only dreams. -Pedro Calderon de la Barca}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 153.
+            (5:202) emit message {The Wisdom Tree says: The best proof of love is trust. -Joyce Brothers}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 154.
+            (5:202) emit message {The Wisdom Tree speaks: To enlarge or illustrate this power and effect of love is to set a candle in the sun. -Robert Burton}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 155.
+            (5:202) emit message {The Wisdom Tree intones: Love is life. And if you miss love, you miss life. -Leo Buscaglia}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 156.
+            (5:202) emit message {The Wisdom Tree imparts: Love is always bestowed as a gift - freely, willingly and without expectation. We don't love to be loved; we love to love. -Leo Buscaglia}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 157.
+            (5:202) emit message {The Wisdom Tree: A loving heart is the beginning of all knowledge. -Thomas Carlyle}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 158.
+            (5:202) emit message {The Wisdom Tree says: Where there is great love, there are always wishes. -Willa Cather}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 159.
+            (5:202) emit message {The Wisdom Tree speaks: The way to love anything is to realize that it may be lost. -Gilbert K. Chesterton}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 160.
+            (5:202) emit message {The Wisdom Tree intones: A baby is born with a need to be loved - and never outgrows it. -Frank A. Clark}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 161.
+            (5:202) emit message {The Wisdom Tree imparts: Friendship often ends in love; but love in friendship - never. -Charles Caleb Colton}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 162.
+            (5:202) emit message {The Wisdom Tree: Come live with me, and be my love, And we will some new pleasures prove, Of golden sands, and crystal brooks, With silken lines, and silver hooks. -John Donne}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 163.
+            (5:202) emit message {The Wisdom Tree says: You will find as you look back upon your life that the moments when you have truly lived are the moments when you have done things in the spirit of love. -Henry Drummond}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 164.
+            (5:202) emit message {The Wisdom Tree speaks: To love abundantly is to live abundantly, and to love forever is to live forever. -Henry Drummond}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 165.
+            (5:202) emit message {The Wisdom Tree intones: Love is love's reward. -John Dryden}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 166.
+            (5:202) emit message {The Wisdom Tree imparts: You cannot be lonely if you like the person you're alone with. -Wayne Dyer}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 167.
+            (5:202) emit message {The Wisdom Tree: Time is too slow for those who wait, too swift for those who fear, too long for those who grieve, too short for those who rejoice, but for those who love, time is eternity. -Henry Van Dyke}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 168.
+            (5:202) emit message {The Wisdom Tree says: You don't have to go looking for love when it's where you come from. -Werner Erhard}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 169.
+            (5:202) emit message {The Wisdom Tree says: Loving is not just looking at each other, it's looking in the same direction. -Antoine de Saint-Exupery}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 170.
+            (5:202) emit message {The Wisdom Tree speaks: The hardest of all is learning to be a well of affection, and not a fountain; to show them we love them not when we feel like it, but when they do. -Nan Fairbrother}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 171.
+            (5:202) emit message {The Wisdom Tree intones: In love the paradox occurs that two beings become one and yet remain two. -Erich Fromm}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 172.
+            (5:202) emit message {The Wisdom Tree imparts: Immature love says: 'I love you because I need you.' Mature love says 'I need you because I love you.' -Erich Fromm}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 173.
+            (5:202) emit message {The Wisdom Tree: Love is an irresistible desire to be irresistibly desired. -Robert Frost}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 174.
+            (5:202) emit message {The Wisdom Tree says: Love is metaphysical gravity. -R. Buckminster Fuller}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 175.
+            (5:202) emit message {The Wisdom Tree speaks: Love is a game that two can play and both win. -Eva Gabor}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 176.
+            (5:202) emit message {The Wisdom Tree intones: Where there is love there is life. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 177.
+            (5:202) emit message {The Wisdom Tree imparts: A 'No' uttered from the deepest conviction is better than a 'Yes' merely uttered to please, or worse, to avoid trouble. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 178.
+            (5:202) emit message {The Wisdom Tree: A coward is incapable of exhibiting love; it is the prerogative of the brave. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 179.
+            (5:202) emit message {The Wisdom Tree: Don't go around saying the world owes you a living. The world owes you nothing. It was here first. -Mark Twain}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 180.
+            (5:202) emit message {The Wisdom Tree says: A small body of determined spirits fired by an unquenchable faith in their mission can alter the course of history. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 181.
+            (5:202) emit message {The Wisdom Tree speaks: An eye for an eye makes us all blind. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 182.
+            (5:202) emit message {The Wisdom Tree intones: Anger and intolerance are the enemies of correct understanding. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 183.
+            (5:202) emit message {The Wisdom Tree imparts: Be the change that you want to see in the world. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 184.
+            (5:202) emit message {The Wisdom Tree: Constant development is the law of life, and a furre who always tries to maintain his dogmas in order to appear consistent drives himself into a false position. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 185.
+            (5:202) emit message {The Wisdom Tree says: Evil is, good or truth misplaced. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 186.
+            (5:202) emit message {The Wisdom Tree speaks: First they ignore you, then they laugh at you, then they fight you, then you win. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 187.
+            (5:202) emit message {The Wisdom Tree intones: Freedom is never dear at any price. It is the breath of life. What would a furre not pay for living? -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 188.
+            (5:202) emit message {The Wisdom Tree imparts: Happiness is when what you think, what you say, and what you do are in harmony. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 189.
+            (5:202) emit message {The Wisdom Tree: Healthy discontent is the prelude to progress. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 190.
+            (5:202) emit message {The Wisdom Tree speaks: I believe that a furre is the strongest soldier for daring to die unarmed. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 191.
+            (5:202) emit message {The Wisdom Tree intones: Imitation is the sincerest flattery. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 192.
+            (5:202) emit message {The Wisdom Tree imparts: In a gentle way, you can shake the world. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 193.
+            (5:202) emit message {The Wisdom Tree: It is health that is real wealth and not pieces of gold and silver. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 194.
+            (5:202) emit message {The Wisdom Tree says: It is unwise to be too sure of one's own wisdom. It is healthy to be reminded that the strongest might weaken and the wisest might err. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 195.
+            (5:202) emit message {The Wisdom Tree says: Live as if you were to die tomorrow. Learn as if you were to live forever. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 196.
+            (5:202) emit message {The Wisdom Tree speaks: Moral authority is never retained by any attempt to hold on to it. It comes without seeking and is retained without effort. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 197.
+            (5:202) emit message {The Wisdom Tree intones: Nearly everything you do is of no importance, but it is important that you do it. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 198.
+            (5:202) emit message {The Wisdom Tree imparts: The difference between what we do and what we are capable of doing would suffice to solve most of the world's problem. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 199.
+            (5:202) emit message {The Wisdom Tree: The greatness of a nation can be judged by the way its animals are treated. -Mohandas Gandhi}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 200.
+            (5:202) emit message {The Wisdom Tree says: Anger is an acid that can do more harm to the vessel in which it is stored than to anything on which it is poured. -Mark Twain}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 201.
+            (5:202) emit message {The Wisdom Tree says: A person who never made a mistake never tried anything new. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 202.
+            (5:202) emit message {The Wisdom Tree speaks: Any fool can make things bigger, more complex, and more violent. It takes a touch of genius-and a lot of courage-to move in the opposite direction. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 203.
+            (5:202) emit message {The Wisdom Tree intones: Any furre who can drive safely while kissing a pretty girl is simply not giving the kiss the attention it deserves. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 204.
+            (5:202) emit message {The Wisdom Tree imparts: Anyone who doesn't take truth seriously in small matters cannot be trusted in large ones either. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 205.
+            (5:202) emit message {The Wisdom Tree: Common sense is the collection of prejudices acquired by age eighteen. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 206.
+            (5:202) emit message {The Wisdom Tree says: Education is what remains after one has forgotten what one has learned in school. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 207.
+            (5:202) emit message {The Wisdom Tree says: Everything that can be counted does not necessarily count; everything that counts cannot necessarily be counted. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 208.
+            (5:202) emit message {The Wisdom Tree speaks: Few are those who see with their own eyes and feel with their own hearts. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 209.
+            (5:202) emit message {The Wisdom Tree intones: Force always attracts men of low morality. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 210.
+            (5:202) emit message {The Wisdom Tree imparts: He who can no longer pause to wonder and stand rapt in awe, is as good as dead; his eyes are closed. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 211.
+            (5:202) emit message {The Wisdom Tree: I am enough of an artist to draw freely upon my imagination. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 212.
+            (5:202) emit message {The Wisdom Tree says: I never think of the future - it comes soon enough. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 213.
+            (5:202) emit message {The Wisdom Tree speaks: If A equals success, then the formula is: A = X + Y + Z, X is work. Y is play. Z is keep your mouth shut. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 214.
+            (5:202) emit message {The Wisdom Tree intones: Insanity: doing the same thing over and over again and expecting different results. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 215.
+            (5:202) emit message {The Wisdom Tree imparts: Intellectuals solve problems, geniuses prevent them. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 216.
+            (5:202) emit message {The Wisdom Tree: It is the supreme art of the teacher to awaken joy in creative expression and knowledge. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 217.
+            (5:202) emit message {The Wisdom Tree says: Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 218.
+            (5:202) emit message {The Wisdom Tree says: Logic will get you from A to B. Imagination will take you everywhere. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 219.
+            (5:202) emit message {The Wisdom Tree speaks: Once we accept our limits, we go beyond them. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 220.
+            (5:202) emit message {The Wisdom Tree intones: Only two things are infinite, the universe and furre stupidity, and I'm not sure about the former. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 221.
+            (5:202) emit message {The Wisdom Tree imparts: Reality is merely an illusion, albeit a very persistent one. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 222.
+            (5:202) emit message {The Wisdom Tree: The difference between stupidity and genius is that genius has its limits. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 223.
+            (5:202) emit message {The Wisdom Tree says: The most incomprehensible thing about the world is that it is comprehensible. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 224.
+            (5:202) emit message {The Wisdom Tree says: The only reason for time is so that everything doesn't happen at once. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 225.
+            (5:202) emit message {The Wisdom Tree speaks: The pursuit of truth and beauty is a sphere of activity in which we are permitted to remain children all our lives. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 226.
+            (5:202) emit message {The Wisdom Tree intones: Climate is what we expect, weather is what we get. -Mark Twain}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 227.
+            (5:202) emit message {The Wisdom Tree imparts: The whole of science is nothing more than a refinement of everyday thinking. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 228.
+            (5:202) emit message {The Wisdom Tree: The world is a dangerous place to live; not because of the people who are evil, but because of the people who don't do anything about it. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 229.
+            (5:202) emit message {The Wisdom Tree says: There comes a time when the mind takes a higher plane of knowledge but can never prove how it got there. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 230.
+            (5:202) emit message {The Wisdom Tree speaks: Try not to become a furre of success, but rather try to become a furre of value. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 231.
+            (5:202) emit message {The Wisdom Tree intones: When you are courting a nice girl an hour seems like a second. When you sit on a red-hot cinder a second seems like an hour. That's relativity. -Albert Einstein}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 232.
+            (5:202) emit message {The Wisdom Tree imparts: A lie can travel half way around the world while the truth is putting on its shoes. -Mark Twain}to every furre who can see (68,47).
+(0:50) When countdown timer 201 goes off,
+   (1:200) and variable %SpeakMessage is equal to 233.
+            (5:202) emit message {The Wisdom Tree: A person who won't read has no advantage over one who can't read. -Mark Twain}to every furre who can see (68,47).
+
+*Endtriggers* 9999 *Endtriggers*
+
+*  // A BEGINNING PROGRAMMER'S NOTE ABOUT STAGE CURTAINS AND STATE MACHINES //
+*
+*    COMPUTERS ARE SOPHISTICATED "STATE MACHINES".  WHAT'S A STATE
+*    MACHINE?  WELL, IT'S A DEVICE THAT WORKS BY KEEPING TRACK OF
+*    THINGS BEING IN ONE STATE OR ANOTHER.  CHARLES BABBAGE AND ADA BYRON
+*    INVENTED THE FIRST COMPUTER, CALLED THE "DIFFERENCE ENGINE"; THEY
+*    DIDN'T ACTUALLY BUILD ONE BUT IT WAS MEANT TO BE MADE OUT OF THOUSANDS
+*    OF BRASS GEARS-- AND IT DIDN'T USE ANY ELECTRICITY!  TO MAKE THE CURTAINS
+*    WORK, WE BUILT OUR OWN TINY STATE MACHINE, USING DRAGONSPEAK AND
+*    ITS ABILITY TO INTERACT WITH THE MAP.*
+*
+*    THIS BIT OF DRAGONSPEAK IS FOR ACTORS ON THE THEATRE MEOVANNI
+*    STAGE.  THE DARK WOOD SQUARES ARE THE SPACES THAT CAN BE SEEN FROM
+*    ALL THE SEATS.  WHEN ANYBODY STANDING ON ONE OF THESE SIX SPACES
+*    TYPES CONTROL-U WITH EMPTY HANDS, THEY OPERATE THE CURTAINS.
+*    IF THERE ARE CURTAINS, THEY WILL GO AWAY; IF THE CURTAINS ARE GONE,
+*    THEY WILL APPEAR.  ONE "INPUT" GIVES TWO DIFFERENT "OUTPUTS" DEPENDING
+*    ON THE WAY THE CURTAINS WERE BEFORE.*
+*
+*    THE TILE BEHIND STAGE IS BEING USED AS A "VARIABLE".  AS YOU WORK THE
+*    CURTAINS YOU CAN SEE IT CHANGE.  THIS IS OUR STATE MACHINE'S
+*    "MEMORY".  IT HAS 3 STATES, `BLACK', `DOT', AND `WHITE'.
+*    EACH TIME CONTROL-U IS PRESSED, THE GAME GOES THROUGH THE
+*    DRAGONSPEAK SCRIPT, TRYING TO EXECUTE ALL THE COMMANDS IN ORDER.
+*    THIS IS A "LINEAR" LANGUAGE, THAT IS, THE COMMANDS ARE LINED UP.
+*    THE DOT STATE IS IMPORTANT BECAUSE IT KEEPS ONE PART OF THE
+*    DRAGONSPEAK SCRIPT FROM UNDOING SOMETHING DONE BY THE PREVIOUS
+*    TRIGGER.*
+*
+*    AN ELECTRONIC COMPUTER SENDS ELECTRICITY ALONG THE PATHWAYS, OR "CIRCUITS"
+*    OF A MICROCHIP, OR "PROCESSOR".  A CIRCUIT IS LIKE A MAZE FOR THE
+*    ELECTRICAL CURRENT TO FOLLOW.  ELECTRICITY GOES IN ONE END AND OUT
+*    ANOTHER IN ONLY ONE DIRECTION.  IT PASSES THROUGH "FUNCTION GATES"
+*    WHICH CHANGES THE STATE OF THE CURRENT.  THE DRAGONSPEAK BELOW IS
+*    THREE TRIGGERS THAT WORK TOGETHER TO TURN A WHITE TILE TO BLACK OR
+*    A BLACK TILE TO WHITE.  THIS IS ALOT LIKE THE KIND OF FUNCTION CALLED
+*    A "FLIPFLOP".

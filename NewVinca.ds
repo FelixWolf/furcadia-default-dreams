@@ -1,0 +1,59 @@
+DSPK V01.00 Furcadia
+VINCA NEXUS
+(0:9) When a furre arrives in the dream,
+ (5:15) move the triggering furre to (38,39), or to someplace nearby if it's occupied.
+Tuning Variables
+(0:0)
+*Time Limit for Idle Furres
+            (5:300) set variable %IdleLimit to the value 240.
+
+            (5:210) set entrytext to {You're back in the <a href=http://www.furcadia.com/maps/vincanexus.jpg>Vinca Nexus</a> again, the heart of Furcadia. You can reach many main areas from here. For peaceful chatting without any roleplaying, try Acropolis. To find a good roleplay dream, try Imaginarium. Meovanni is the in-between place, for easygoing persona play. To get help or learn something new, try the community center, Naia Green.}
+(0:31) When a furre says {entryoff},
+   (1:70) and the triggering furre's name is {emerald|flame},
+(0:31) When a furre says {entryoff},
+   (1:70) and the triggering furre's name is {felorin},
+            (5:210) set entrytext to {}
+
+Idle DS
+NW
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+   (1:17) and they (moved from/are standing at) floor type 168,
+            (5:15) move the triggering furre to (24,26), or to someplace nearby if it's occupied.
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+   (1:17) and they (moved from/are standing at) floor type 164,
+            (5:15) move the triggering furre to (24,26), or to someplace nearby if it's occupied.
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+   (1:17) and they (moved from/are standing at) floor type 172,
+            (5:15) move the triggering furre to (24,26), or to someplace nearby if it's occupied.
+NE
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+   (1:17) and they (moved from/are standing at) floor type 169,
+            (5:15) move the triggering furre to (50,26), or to someplace nearby if it's occupied.
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+   (1:17) and they (moved from/are standing at) floor type 165,
+            (5:15) move the triggering furre to (50,26), or to someplace nearby if it's occupied.
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+   (1:17) and they (moved from/are standing at) floor type 173,
+            (5:15) move the triggering furre to (50,26), or to someplace nearby if it's occupied.
+SE
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+   (1:17) and they (moved from/are standing at) floor type 170,
+            (5:15) move the triggering furre to (50,52), or to someplace nearby if it's occupied.
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+   (1:17) and they (moved from/are standing at) floor type 166,
+            (5:15) move the triggering furre to (50,52), or to someplace nearby if it's occupied.
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+   (1:17) and they (moved from/are standing at) floor type 174,
+            (5:15) move the triggering furre to (50,52), or to someplace nearby if it's occupied.
+SW
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+   (1:17) and they (moved from/are standing at) floor type 171,
+            (5:15) move the triggering furre to (24,52), or to someplace nearby if it's occupied.
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+   (1:17) and they (moved from/are standing at) floor type 167,
+            (5:15) move the triggering furre to (24,52), or to someplace nearby if it's occupied.
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+   (1:17) and they (moved from/are standing at) floor type 175,
+            (5:15) move the triggering furre to (24,52), or to someplace nearby if it's occupied.
+
+*Endtriggers* 9999 *Endtriggers*

@@ -1,0 +1,890 @@
+DSPK V01.10 Furcadia
+Tuning Variables
+(0:0)
+*Time Limit for Idle Furres
+            (5:300) set variable %IdleLimit to the value 120.
+            (5:300) set variable %IdleLimit2 to the value 20.
+            (5:210) set entrytext to {<a href=http://www.furcadia.com/maps/allegriaisland.jpg>Allegria Island</a> is a place especially rich in dream-energy. Just find a spot you like, and press Ctrl-T to upload your dream. AI has a <a href=http://www.furcadia.com/standards/>Teen+</a> environment. Make sure you check out our special <a href=furc://silvershowcase>Silver Showcase</a> dream. Use F3 to move between multiple points around the dream. You can warp to <a href=furc://allegriaisland/1337>Keywi Island</a> and <a href=furc://allegriaisland/1387>Home Island</a> by clicking these links.}
+
+
+
+*Keywi
+0:3 262 3:2 28,91 5:4 159 5:8 29
+0:19 159 1:18 159 3:6 5:4 0
+0:1 1:1002 159 1:81 30,128 34,164 5:76 255
+0:17 255 5:76 0
+
+
+
+*arrival DS
+(0:0)
+            (5:300) set variable %StartPosNumber to the value 1.
+            (5:300) set variable %FurreNumber to the value 0.
+            (5:300) set variable %FurreMAX to the value 3.
+
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+            (5:302) take variable %FurreNumber and add 1 to it.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 1.
+            (5:15) move the triggering furre to (48,61), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 2.
+            (5:15) move the triggering furre to (44,64), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 3.
+            (5:15) move the triggering furre to (42,67), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 4.
+            (5:15) move the triggering furre to (38,70), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 5.
+            (5:15) move the triggering furre to (36,75), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 6.
+            (5:15) move the triggering furre to (38,79), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 7.
+            (5:15) move the triggering furre to (42,81), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 8.
+            (5:15) move the triggering furre to (40,81), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 9.
+            (5:15) move the triggering furre to (44,86), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 10.
+            (5:15) move the triggering furre to (42,89), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 11.
+            (5:15) move the triggering furre to (44,93), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 12.
+            (5:15) move the triggering furre to (48,90), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 13.
+            (5:15) move the triggering furre to (52,87), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 14.
+            (5:15) move the triggering furre to (54,84), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 15.
+            (5:15) move the triggering furre to (58,81), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 16.
+            (5:15) move the triggering furre to (60,78), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 17.
+            (5:15) move the triggering furre to (64,75), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 18.
+            (5:15) move the triggering furre to (66,72), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 19.
+            (5:15) move the triggering furre to (70,69), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 20.
+            (5:15) move the triggering furre to (72,66), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 21.
+            (5:15) move the triggering furre to (76,61), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 22.
+            (5:15) move the triggering furre to (72,56), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 23.
+            (5:15) move the triggering furre to (70,52), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 24.
+            (5:15) move the triggering furre to (66,50), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 25.
+            (5:15) move the triggering furre to (64,54), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 26.
+            (5:15) move the triggering furre to (60,56), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 27.
+            (5:15) move the triggering furre to (58,57), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 28.
+            (5:15) move the triggering furre to (56,60), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 29.
+            (5:15) move the triggering furre to (54,61), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 30.
+            (5:15) move the triggering furre to (52,64), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 31.
+            (5:15) move the triggering furre to (52,64), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 32.
+            (5:15) move the triggering furre to (50,63), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 33.
+            (5:15) move the triggering furre to (48,61), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 34.
+            (5:15) move the triggering furre to (46,59), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 35.
+            (5:15) move the triggering furre to (42,58), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 36.
+            (5:15) move the triggering furre to (42,54), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 37.
+            (5:15) move the triggering furre to (40,53), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 38.
+            (5:15) move the triggering furre to (36,54), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 39.
+            (5:15) move the triggering furre to (34,57), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 40.
+            (5:15) move the triggering furre to (30,57), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 41.
+            (5:15) move the triggering furre to (28,53), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 42.
+            (5:15) move the triggering furre to (28,48), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 43.
+            (5:15) move the triggering furre to (32,46), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 44.
+            (5:15) move the triggering furre to (34,42), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 45.
+            (5:15) move the triggering furre to (38,40), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 46.
+            (5:15) move the triggering furre to (40,36), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 47.
+            (5:15) move the triggering furre to (44,34), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 48.
+            (5:15) move the triggering furre to (46,30), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 49.
+            (5:15) move the triggering furre to (50,27), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 50.
+            (5:15) move the triggering furre to (52,23), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 51.
+            (5:15) move the triggering furre to (56,21), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 52.
+            (5:15) move the triggering furre to (60,19), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 53.
+            (5:15) move the triggering furre to (62,23), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:200) and variable %StartPosNumber is equal to 54.
+   (1:92) and the triggering furre's entry code is less than 10,
+            (5:15) move the triggering furre to (66,25), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 55.
+            (5:15) move the triggering furre to (68,28), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 56.
+            (5:15) move the triggering furre to (62,34), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 57.
+            (5:15) move the triggering furre to (62,38), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 58.
+            (5:15) move the triggering furre to (58,40), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 59.
+            (5:15) move the triggering furre to (56,44), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 60.
+            (5:15) move the triggering furre to (52,46), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 61.
+            (5:15) move the triggering furre to (50,52), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 62.
+            (5:15) move the triggering furre to (50,52), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosNumber is equal to 63.
+            (5:15) move the triggering furre to (52,57), or to someplace nearby if it's occupied.
+
+(0:9) When a furre arrives in the dream,
+   (1:90) and their entry code is 1337,
+            (5:15) move the triggering furre to (34,146), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and their entry code is 1387,
+            (5:15) move the triggering furre to (94,28), or to someplace nearby if it's occupied.
+
+
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %FurreNumber is equal to %FurreMAX.
+   (1:202) and variable %StartPosNumber is less than 61.
+            (5:302) take variable %StartPosNumber and add 1 to it.
+            (5:300) set variable %FurreNumber to the value 0.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %FurreNumber is equal to %FurreMAX.
+   (1:200) and variable %StartPosNumber is equal to 61.
+            (5:300) set variable %StartPosNumber to the value 1.
+            (5:300) set variable %FurreNumber to the value 0.
+
+Hop through
+(0:1) Whenever somebody moves,
+   (1:4) and they bump into a furre,
+   (1:13) and the triggering furre is facing northeast (up and right),
+   (1:150) and 2 step(s) northeast (up and right) from the triggering furre is not object 268,
+   (1:150) and 2 step(s) northeast (up and right) from the triggering furre is not object 1328,
+   (1:150) and 2 step(s) northeast (up and right) from the triggering furre is not object 1329,
+   (1:150) and 2 step(s) northeast (up and right) from the triggering furre is not object 1324,
+   (1:18) and they (moved from/are standing at) object type 2400,
+(0:1) Whenever somebody moves,
+   (1:4) and they bump into a furre,
+   (1:14) and the triggering furre is facing southeast (down and right),
+   (1:151) and 2 step(s) southeast (down and right) from the triggering furre is not object 268,
+   (1:151) and 2 step(s) southeast (down and right) from the triggering furre is not object 1328,
+   (1:151) and 2 step(s) northeast (up and right) from the triggering furre is not object 1329,
+   (1:151) and 2 step(s) northeast (up and right) from the triggering furre is not object 1324,
+   (1:18) and they (moved from/are standing at) object type 2400,
+(0:1) Whenever somebody moves,
+   (1:4) and they bump into a furre,
+   (1:15) and the triggering furre is facing southwest (down and left),
+   (1:152) and 2 step(s) southwest (down and left) from the triggering furre is not object 268,
+   (1:152) and 2 step(s) southwest (down and left) from the triggering furre is not object 1328,
+   (1:152) and 2 step(s) northeast (up and right) from the triggering furre is not object 1329,
+   (1:152) and 2 step(s) northeast (up and right) from the triggering furre is not object 1324,
+   (1:18) and they (moved from/are standing at) object type 2400,
+(0:1) Whenever somebody moves,
+   (1:4) and they bump into a furre,
+   (1:16) and the triggering furre is facing northwest (up and left),
+   (1:153) and 2 step(s) northwest (up and left) from the triggering furre is not object 268,
+   (1:153) and 2 step(s) northwest (up and left) from the triggering furre is not object 1328,
+   (1:153) and 2 step(s) northeast (up and right) from the triggering furre is not object 1329,
+   (1:153) and 2 step(s) northeast (up and right) from the triggering furre is not object 1324,
+   (1:18) and they (moved from/are standing at) object type 2400,
+      (3:5) where the triggering furre (moved from/is standing at),
+            (5:19) move any furre present 2 step(s) forward (in the direction they're facing) if there's nobody already there.
+
+
+
+Animation
+Fires
+(0:3) When somebody moves into object type 79,
+      (3:6) where the triggering furre moved into,
+            (5:4) place object type 1357.
+(0:3) When somebody moves into object type 1357,
+      (3:6) where the triggering furre moved into,
+            (5:4) place object type 79.
+
+*F3 Spots
+
+(0:0) When everything is starting up
+(5:41) place object type 254 at (0,0)
+
+(0:19) When someone uses object type 0
+   (1:118) and the triggering furre (didn't move from/isn't standing at) object type 1378,
+   (1:118) and the triggering furre (didn't move from/isn't standing at) object type 1379,
+   (1:118) and the triggering furre (didn't move from/isn't standing at) object type 1380,
+   (1:118) and the triggering furre (didn't move from/isn't standing at) object type 1381,
+(3:5) where the triggering furre (moved from/is standing at),
+(5:23) swap the object with the object at (0,0).
+(4:3) only where object type 254 is
+(3:3) within the diamond (50,50) - (50,67),
+(5:201) emit message {Keywi Isle} to any furre present.
+(5:17) move any furre present to (34,146), or to someplace nearby if it's occupied.
+(3:3) within the diamond (32,136) - (36,157),
+(5:201) emit message {Home Isle} to any furre present.
+(5:17) move any furre present to (92,28), or to someplace nearby if it's occupied.
+(3:3) within the diamond (92,18) - (96,38),
+(5:201) emit message {Camp Site} to any furre present.
+(5:17) move any furre present to (28,100), or to someplace nearby if it's occupied.
+(3:3) within the diamond (26,94) - (26,123),
+(5:201) emit message {Arena} to any furre present.
+(5:17) move any furre present to (72,89), or to someplace nearby if it's occupied.
+(3:3) within the diamond (78,80) - (80,101),
+(5:201) emit message {Main Hall Exit (NE)} to any furre present.
+(5:17) move any furre present to (66,41), or to someplace nearby if it's occupied.
+(3:3) within the diamond (64,33) - (66,45),
+(5:201) emit message {North Shore} to any furre present.
+(5:17) move any furre present to (42,31), or to someplace nearby if it's occupied.
+(3:1) everywhere on the whole map
+(5:201) emit message {Main Hall} to any furre present.
+(5:17) move any furre present to (48,61), or to someplace nearby if it's occupied.
+(3:5) where the triggering furre (moved from/is standing at),
+(5:23) swap the object with the object at (0,0).
+
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 11,
+            (5:15) move the triggering furre to (34,146), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 12,
+            (5:15) move the triggering furre to (92,28), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 13,
+            (5:15) move the triggering furre to (28,100), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 14,
+            (5:15) move the triggering furre to (72,89), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 15,
+            (5:15) move the triggering furre to (66,41), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 16,
+            (5:15) move the triggering furre to (42,31), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 16,
+            (5:15) move the triggering furre to (48,61), or to someplace nearby if it's occupied.
+
+*Innactivity DS
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+(1:81) and the triggering furre is within the diamond (50,44) - (50,71),
+   (1:18) and they (moved from/are standing at) object type 2400,
+            (5:15) move the triggering furre to (78,92), or to someplace nearby if it's occupied.
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+   (1:181) and the triggering furre is not within the diamond (50,44) - (50,71),
+   (1:18) and they (moved from/are standing at) object type 2400,
+(0:71) When a furre stays in the same square for %IdleLimit2 seconds,
+   (1:18) and they (moved from/are standing at) object type 268,
+(0:71) When a furre stays in the same square for %IdleLimit2 seconds,
+   (1:18) and they (moved from/are standing at) object type 1327,
+(0:71) When a furre stays in the same square for %IdleLimit2 seconds,
+   (1:18) and they (moved from/are standing at) object type 1328,
+(0:71) When a furre stays in the same square for %IdleLimit2 seconds,
+   (1:18) and they (moved from/are standing at) object type 1329,
+            (5:541) set variable %IdlePos to the X,Y position of a random spot where the object is not type 2400 that is onscreen for the triggering furre,
+            (5:15) move the triggering furre to (%IdlePos), or to someplace nearby if it's occupied.
+
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+   (1:81) and the triggering furre is within the diamond (34,64) - (38,83),
+   (1:50) and 1 step(s) northeast (up and right) from the triggering furre is object 2400,
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+   (1:81) and the triggering furre is within the diamond (34,64) - (38,83),
+   (1:51) and 1 step(s) southeast (down and right) from the triggering furre is object 2400,
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+   (1:81) and the triggering furre is within the diamond (34,64) - (38,83),
+   (1:52) and 1 step(s) southwest (down and left) from the triggering furre is object 2400,
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+   (1:81) and the triggering furre is within the diamond (34,64) - (38,83),
+   (1:53) and 1 step(s) northwest (up and left) from the triggering furre is object 2400,
+            (5:541) set variable %IdlePos to the X,Y position of a random spot where the object is not type 2400 that is onscreen for the triggering furre,
+            (5:15) move the triggering furre to (%IdlePos), or to someplace nearby if it's occupied.
+
+Laying get stood up
+(0:13) When a furre lays down,
+   (1:18) and they (moved from/are standing at) object type 2400,
+(0:12) When a furre sits down,
+   (1:18) and they (moved from/are standing at) object type 2400,
+            (5:70) Make the triggering furre stand up.
+
+
+Charter Antiidle
+*(0:71) When a furre stays in the same square for %IdleLimit2 seconds,
+*   (1:17) and they (moved from/are standing at) floor type 63,
+*(0:71) When a furre stays in the same square for %IdleLimit2 seconds,
+*   (1:40) and 1 step(s) northeast (up and right) from the triggering furre is floor 63,
+*(0:71) When a furre stays in the same square for %IdleLimit2 seconds,
+*   (1:41) and 1 step(s) southeast (down and right) from the triggering furre is floor 63,
+*   (1:118) and they (didn't move from/aren't standing at) object type 398,
+*(0:71) When a furre stays in the same square for %IdleLimit2 seconds,
+*   (1:42) and 1 step(s) southwest (down and left) from the triggering furre is floor 63,
+*   (1:118) and they (didn't move from/aren't standing at) object type 398,
+*(0:71) When a furre stays in the same square for %IdleLimit2 seconds,
+*   (1:43) and 1 step(s) northwest (up and left) from the triggering furre is floor 63,
+*            (5:200) emit message {Please do not block chartered positions} to whoever set off the trigger.
+*            (5:541) set variable %IdlePos to the X,Y position of a random spot where the object is not type 2400 that is onscreen for the triggering furre,
+*            (5:15) move the triggering furre to (%IdlePos), or to someplace nearby if it's occupied.
+*(0:71) When a furre stays in the same square for %IdleLimit seconds,
+*   (1:81) and the triggering furre is within the diamond (56,50) - (56,54),
+*            (5:15) move the triggering furre to (78,92), or to someplace nearby if it's occupied.
+
+
+*Boat 1
+
+Boat one postion one
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (84,31),
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (72,24),
+      (3:2) at position (74,24) on the map,
+            (5:4) place object type 270.
+      (3:2) at position (82,31) on the map,
+            (5:4) place object type 270.
+      (3:2) at position (84,31) on the map,
+            (5:16) move any furre present to (82,31) if there's nobody already there.
+            (5:4) place object type 254.
+      (3:2) at position (72,24) on the map,
+            (5:16) move any furre present to (74,24) if there's nobody already there.
+            (5:4) place object type 254.
+            (5:50) set countdown timer 1 to go off in 2 seconds.
+Boat one postion two
+(0:50) When countdown timer 1 goes off,
+   (1:1013) and position (82,31) is object type 270,
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (82,31),
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (74,24),
+      (3:2) at position (76,25) on the map,
+            (5:4) place object type 270.
+      (3:2) at position (80,30) on the map,
+            (5:4) place object type 270.
+      (3:2) at position (82,31) on the map,
+            (5:16) move any furre present to (80,30) if there's nobody already there.
+            (5:4) place object type 254.
+      (3:2) at position (74,24) on the map,
+            (5:16) move any furre present to (76,25) if there's nobody already there.
+            (5:4) place object type 254.
+            (5:50) set countdown timer 1 to go off in 2 seconds.
+Boat one postion three
+(0:50) When countdown timer 1 goes off,
+   (1:1013) and position (80,30) is object type 270,
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (80,30),
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (76,25),
+      (3:2) at position (76,26) on the map,
+            (5:4) place object type 270.
+      (3:2) at position (80,28) on the map,
+            (5:4) place object type 270.
+      (3:2) at position (80,30) on the map,
+            (5:16) move any furre present to (80,28) if there's nobody already there.
+            (5:4) place object type 254.
+      (3:2) at position (76,25) on the map,
+            (5:16) move any furre present to (76,26) if there's nobody already there.
+            (5:4) place object type 254.
+            (5:50) set countdown timer 1 to go off in 2 seconds.
+Boat one postion four
+(0:50) When countdown timer 1 goes off,
+   (1:1013) and position (80,28) is object type 270,
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (80,28),
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (76,26),
+      (3:2) at position (80,27) on the map,
+            (5:4) place object type 270.
+      (3:2) at position (76,28) on the map,
+            (5:4) place object type 270.
+      (3:2) at position (80,28) on the map,
+            (5:16) move any furre present to (80,27) if there's nobody already there.
+            (5:4) place object type 254.
+      (3:2) at position (76,26) on the map,
+            (5:16) move any furre present to (76,28) if there's nobody already there.
+            (5:4) place object type 254.
+            (5:50) set countdown timer 1 to go off in 2 seconds.
+Boat one postion five
+(0:50) When countdown timer 1 goes off,
+   (1:1013) and position (80,27) is object type 270,
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (80,27),
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (76,28),
+      (3:2) at position (80,25) on the map,
+            (5:4) place object type 270.
+      (3:2) at position (76,30) on the map,
+            (5:4) place object type 270.
+      (3:2) at position (80,27) on the map,
+            (5:16) move any furre present to (80,25) if there's nobody already there.
+            (5:4) place object type 254.
+      (3:2) at position (76,28) on the map,
+            (5:16) move any furre present to (76,30) if there's nobody already there.
+            (5:4) place object type 254.
+            (5:50) set countdown timer 1 to go off in 2 seconds.
+Boat one postion six
+(0:50) When countdown timer 1 goes off,
+   (1:1013) and position (80,25) is object type 270,
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (80,25),
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (76,30),
+      (3:2) at position (78,24) on the map,
+            (5:4) place object type 270.
+      (3:2) at position (78,31) on the map,
+            (5:4) place object type 270.
+      (3:2) at position (80,25) on the map,
+            (5:16) move any furre present to (78,24) if there's nobody already there.
+            (5:4) place object type 254.
+      (3:2) at position (76,30) on the map,
+            (5:16) move any furre present to (78,31) if there's nobody already there.
+            (5:4) place object type 254.
+            (5:50) set countdown timer 1 to go off in 2 seconds.
+Boat one postion seven
+(0:50) When countdown timer 1 goes off,
+   (1:1013) and position (78,24) is object type 270,
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (78,24),
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (78,31),
+      (3:2) at position (78,23) on the map,
+            (5:4) place object type 270.
+      (3:2) at position (78,32) on the map,
+            (5:4) place object type 270.
+      (3:2) at position (78,24) on the map,
+            (5:16) move any furre present to (78,23) if there's nobody already there.
+            (5:4) place object type 254.
+      (3:2) at position (78,31) on the map,
+            (5:16) move any furre present to (78,32) if there's nobody already there.
+            (5:4) place object type 254.
+            (5:50) set countdown timer 1 to go off in 2 seconds.
+Boat one postion eight
+(0:50) When countdown timer 1 goes off,
+   (1:1013) and position (78,23) is object type 270,
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (78,23),
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (78,32),
+      (3:2) at position (76,23) on the map,
+            (5:4) place object type 270.
+      (3:2) at position (80,32) on the map,
+            (5:4) place object type 270.
+      (3:2) at position (78,23) on the map,
+            (5:16) move any furre present to (76,23) if there's nobody already there.
+            (5:4) place object type 254.
+      (3:2) at position (78,32) on the map,
+            (5:16) move any furre present to (80,32) if there's nobody already there.
+            (5:4) place object type 254.
+            (5:50) set countdown timer 1 to go off in 2 seconds.
+Boat one postion nine
+(0:50) When countdown timer 1 goes off,
+   (1:1013) and position (76,23) is object type 270,
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (76,23),
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (80,32),
+      (3:2) at position (74,23) on the map,
+            (5:4) place object type 270.
+      (3:2) at position (82,32) on the map,
+            (5:4) place object type 270.
+      (3:2) at position (76,23) on the map,
+            (5:16) move any furre present to (74,23) if there's nobody already there.
+            (5:4) place object type 254.
+      (3:2) at position (80,32) on the map,
+            (5:16) move any furre present to (82,32) if there's nobody already there.
+            (5:4) place object type 254.
+            (5:50) set countdown timer 1 to go off in 2 seconds.
+Boat one position ten
+(0:50) When countdown timer 1 goes off,
+   (1:1013) and position (74,23) is object type 270,
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (74,23),
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (82,32),
+      (3:2) at position (72,24) on the map,
+            (5:4) place object type 270.
+      (3:2) at position (84,31) on the map,
+            (5:4) place object type 270.
+      (3:2) at position (74,23) on the map,
+            (5:17) move any furre present to (70,26) or nearby.
+            (5:4) place object type 254.
+      (3:2) at position (82,32) on the map,
+            (5:17) move any furre present to (86,29) or nearby.
+            (5:4) place object type 254.
+            (5:50) set countdown timer 1 to go off in 2 seconds.
+
+
+Boat two position one
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (26,128),
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (30,119),
+      (3:2) at position (26,127) on the map,
+            (5:4) place object type 269.
+      (3:2) at position (30,120) on the map,
+            (5:4) place object type 269.
+      (3:2) at position (26,128) on the map,
+            (5:16) move any furre present to (26,127) if there's nobody already there.
+            (5:4) place object type 254.
+      (3:2) at position (30,119) on the map,
+            (5:16) move any furre present to (30,120) if there's nobody already there.
+            (5:4) place object type 254.
+            (5:50) set countdown timer 2 to go off in 2 seconds.
+Boat two position two
+(0:50) When countdown timer 2 goes off,
+   (1:1013) and position (26,127) is object type 269,
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (26,127),
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (30,120),
+      (3:2) at position (26,125) on the map,
+            (5:4) place object type 269.
+      (3:2) at position (30,122) on the map,
+            (5:4) place object type 269.
+      (3:2) at position (26,127) on the map,
+            (5:16) move any furre present to (26,125) if there's nobody already there.
+            (5:4) place object type 254.
+      (3:2) at position (30,120) on the map,
+            (5:16) move any furre present to (30,122) if there's nobody already there.
+            (5:4) place object type 254.
+            (5:50) set countdown timer 2 to go off in 2 seconds.
+Boat two position three
+(0:50) When countdown timer 2 goes off,
+   (1:1013) and position (26,125) is object type 269,
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (26,125),
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (30,122),
+      (3:2) at position (26,124) on the map,
+            (5:4) place object type 269.
+      (3:2) at position (30,123) on the map,
+            (5:4) place object type 269.
+      (3:2) at position (26,125) on the map,
+            (5:16) move any furre present to (26,124) if there's nobody already there.
+            (5:4) place object type 254.
+      (3:2) at position (30,122) on the map,
+            (5:16) move any furre present to (30,123) if there's nobody already there.
+            (5:4) place object type 254.
+            (5:50) set countdown timer 2 to go off in 2 seconds.
+Boat two position four
+(0:50) When countdown timer 2 goes off,
+   (1:1013) and position (26,124) is object type 269,
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (26,124),
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (30,123),
+      (3:2) at position (28,123) on the map,
+            (5:4) place object type 269.
+      (3:2) at position (28,124) on the map,
+            (5:4) place object type 269.
+      (3:2) at position (26,124) on the map,
+            (5:16) move any furre present to (28,123) if there's nobody already there.
+            (5:4) place object type 254.
+      (3:2) at position (30,123) on the map,
+            (5:16) move any furre present to (28,124) if there's nobody already there.
+            (5:4) place object type 254.
+            (5:50) set countdown timer 2 to go off in 2 seconds.
+Boat two position five
+(0:50) When countdown timer 2 goes off,
+   (1:1013) and position (28,123) is object type 269,
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (28,123),
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (28,124),
+      (3:2) at position (28,122) on the map,
+            (5:4) place object type 269.
+      (3:2) at position (28,125) on the map,
+            (5:4) place object type 269.
+      (3:2) at position (28,123) on the map,
+            (5:16) move any furre present to (28,122) if there's nobody already there.
+            (5:4) place object type 254.
+      (3:2) at position (28,124) on the map,
+            (5:16) move any furre present to (28,125) if there's nobody already there.
+            (5:4) place object type 254.
+            (5:50) set countdown timer 2 to go off in 2 seconds.
+Boat two position six
+(0:50) When countdown timer 2 goes off,
+   (1:1013) and position (28,122) is object type 269,
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (28,122),
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (28,125),
+      (3:2) at position (30,121) on the map,
+            (5:4) place object type 269.
+      (3:2) at position (28,127) on the map,
+            (5:4) place object type 269.
+      (3:2) at position (28,122) on the map,
+            (5:16) move any furre present to (30,121) if there's nobody already there.
+            (5:4) place object type 254.
+      (3:2) at position (28,125) on the map,
+            (5:16) move any furre present to (28,127) if there's nobody already there.
+            (5:4) place object type 254.
+            (5:50) set countdown timer 2 to go off in 2 seconds.
+Boat two position seven
+(0:50) When countdown timer 2 goes off,
+   (1:1013) and position (30,121) is object type 269,
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (30,121),
+(0:71) When a furre stays in the same square for 1 seconds,
+   (1:19) and they (moved from/are standing at) position (28,127),
+      (3:2) at position (30,119) on the map,
+            (5:4) place object type 269.
+      (3:2) at position (26,128) on the map,
+            (5:4) place object type 269.
+      (3:2) at position (30,121) on the map,
+            (5:17) move any furre present to (28,117) or nearby.
+            (5:4) place object type 254.
+      (3:2) at position (28,127) on the map,
+            (5:17) move any furre present to (28,130) or nearby.
+            (5:4) place object type 254.
+            (5:50) set countdown timer 2 to go off in 2 seconds.
+
+0:17 255 5:200  { Aah! The Kiwi ran off when you tried to pick it up.}
+
+Cart DS
+(0:101) When the time is 99:00 FST
+      (3:532) at a random spot somewhere in the dream where the object is type 1378,
+            (5:4) place object type 0.
+      (3:2) at position (44,108) on the map,
+            (5:5) change object type 0 to type 1378.
+(0:101) When the time is 99:00 FST
+      (3:532) at a random spot somewhere in the dream where the object is type 1379,
+            (5:4) place object type 0.
+      (3:2) at position (44,108) on the map,
+            (5:5) change object type 0 to type 1379.
+(0:101) When the time is 99:00 FST
+      (3:532) at a random spot somewhere in the dream where the object is type 1380,
+            (5:4) place object type 0.
+      (3:2) at position (44,108) on the map,
+            (5:5) change object type 0 to type 1380.
+(0:101) When the time is 99:00 FST
+      (3:532) at a random spot somewhere in the dream where the object is type 1381,
+            (5:4) place object type 0.
+      (3:2) at position (44,108) on the map,
+            (5:5) change object type 0 to type 1381.
+
+
+(0:16) When a furre uses any object,
+ (1:18) and the triggering furre (moved from/is standing at) object type 1378,
+ (1:13) and the triggering furre is facing northeast (up and right),
+ (1:50) and 3 step(s) northeast (up and right) from the triggering furre is object 0,
+ (1:50) and 2 step(s) northeast (up and right) from the triggering furre is object 0,
+ (1:50) and 1 step(s) northeast (up and right) from the triggering furre is object 0,
+  (3:5) where the triggering furre (moved from/is standing at),
+    (5:19) move any furre present 3 step(s) forward (in the direction they're facing) if there's nobody already there.
+    (5:20) move any item present 3 step(s) in the direction the triggering furre is facing.
+    (5:434) reset the animation of all copies of object type 1378 in the dream.
+
+(0:16) When a furre uses any object,
+ (1:18) and the triggering furre (moved from/is standing at) object type 1379,
+ (1:16) and the triggering furre is facing northwest (up and left),
+ (1:53) and 3 step(s) northwest (up and left) from the triggering furre is object 0,
+ (1:53) and 2 step(s) northwest (up and left) from the triggering furre is object 0,
+ (1:53) and 1 step(s) northwest (up and left) from the triggering furre is object 0,
+  (3:5) where the triggering furre (moved from/is standing at),
+    (5:19) move any furre present 3 step(s) forward (in the direction they're facing) if there's nobody already there.
+    (5:20) move any item present 3 step(s) in the direction the triggering furre is facing.
+    (5:434) reset the animation of all copies of object type 1379 in the dream.
+
+(0:16) When a furre uses any object,
+ (1:18) and the triggering furre (moved from/is standing at) object type 1380,
+ (1:15) and the triggering furre is facing southwest (down and left),
+ (1:52) and 3 step(s) southwest (down and left) from the triggering furre is object 0,
+ (1:52) and 2 step(s) southwest (down and left) from the triggering furre is object 0,
+ (1:52) and 1 step(s) southwest (down and left) from the triggering furre is object 0,
+  (3:5) where the triggering furre (moved from/is standing at),
+    (5:19) move any furre present 3 step(s) forward (in the direction they're facing) if there's nobody already there.
+    (5:20) move any item present 3 step(s) in the direction the triggering furre is facing.
+    (5:434) reset the animation of all copies of object type 1380 in the dream.
+
+(0:16) When a furre uses any object,
+ (1:18) and the triggering furre (moved from/is standing at) object type 1381,
+ (1:14) and the triggering furre is facing southeast (down and right),
+ (1:51) and 3 step(s) southeast (down and right) from the triggering furre is object 0,
+ (1:51) and 2 step(s) southeast (down and right) from the triggering furre is object 0,
+ (1:51) and 1 step(s) southeast (down and right) from the triggering furre is object 0,
+  (3:5) where the triggering furre (moved from/is standing at),
+    (5:19) move any furre present 3 step(s) forward (in the direction they're facing) if there's nobody already there.
+    (5:20) move any item present 3 step(s) in the direction the triggering furre is facing.
+    (5:434) reset the animation of all copies of object type 1381 in the dream.
+
+
+
+(0:12) When a furre sits down,
+ (1:13) and the triggering furre is facing northeast (up and right),
+(0:4) When a furre turns,
+ (1:13) and the triggering furre is facing northeast (up and right),
+  (3:5) where the triggering furre (moved from/is standing at),
+    (5:5) change object type 1378 to type 1378.
+    (5:5) change object type 1379 to type 1378.
+    (5:5) change object type 1380 to type 1378.
+    (5:5) change object type 1381 to type 1378.
+
+(0:12) When a furre sits down,
+ (1:16) and the triggering furre is facing northwest (up and left),
+(0:4) When a furre turns,
+ (1:16) and the triggering furre is facing northwest (up and left),
+  (3:5) where the triggering furre (moved from/is standing at),
+    (5:5) change object type 1378 to type 1379.
+    (5:5) change object type 1379 to type 1379.
+    (5:5) change object type 1380 to type 1379.
+    (5:5) change object type 1381 to type 1379.
+
+(0:12) When a furre sits down,
+ (1:15) and the triggering furre is facing southwest (down and left),
+(0:4) When a furre turns,
+ (1:15) and the triggering furre is facing southwest (down and left),
+  (3:5) where the triggering furre (moved from/is standing at),
+    (5:5) change object type 1378 to type 1380.
+    (5:5) change object type 1379 to type 1380.
+    (5:5) change object type 1380 to type 1380.
+    (5:5) change object type 1381 to type 1380.
+
+(0:12) When a furre sits down,
+ (1:14) and the triggering furre is facing southeast (down and right),
+(0:4) When a furre turns,
+ (1:14) and the triggering furre is facing southeast (down and right),
+  (3:5) where the triggering furre (moved from/is standing at),
+    (5:5) change object type 1378 to type 1381.
+    (5:5) change object type 1379 to type 1381.
+    (5:5) change object type 1380 to type 1381.
+    (5:5) change object type 1381 to type 1381.
+
+*Endtriggers* 8888 *Endtriggers*
+

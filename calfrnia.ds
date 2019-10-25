@@ -1,0 +1,1373 @@
+DSPK V01.00 Furcadia
+
+HOTEL CALIFURRNIA by RAFF
+
+*******************************************************
+
+HAPPY FURRES!
+
+(0:19) When somebody uses object type 0,
+	(5:12) play sound 46 to everyone on the map.
+
+*******************************************************
+
+CLOCK:
+
+(0:100) When 3600 seconds have passed, offset by 0,
+	(3:2) at position (32,48) on the map,
+	(5:1) set the floor to type 176.
+	(3:2) at position (36,49) on the map,
+	(5:1) set the floor to type 177.
+
+(0:100) When 3600 seconds have passed, offset by 300,
+	(3:2) at position (36,49) on the map,
+	(5:1) set the floor to type 176.
+	(3:2) at position (38,51) on the map,
+	(5:1) set the floor to type 177.
+
+(0:100) When 3600 seconds have passed, offset by 600,
+	(3:2) at position (38,51) on the map,
+	(5:1) set the floor to type 176.
+	(3:2) at position (38,54) on the map,
+	(5:1) set the floor to type 177.
+
+(0:100) When 3600 seconds have passed, offset by 900,
+	(3:2) at position (38,54) on the map,
+	(5:1) set the floor to type 176.
+	(3:2) at position (38,57) on the map,
+	(5:1) set the floor to type 177.
+	(3:2) at position (48,125) on the map,
+	(5:1) set the floor to type 177.
+	(3:2) at position (62,178) on the map,
+	(5:1) set the floor to type 177.
+
+(0:100) When 3600 seconds have passed, offset by 1200,
+	(3:2) at position (38,57) on the map,
+	(5:1) set the floor to type 176.
+	(3:2) at position (48,125) on the map,
+	(5:1) set the floor to type 176.
+	(3:2) at position (62,178) on the map,
+	(5:1) set the floor to type 176.
+	(3:2) at position (36,59) on the map,
+	(5:1) set the floor to type 177.
+	(3:2) at position (46,127) on the map,
+	(5:1) set the floor to type 177.
+	(3:2) at position (60,180) on the map,
+	(5:1) set the floor to type 177.
+
+(0:100) When 3600 seconds have passed, offset by 1500,
+	(3:2) at position (36,59) on the map,
+	(5:1) set the floor to type 176.
+	(3:2) at position (46,127) on the map,
+	(5:1) set the floor to type 176.
+	(3:2) at position (60,180) on the map,
+	(5:1) set the floor to type 176.
+	(3:2) at position (32,60) on the map,
+	(5:1) set the floor to type 177.
+
+(0:100) When 3600 seconds have passed, offset by 1800,
+	(3:2) at position (32,60) on the map,
+	(5:1) set the floor to type 176.
+	(3:2) at position (30,59) on the map,
+	(5:1) set the floor to type 177.
+
+(0:100) When 3600 seconds have passed, offset by 2100,
+	(3:2) at position (30,59) on the map,
+	(5:1) set the floor to type 176.
+	(3:2) at position (28,57) on the map,
+	(5:1) set the floor to type 177.
+
+(0:100) When 3600 seconds have passed, offset by 2400,
+	(3:2) at position (28,57) on the map,
+	(5:1) set the floor to type 176.
+	(3:2) at position (26,54) on the map,
+	(5:1) set the floor to type 177.
+
+(0:100) When 3600 seconds have passed, offset by 2700,
+	(3:2) at position (26,54) on the map,
+	(5:1) set the floor to type 176.
+	(3:2) at position (28,51) on the map,
+	(5:1) set the floor to type 177.
+
+(0:100) When 3600 seconds have passed, offset by 3000,
+	(3:2) at position (28,51) on the map,
+	(5:1) set the floor to type 176.
+	(3:2) at position (30,49) on the map,
+	(5:1) set the floor to type 177.
+
+(0:100) When 3600 seconds have passed, offset by 3300,
+	(3:2) at position (30,49) on the map,
+	(5:1) set the floor to type 176.
+	(3:2) at position (32,48) on the map,
+	(5:1) set the floor to type 177.
+	(5:12) play sound 13 to everyone on the map.
+
+********************************************************
+
+HOUSEKEEPING:
+
+(0:100) When 3600 seconds have passed, offset by 3300,
+	(3:1) everywhere on the whole map,
+	(5:5) change object type 42 to type 0.
+
+********************************************************
+
+CHECKOUT TIME:
+
+red room:
+
+time limit & housekeeping
+
+*give up an hour after key due
+(0:100) When 3600 seconds have passed, offset by 3300,
+(1:1014) and position (38,45) is not object type 262,
+(1:1011) and position (4,1) is floor type 178,
+	(3:1) everywhere on the whole map,
+	(5:5) change object type 159 to type 0.
+	(3:2) at position (4,1) on the map,
+	(5:1) set the floor to type 180.
+	(3:2) at position (24,89) on the map,
+	(5:4) place object type 534.
+	(3:2) at position (24,88) on the map,
+	(5:4) place object type 66.
+	(3:2) at position (62,26) on the map,
+	(5:4) place object type 534.
+	(3:2) at position (38,45) on the map,
+	(5:4) place object type 262.
+	(5:12) play sound 14 to everyone on the map.
+
+collect loose keys when due
+(0:100) When 3600 seconds have passed, offset by 3300,
+(1:1014) and position (38,45) is not object type 262,
+	(3:1) everywhere on the whole map,
+	(5:5) change object type 159 to type 0.
+	(3:2) at position (4,1) on the map,
+	(5:1) set the floor to type 178.
+	(3:2) at position (24,89) on the map,
+	(5:4) place object type 534.
+	(3:2) at position (24,88) on the map,
+	(5:4) place object type 66.
+	(3:2) at position (62,26) on the map,
+	(5:4) place object type 534.
+
+key due
+
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 159 in their paws,
+(1:1011) and position (4,1) is floor type 178,
+	(5:14) move the triggering furre to (36,47) if there's nobody already there.
+
+key return
+
+(0:18) When somebody drops object type 159,
+(1:19) and they (moved from/are standing at) position (36,47),
+	(3:1) everywhere on the whole map,
+	(5:5) change object type 159 to type 0.
+	(3:2) at position (4,1) on the map,
+	(5:1) set the floor to type 180.
+	(3:2) at position (38,45) on the map,
+	(5:4) place object type 262.
+	(3:2) at position (24,89) on the map,
+	(5:4) place object type 534.
+	(3:2) at position (24,88) on the map,
+	(5:4) place object type 66.
+	(3:2) at position (62,26) on the map,
+	(5:4) place object type 534.
+	(5:12) play sound 14 to everyone on the map.
+
+yellow room:
+
+time limit & housekeeping
+
+*give up an hour after key due
+(0:100) When 3600 seconds have passed, offset by 3300,
+(1:1014) and position (40,47) is not object type 262,
+(1:1011) and position (4,2) is floor type 178,
+	(3:1) everywhere on the whole map,
+	(5:5) change object type 422 to type 0.
+	(3:2) at position (4,2) on the map,
+	(5:1) set the floor to type 182.
+	(3:2) at position (38,103) on the map,
+	(5:4) place object type 529.
+	(3:2) at position (38,102) on the map,
+	(5:4) place object type 66.
+	(3:2) at position (62,60) on the map,
+	(5:4) place object type 529.
+	(3:2) at position (40,47) on the map,
+	(5:4) place object type 262.
+	(5:12) play sound 14 to everyone on the map.
+
+collect loose keys when due
+(0:100) When 3600 seconds have passed, offset by 3300,
+(1:1014) and position (40,47) is not object type 262,
+	(3:1) everywhere on the whole map,
+	(5:5) change object type 422 to type 0.
+	(3:2) at position (4,2) on the map,
+	(5:1) set the floor to type 178.
+	(3:2) at position (38,103) on the map,
+	(5:4) place object type 529.
+	(3:2) at position (38,102) on the map,
+	(5:4) place object type 66.
+	(3:2) at position (62,60) on the map,
+	(5:4) place object type 529.
+
+key due
+
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 422 in their paws,
+(1:1011) and position (4,2) is floor type 178,
+	(5:14) move the triggering furre to (38,49) if there's nobody already there.
+
+key return
+
+(0:18) When somebody drops object type 422,
+(1:19) and they (moved from/are standing at) position (38,49),
+	(3:1) everywhere on the whole map,
+	(5:5) change object type 422 to type 0.
+	(3:2) at position (4,2) on the map,
+	(5:1) set the floor to type 182.
+	(3:2) at position (40,47) on the map,
+	(5:4) place object type 262.
+	(3:2) at position (38,103) on the map,
+	(5:4) place object type 529.
+	(3:2) at position (38,102) on the map,
+	(5:4) place object type 66.
+	(3:2) at position (62,60) on the map,
+	(5:4) place object type 529.
+	(5:12) play sound 14 to everyone on the map.
+
+blue room:
+
+time limit & housekeeping
+
+*give up an hour after key due
+(0:100) When 3600 seconds have passed, offset by 3300,
+(1:1014) and position (42,49) is not object type 262,
+(1:1011) and position (6,3) is floor type 178,
+	(3:1) everywhere on the whole map,
+	(5:5) change object type 421 to type 0.
+	(3:2) at position (6,3) on the map,
+	(5:1) set the floor to type 184.
+	(3:2) at position (52,117) on the map,
+	(5:4) place object type 531.
+	(3:2) at position (52,116) on the map,
+	(5:4) place object type 66.
+	(3:2) at position (62,94) on the map,
+	(5:4) place object type 531.
+	(3:2) at position (42,49) on the map,
+	(5:4) place object type 262.
+	(5:12) play sound 14 to everyone on the map.
+
+collect loose keys when due
+(0:100) When 3600 seconds have passed, offset by 3300,
+(1:1014) and position (42,49) is not object type 262,
+	(3:1) everywhere on the whole map,
+	(5:5) change object type 421 to type 0.
+	(3:2) at position (6,3) on the map,
+	(5:1) set the floor to type 178.
+	(3:2) at position (52,117) on the map,
+	(5:4) place object type 531.
+	(3:2) at position (52,116) on the map,
+	(5:4) place object type 66.
+	(3:2) at position (62,94) on the map,
+	(5:4) place object type 531.
+
+key due
+
+(0:1) Whenever somebody moves,
+(1:1002) and they are holding item 421 in their paws,
+(1:1011) and position (6,3) is floor type 178,
+	(5:14) move the triggering furre to (40,51) if there's nobody already there.
+
+key return
+
+(0:18) When somebody drops object type 421,
+(1:19) and they (moved from/are standing at) position (40,51),
+	(3:1) everywhere on the whole map,
+	(5:5) change object type 421 to type 0.
+	(3:2) at position (6,3) on the map,
+	(5:1) set the floor to type 184.
+	(3:2) at position (42,49) on the map,
+	(5:4) place object type 262.
+	(3:2) at position (52,117) on the map,
+	(5:4) place object type 531.
+	(3:2) at position (52,116) on the map,
+	(5:4) place object type 66.
+	(3:2) at position (62,94) on the map,
+	(5:4) place object type 531.
+	(5:12) play sound 14 to everyone on the map.
+
+********************************************************
+
+ELEVATORS:
+
+ELEVATOR ONE:
+
+floor variables:
+at floor one: tile two, one is floor type one
+in transit, ascending: tile two, one is floor type three
+at floor two: tile two, one is floor type two
+in transit, descending: tile two, one is floor type zero
+in transit, stopped: tile two, one is floor type four
+
+repair stopped elevator:
+
+(0:100) When 900 seconds have passed, offset by 2,
+(1:1011) and position (2,1) is floor type 4,
+(1:1000) and a random dice roll comes up (50 percent of the time),
+	(3:2) at position (2,1) on the map,
+	(5:1) set the floor to type 0.
+	(3:2) at position (12,129) on the map,
+	(5:4) place object type 163.
+	(5:12) play sound 7 to everyone on the map.
+
+summon elevator to floor one:
+
+*press the button
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (20,47),
+	(5:8) play sound 20 to whoever set off the trigger.
+
+*make sure elevator is on second floor
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (20,47),
+(1:1011) and position (2,1) is floor type 2,
+	(5:12) play sound 31 to everyone on the map.
+*block entrance to second floor elevator
+	(3:2) at position (30,111) on the map,
+	(5:4) place object type 541.
+	(3:2) at position (28,110) on the map,
+	(5:1) set the floor to type 80.
+*move occupants to transit elevator
+	(3:2) at position (28,107) on the map,
+	(5:16) move any furre here to (10,127) if there's nobody already there.
+	(3:2) at position (26,108) on the map,
+	(5:16) move any furre here to (8,128) if there's nobody already there.
+	(3:2) at position (28,108) on the map,
+	(5:16) move any furre here to (10,128) if there's nobody already there.
+	(3:2) at position (26,109) on the map,
+	(5:16) move any furre here to (8,129) if there's nobody already there.
+	(3:2) at position (28,109) on the map,
+	(5:16) move any furre here to (10,129) if there's nobody already there.
+	(3:2) at position (26,110) on the map,
+	(5:16) move any furre here to (8,130) if there's nobody already there.
+	(3:2) at position (28,110) on the map,
+	(5:16) move any furre here to (10,130) if there's nobody already there.
+	(3:2) at position (28,111) on the map,
+	(5:16) move any furre here to (10,131) if there's nobody already there.
+*set elevator descending
+	(3:2) at position (2,1) on the map,
+	(5:1) set the floor to type 0.
+*what to do with items left in elevator?
+
+send elevator to floor one:
+
+*throw switch
+(0:7) When somebody moves into position (30,109),
+(1:17) and they (moved from/are standing at) floor type 179,
+	(5:12) play sound 48 to everyone on the map.
+
+*move it if not blocked
+(0:7) When somebody moves into position (30,109),
+(1:17) and they (moved from/are standing at) floor type 179,
+(1:1013) and position (30,111) is object type 0,
+	(5:12) play sound 31 to everyone on the map.
+*block entrance to second floor elevator
+	(3:2) at position (30,111) on the map,
+	(5:4) place object type 541.
+	(3:2) at position (28,110) on the map,
+	(5:1) set the floor to type 80.
+*move occupants to transit elevator
+	(3:2) at position (28,107) on the map,
+	(5:16) move any furre here to (10,127) if there's nobody already there.
+	(3:2) at position (26,108) on the map,
+	(5:16) move any furre here to (8,128) if there's nobody already there.
+	(3:2) at position (28,108) on the map,
+	(5:16) move any furre here to (10,128) if there's nobody already there.
+	(3:2) at position (26,109) on the map,
+	(5:16) move any furre here to (8,129) if there's nobody already there.
+	(3:2) at position (28,109) on the map,
+	(5:16) move any furre here to (10,129) if there's nobody already there.
+	(3:2) at position (26,110) on the map,
+	(5:16) move any furre here to (8,130) if there's nobody already there.
+	(3:2) at position (28,110) on the map,
+	(5:16) move any furre here to (10,130) if there's nobody already there.
+	(3:2) at position (28,111) on the map,
+	(5:16) move any furre here to (10,131) if there's nobody already there.
+*set elevator descending
+	(3:2) at position (2,1) on the map,
+	(5:1) set the floor to type 0.
+*what to do with items left in elevator?
+
+emergency stop:
+
+(0:3) When somebody moves into object type 163,
+(1:7) and they move into position (12,129),
+	(3:6) where the triggering furre moved into,
+	(5:4) place object type 164.
+	(3:2) at position (2,1) on the map,
+	(5:1) set the floor to type 4.
+	(5:12) play sound 50 to everyone on the map.
+
+restart:
+
+(0:3) When somebody moves into object type 164,
+(1:7) and they move into position (12,129),
+	(3:6) where the triggering furre moved into,
+	(5:4) place object type 163.
+	(3:2) at position (2,1) on the map,
+	(5:1) set the floor to type 3.
+	(5:12) play sound 31 to everyone on the map.
+
+move descending elevator to floor one:
+
+*random trip duration, descending
+(0:100) When 5 seconds have passed, offset by 0,
+(1:1011) and position (2,1) is floor type 0,
+(1:1000) and a random dice roll comes up (75 percent of the time),
+	(5:12) play sound 58 to everyone on the map.
+*open entrance to first floor elevator
+	(3:2) at position (20,47) on the map,
+	(5:4) place object type 0.
+	(3:2) at position (18,46) on the map,
+	(5:1) set the floor to type 179.
+*move occupants to first floor elevator
+	(3:2) at position (10,127) on the map,
+	(5:16) move any furre here to (18,43) if there's nobody already there.
+	(3:2) at position (8,128) on the map,
+	(5:16) move any furre here to (16,44) if there's nobody already there.
+	(3:2) at position (10,128) on the map,
+	(5:16) move any furre here to (18,44) if there's nobody already there.
+	(3:2) at position (8,129) on the map,
+	(5:16) move any furre here to (16,45) if there's nobody already there.
+	(3:2) at position (10,129) on the map,
+	(5:16) move any furre here to (18,45) if there's nobody already there.
+	(3:2) at position (8,130) on the map,
+	(5:16) move any furre here to (16,46) if there's nobody already there.
+	(3:2) at position (10,130) on the map,
+	(5:16) move any furre here to (18,46) if there's nobody already there.
+	(3:2) at position (10,131) on the map,
+	(5:16) move any furre here to (18,47) if there's nobody already there.
+*set elevator at floor one
+	(3:2) at position (2,1) on the map,
+	(5:1) set the floor to type 1.
+*what to do with items left in elevator?
+
+summon elevator to floor two:
+
+*press the button
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (30,111),
+	(5:8) play sound 20 to whoever set off the trigger.
+
+*make sure elevator is on first floor
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (30,111),
+(1:1011) and position (2,1) is floor type 1,
+	(5:12) play sound 31 to everyone on the map.
+*block entrance to first floor elevator
+	(3:2) at position (20,47) on the map,
+	(5:4) place object type 541.
+	(3:2) at position (18,46) on the map,
+	(5:1) set the floor to type 80.
+*move occupants to transit elevator
+	(3:2) at position (18,43) on the map,
+	(5:16) move any furre here to (10,127) if there's nobody already there.
+	(3:2) at position (16,44) on the map,
+	(5:16) move any furre here to (8,128) if there's nobody already there.
+	(3:2) at position (18,44) on the map,
+	(5:16) move any furre here to (10,128) if there's nobody already there.
+	(3:2) at position (16,45) on the map,
+	(5:16) move any furre here to (8,129) if there's nobody already there.
+	(3:2) at position (18,45) on the map,
+	(5:16) move any furre here to (10,129) if there's nobody already there.
+	(3:2) at position (16,46) on the map,
+	(5:16) move any furre here to (8,130) if there's nobody already there.
+	(3:2) at position (18,46) on the map,
+	(5:16) move any furre here to (10,130) if there's nobody already there.
+	(3:2) at position (18,47) on the map,
+	(5:16) move any furre here to (10,131) if there's nobody already there.
+*set elevator ascending
+	(3:2) at position (2,1) on the map,
+	(5:1) set the floor to type 3.
+*what to do with items left in elevator?
+
+send elevator to floor two:
+
+*throw switch
+(0:7) When somebody moves into position (20,45),
+(1:17) and they (moved from/are standing at) floor type 179,
+	(5:12) play sound 48 to everyone on the map.
+
+*move it if not blocked
+(0:7) When somebody moves into position (20,45),
+(1:17) and they (moved from/are standing at) floor type 179,
+(1:1013) and position (20,47) is object type 0,
+	(5:12) play sound 31 to everyone on the map.
+*block entrance to first floor elevator
+	(3:2) at position (20,47) on the map,
+	(5:4) place object type 541.
+	(3:2) at position (18,46) on the map,
+	(5:1) set the floor to type 80.
+*move occupants to transit elevator
+	(3:2) at position (18,43) on the map,
+	(5:16) move any furre here to (10,127) if there's nobody already there.
+	(3:2) at position (16,44) on the map,
+	(5:16) move any furre here to (8,128) if there's nobody already there.
+	(3:2) at position (18,44) on the map,
+	(5:16) move any furre here to (10,128) if there's nobody already there.
+	(3:2) at position (16,45) on the map,
+	(5:16) move any furre here to (8,129) if there's nobody already there.
+	(3:2) at position (18,45) on the map,
+	(5:16) move any furre here to (10,129) if there's nobody already there.
+	(3:2) at position (16,46) on the map,
+	(5:16) move any furre here to (8,130) if there's nobody already there.
+	(3:2) at position (18,46) on the map,
+	(5:16) move any furre here to (10,130) if there's nobody already there.
+	(3:2) at position (18,47) on the map,
+	(5:16) move any furre here to (10,131) if there's nobody already there.
+*set elevator ascending
+	(3:2) at position (2,1) on the map,
+	(5:1) set the floor to type 3.
+*what to do with items left in elevator?
+
+move ascending elevator to floor two:
+
+*random trip duration, ascending
+(0:100) When 5 seconds have passed, offset by 0,
+(1:1011) and position (2,1) is floor type 3,
+(1:1000) and a random dice roll comes up (75 percent of the time),
+	(5:12) play sound 58 to everyone on the map.
+*open entrance to second floor elevator
+	(3:2) at position (30,111) on the map,
+	(5:4) place object type 0.
+	(3:2) at position (28,110) on the map,
+	(5:1) set the floor to type 179.
+*move occupants to second floor elevator
+	(3:2) at position (10,127) on the map,
+	(5:16) move any furre here to (28,107) if there's nobody already there.
+	(3:2) at position (8,128) on the map,
+	(5:16) move any furre here to (26,108) if there's nobody already there.
+	(3:2) at position (10,128) on the map,
+	(5:16) move any furre here to (28,108) if there's nobody already there.
+	(3:2) at position (8,129) on the map,
+	(5:16) move any furre here to (26,109) if there's nobody already there.
+	(3:2) at position (10,129) on the map,
+	(5:16) move any furre here to (28,109) if there's nobody already there.
+	(3:2) at position (8,130) on the map,
+	(5:16) move any furre here to (26,110) if there's nobody already there.
+	(3:2) at position (10,130) on the map,
+	(5:16) move any furre here to (28,110) if there's nobody already there.
+	(3:2) at position (10,131) on the map,
+	(5:16) move any furre here to (28,111) if there's nobody already there.
+*set elevator at floor two
+	(3:2) at position (2,1) on the map,
+	(5:1) set the floor to type 2.
+*what to do with items left in elevator?
+
+ELEVATOR TWO:
+
+floor variables:
+at floor one: tile two, two is floor type one
+in transit, ascending: tile two, two is floor type three
+at floor two: tile two, one is floor type two
+in transit, descending: tile two, one is floor type zero
+in transit, stopped: tile two, two is floor type four
+
+repair stopped elevator:
+
+(0:100) When 900 seconds have passed, offset by 2,
+(1:1000) and a random dice roll comes up (50 percent of the time),
+(1:1011) and position (2,2) is floor type 4,
+	(3:2) at position (2,2) on the map,
+	(5:1) set the floor to type 0.
+	(3:2) at position (12,145) on the map,
+	(5:4) place object type 163.
+	(5:12) play sound 7 to everyone on the map.
+
+summon elevator to floor one:
+
+*press the button
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (24,43),
+	(5:8) play sound 20 to whoever set off the trigger.
+
+*make sure elevator is on second floor
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (24,43),
+(1:1011) and position (2,2) is floor type 2,
+	(5:12) play sound 31 to everyone on the map.
+*block entrance to second floor elevator
+	(3:2) at position (34,107) on the map,
+	(5:4) place object type 541.
+	(3:2) at position (32,106) on the map,
+	(5:1) set the floor to type 80.
+*move occupants to transit elevator
+	(3:2) at position (32,103) on the map,
+	(5:16) move any furre here to (10,143) if there's nobody already there.
+	(3:2) at position (30,104) on the map,
+	(5:16) move any furre here to (8,144) if there's nobody already there.
+	(3:2) at position (32,104) on the map,
+	(5:16) move any furre here to (10,144) if there's nobody already there.
+	(3:2) at position (30,105) on the map,
+	(5:16) move any furre here to (8,45) if there's nobody already there.
+	(3:2) at position (32,105) on the map,
+	(5:16) move any furre here to (10,145) if there's nobody already there.
+	(3:2) at position (30,106) on the map,
+	(5:16) move any furre here to (8,146) if there's nobody already there.
+	(3:2) at position (32,106) on the map,
+	(5:16) move any furre here to (10,146) if there's nobody already there.
+	(3:2) at position (32,107) on the map,
+	(5:16) move any furre here to (10,147) if there's nobody already there.
+*set elevator descending
+	(3:2) at position (2,2) on the map,
+	(5:1) set the floor to type 0.
+*what to do with items left in elevator?
+
+send elevator to floor one:
+
+*throw switch
+(0:7) When somebody moves into position (34,105),
+(1:17) and they (moved from/are standing at) floor type 179,
+	(5:12) play sound 48 to everyone on the map.
+
+*move it if not blocked
+(0:7) When somebody moves into position (34,105),
+(1:17) and they (moved from/are standing at) floor type 179,
+(1:1013) and position (34,107) is object type 0,
+	(5:12) play sound 31 to everyone on the map.
+*block entrance to second floor elevator
+	(3:2) at position (34,107) on the map,
+	(5:4) place object type 541.
+	(3:2) at position (32,106) on the map,
+	(5:1) set the floor to type 80.
+*move occupants to transit elevator
+	(3:2) at position (32,103) on the map,
+	(5:16) move any furre here to (10,143) if there's nobody already there.
+	(3:2) at position (30,104) on the map,
+	(5:16) move any furre here to (8,144) if there's nobody already there.
+	(3:2) at position (32,104) on the map,
+	(5:16) move any furre here to (10,144) if there's nobody already there.
+	(3:2) at position (30,105) on the map,
+	(5:16) move any furre here to (8,45) if there's nobody already there.
+	(3:2) at position (32,105) on the map,
+	(5:16) move any furre here to (10,145) if there's nobody already there.
+	(3:2) at position (30,106) on the map,
+	(5:16) move any furre here to (8,146) if there's nobody already there.
+	(3:2) at position (32,106) on the map,
+	(5:16) move any furre here to (10,146) if there's nobody already there.
+	(3:2) at position (32,107) on the map,
+	(5:16) move any furre here to (10,147) if there's nobody already there.
+*set elevator descending
+	(3:2) at position (2,2) on the map,
+	(5:1) set the floor to type 0.
+*what to do with items left in elevator?
+
+emergency stop:
+
+(0:3) When somebody moves into object type 163,
+(1:7) and they move into position (12,145),
+	(3:6) where the triggering furre moved into,
+	(5:4) place object type 164.
+	(3:2) at position (2,2) on the map,
+	(5:1) set the floor to type 4.
+	(5:12) play sound 50 to everyone on the map.
+
+restart:
+
+(0:3) When somebody moves into object type 164,
+(1:7) and they move into position (12,145),
+	(3:6) where the triggering furre moved into,
+	(5:4) place object type 163.
+	(3:2) at position (2,2) on the map,
+	(5:1) set the floor to type 3.
+	(5:12) play sound 31 to everyone on the map.
+
+move descending elevator to floor one:
+
+*random trip duration, descending
+(0:100) When 5 seconds have passed, offset by 0,
+(1:1011) and position (2,2) is floor type 0,
+(1:1000) and a random dice roll comes up (75 percent of the time),
+	(5:12) play sound 58 to everyone on the map.
+*open entrance to first floor elevator
+	(3:2) at position (24,43) on the map,
+	(5:4) place object type 0.
+	(3:2) at position (22,42) on the map,
+	(5:1) set the floor to type 179.
+*move occupants to first floor elevator
+	(3:2) at position (10,143) on the map,
+	(5:16) move any furre here to (22,39) if there's nobody already there.
+	(3:2) at position (8,144) on the map,
+	(5:16) move any furre here to (20,40) if there's nobody already there.
+	(3:2) at position (10,144) on the map,
+	(5:16) move any furre here to (22,40) if there's nobody already there.
+	(3:2) at position (8,145) on the map,
+	(5:16) move any furre here to (20,41) if there's nobody already there.
+	(3:2) at position (10,145) on the map,
+	(5:16) move any furre here to (22,41) if there's nobody already there.
+	(3:2) at position (8,146) on the map,
+	(5:16) move any furre here to (20,42) if there's nobody already there.
+	(3:2) at position (10,146) on the map,
+	(5:16) move any furre here to (22,42) if there's nobody already there.
+	(3:2) at position (10,147) on the map,
+	(5:16) move any furre here to (22,43) if there's nobody already there.
+*set elevator at floor one
+	(3:2) at position (2,2) on the map,
+	(5:1) set the floor to type 1.
+*what to do with items left in elevator?
+
+summon elevator to floor two:
+
+*press the button
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (34,107),
+	(5:8) play sound 20 to whoever set off the trigger.
+
+*make sure elevator is on first floor
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (34,107),
+(1:1011) and position (2,2) is floor type 1,
+	(5:12) play sound 31 to everyone on the map.
+*block entrance to first floor elevator
+	(3:2) at position (24,43) on the map,
+	(5:4) place object type 541.
+	(3:2) at position (22,42) on the map,
+	(5:1) set the floor to type 80.
+*move occupants to transit elevator
+	(3:2) at position (22,39) on the map,
+	(5:16) move any furre here to (10,143) if there's nobody already there.
+	(3:2) at position (20,40) on the map,
+	(5:16) move any furre here to (8,144) if there's nobody already there.
+	(3:2) at position (22,40) on the map,
+	(5:16) move any furre here to (10,144) if there's nobody already there.
+	(3:2) at position (20,41) on the map,
+	(5:16) move any furre here to (8,145) if there's nobody already there.
+	(3:2) at position (22,41) on the map,
+	(5:16) move any furre here to (10,145) if there's nobody already there.
+	(3:2) at position (20,42) on the map,
+	(5:16) move any furre here to (8,146) if there's nobody already there.
+	(3:2) at position (22,42) on the map,
+	(5:16) move any furre here to (10,146) if there's nobody already there.
+	(3:2) at position (22,43) on the map,
+	(5:16) move any furre here to (10,147) if there's nobody already there.
+*set elevator ascending
+	(3:2) at position (2,2) on the map,
+	(5:1) set the floor to type 3.
+*what to do with items left in elevator?
+
+send elevator to floor two:
+
+*throw switch
+(0:7) When somebody moves into position (24,41),
+(1:17) and they (moved from/are standing at) floor type 179,
+	(5:12) play sound 48 to everyone on the map.
+
+*move it if not blocked
+(0:7) When somebody moves into position (24,41),
+(1:17) and they (moved from/are standing at) floor type 179,
+(1:1013) and position (24,43) is object type 0,
+	(5:12) play sound 31 to everyone on the map.
+*block entrance to first floor elevator
+	(3:2) at position (24,43) on the map,
+	(5:4) place object type 541.
+	(3:2) at position (22,42) on the map,
+	(5:1) set the floor to type 80.
+*move occupants to transit elevator
+	(3:2) at position (22,39) on the map,
+	(5:16) move any furre here to (10,143) if there's nobody already there.
+	(3:2) at position (20,40) on the map,
+	(5:16) move any furre here to (8,144) if there's nobody already there.
+	(3:2) at position (22,40) on the map,
+	(5:16) move any furre here to (10,144) if there's nobody already there.
+	(3:2) at position (20,41) on the map,
+	(5:16) move any furre here to (8,145) if there's nobody already there.
+	(3:2) at position (22,41) on the map,
+	(5:16) move any furre here to (10,145) if there's nobody already there.
+	(3:2) at position (20,42) on the map,
+	(5:16) move any furre here to (8,146) if there's nobody already there.
+	(3:2) at position (22,42) on the map,
+	(5:16) move any furre here to (10,146) if there's nobody already there.
+	(3:2) at position (22,43) on the map,
+	(5:16) move any furre here to (10,147) if there's nobody already there.
+*set elevator ascending
+	(3:2) at position (2,2) on the map,
+	(5:1) set the floor to type 3.
+*what to do with items left in elevator?
+
+move ascending elevator to floor two:
+
+*random trip duration, ascending
+(0:100) When 5 seconds have passed, offset by 0,
+(1:1011) and position (2,2) is floor type 3,
+(1:1000) and a random dice roll comes up (75 percent of the time),
+	(5:12) play sound 58 to everyone on the map.
+*open entrance to second floor elevator
+	(3:2) at position (34,107) on the map,
+	(5:4) place object type 0.
+	(3:2) at position (32,106) on the map,
+	(5:1) set the floor to type 179.
+*move occupants to second floor elevator
+	(3:2) at position (10,143) on the map,
+	(5:16) move any furre here to (32,103) if there's nobody already there.
+	(3:2) at position (8,144) on the map,
+	(5:16) move any furre here to (30,104) if there's nobody already there.
+	(3:2) at position (10,144) on the map,
+	(5:16) move any furre here to (32,104) if there's nobody already there.
+	(3:2) at position (8,145) on the map,
+	(5:16) move any furre here to (30,105) if there's nobody already there.
+	(3:2) at position (10,145) on the map,
+	(5:16) move any furre here to (32,105) if there's nobody already there.
+	(3:2) at position (8,146) on the map,
+	(5:16) move any furre here to (30,106) if there's nobody already there.
+	(3:2) at position (10,146) on the map,
+	(5:16) move any furre here to (32,106) if there's nobody already there.
+	(3:2) at position (10,147) on the map,
+	(5:16) move any furre here to (32,107) if there's nobody already there.
+*set elevator at floor two
+	(3:2) at position (2,2) on the map,
+	(5:1) set the floor to type 2.
+*what to do with items left in elevator?
+
+********************************************************
+
+UNIVERSAL DOOR CODE:
+
+se/nw doors (bathrooms only):
+
+(0:1) Whenever somebody moves,
+(1:18) and they (moved from/are standing at) object type (259),
+(1:2) and they move into floor type 179,
+	(5:12) play sound 4 to everyone on the map.
+
+(0:1) Whenever somebody moves,
+(1:17) and they (moved from/are standing at) floor type 179,
+(1:3) and they move into object type 259,
+	(5:12) play sound 4 to everyone on the map.
+
+ne/sw doors (grey carpet):
+
+(0:1) Whenever somebody moves,
+(1:18) and they (moved from/are standing at) object type (260),
+(1:2) and they move into floor type 167,
+	(5:12) play sound 4 to everyone on the map.
+
+(0:1) Whenever somebody moves,
+(1:17) and they (moved from/are standing at) floor type 167,
+(1:3) and they move into object type 260,
+	(5:12) play sound 4 to everyone on the map.
+
+all doors:
+
+(0:19) When somebody uses object type (0),
+(1:18) and they (moved from/are standing at) object type (259),
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 260.
+	(5:12) play sound 3 to everyone on the map.
+
+(0:19) When somebody uses object type (0),
+(1:18) and they (moved from/are standing at) object type (260),
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 259.
+	(5:12) play sound 3 to everyone on the map.
+
+***********************************************************
+
+STAIRS:
+
+up from lobby
+
+(0:7) When somebody moves into position (14,36),
+	(5:14) move the triggering furre to (22,102) if there's nobody already there.
+
+down from second floor
+
+(0:7) When somebody moves into position (24,101),
+	(5:14) move the triggering furre to (16,35) if there's nobody already there.
+
+up from second floor
+
+(0:7) When somebody moves into position (26,104),
+	(5:14) move the triggering furre to (44,151) if there's nobody already there.
+
+down from roof
+
+(0:7) When somebody moves into position (42,152),
+	(5:14) move the triggering furre to (26,105) if there's nobody already there.
+
+*******************************************************
+
+FRONT DESK:
+
+window one
+
+(0:3) When somebody moves into object type 74,
+(1:19) and they (moved from/are standing at) position (36,47),
+(1:1013) and position (38,45) is object type 262,
+(1:1013) and position (36,47) is object type 0,
+	(3:1) everywhere on the whole map,
+	(5:5) change object type 159 to type 0.
+	(3:2) at position (36,47) on the map,
+	(5:4) place object type 159.
+	(3:2) at position (38,45) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 14 to everyone on the map.
+
+window two
+
+(0:3) When somebody moves into object type 74,
+(1:19) and they (moved from/are standing at) position (38,49),
+(1:1013) and position (40,47) is object type 262,
+(1:1013) and position (38,49) is object type 0,
+	(3:1) everywhere on the whole map,
+	(5:5) change object type 422 to type 0.
+	(3:2) at position (38,49) on the map,
+	(5:4) place object type 422.
+	(3:2) at position (40,47) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 14 to everyone on the map.
+
+window three
+
+(0:3) When somebody moves into object type 74,
+(1:19) and they (moved from/are standing at) position (40,51),
+(1:1013) and position (42,49) is object type 262,
+(1:1013) and position (40,51) is object type 0,
+	(3:1) everywhere on the whole map,
+	(5:5) change object type 421 to type 0.
+	(3:2) at position (40,51) on the map,
+	(5:4) place object type 421.
+	(3:2) at position (42,49) on the map,
+	(5:4) place object type 0.
+	(5:12) play sound 14 to everyone on the map.
+
+********************************************************
+
+SFX:
+
+welcome to the hotel
+
+(0:9) When a furre arrives in the dream,
+	(5:15) move the triggering furre to (32,53), or to someplace nearby if it's occupied.
+	(5:12) play sound 61 to everyone on the map.
+
+shower
+
+(0:19) When somebody uses object type 0,
+(1:17) and they (moved from/are standing at) floor type 178,
+	(5:8) play sound 37 to whoever set off the trigger.
+
+toilet
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 413,
+	(5:8) play sound 36 to whoever set off the trigger.
+
+sink
+
+(0:3) When somebody moves into object type 192,
+(1:17) and they (moved from/are standing at) floor type 179,
+	(5:8) play sound 35 to whoever set off the trigger.
+
+television
+
+(0:3) When somebody moves into object type 185,
+	(5:8) play sound 65 to whoever set off the trigger.
+
+lamps
+
+(0:3) When somebody moves into object type 186,
+	(5:8) play sound 20 to whoever set off the trigger.
+
+freezer
+
+(0:3) When somebody moves into object type 181,
+(1:17) and they (moved from/are standing at) floor type 179,
+	(5:8) play sound 7 to whoever set off the trigger.
+
+black pillows reserved for hospitality suites
+
+(0:7) When somebody moves into position (46,115),
+(1:1002) and they are holding item 8 in their paws,
+	(5:14) move the triggering furre to (44,116) if there's nobody already there.
+	(5:8) play sound 39 to whoever set off the trigger.
+
+(0:7) When somebody moves into position (22,91),
+(1:1002) and they are holding item 8 in their paws,
+	(5:14) move the triggering furre to (20,92) if there's nobody already there.
+	(5:8) play sound 39 to whoever set off the trigger.
+
+pool
+
+(0:2) When somebody moves into floor type 133,
+	(5:8) play sound 35 to whoever set off the trigger.
+
+(0:2) When somebody moves into floor type 133,
+(1:17) and they (moved from/are standing at) floor type 32,
+	(5:12) play sound 37 to everyone on the map.
+
+(0:2) When somebody moves into floor type 32,
+(1:17) and they (moved from/are standing at) floor type 133,
+	(5:12) play sound 35 to everyone on the map.
+
+diving board
+
+(0:2) When somebody moves into floor type 133,
+(1:17) and they (moved from/are standing at) floor type 168,
+	(5:12) play sound 36 to everyone on the map.
+
+***********************************************************
+
+RED ROOM:
+
+open door
+
+(0:19) When somebody uses object type 159,
+(1:18) and they (moved from/are standing at) object type 534,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 542.
+	(3:2) at position (62,26) on the map,
+	(5:4) place object type 542.
+	(5:12) play sound 3 to everyone on the map.
+
+close door
+
+(0:19) When somebody uses object type 159,
+(1:18) and they (moved from/are standing at) object type 542,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 534.
+	(3:2) at position (62,26) on the map,
+	(5:4) place object type 534.
+	(5:12) play sound 3 to everyone on the map.
+
+through open door from hallway
+
+(0:7) When somebody moves into position (24,88),
+(1:1014) and position (24,89) is not object type 534,
+	(5:14) move the triggering furre to (64,25) if there's nobody already there.
+
+through closed door from hallway
+
+(0:7) When somebody moves into position (24,88),
+(1:1013) and position (24,89) is object type 534,
+(1:1002) and they are holding item 159 in their paws,
+	(5:14) move the triggering furre to (64,25) if there's nobody already there.
+	(5:12) play sound 4 to everyone on the map.
+
+from room, door closed
+
+(0:7) When somebody moves into position (62,26),
+(1:1013) and position (24,89) is object type 534,
+	(5:14) move the triggering furre to (24,89) if there's nobody already there.
+	(5:12) play sound 4 to everyone on the map.
+
+from room, door open
+
+(0:7) When somebody moves into position (62,26),
+(1:1013) and position (24,89) is object type 542,
+	(5:14) move the triggering furre to (24,89) if there's nobody already there.
+
+curtains
+
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (68,10),
+	(5:8) play sound 11 to whoever set off the trigger.
+
+*when closed: open a little
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (68,10),
+(1:1011) and position (6,1) is floor type 0,
+	(3:2) at position (72,13) on the map,
+	(5:4) place object type 0.
+	(3:2) at position (6,1) on the map,
+	(5:1) set the floor to type 4.
+
+*when closing: close fully
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (68,10),
+(1:1011) and position (6,1) is floor type 1,
+(1:1013) and position (72,13) is object type 0,
+	(3:2) at position (72,13) on the map,
+	(5:4) place object type 202.
+	(3:2) at position (6,1) on the map,
+	(5:1) set the floor to type 0.
+
+*when fully open: close a little
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (68,10),
+(1:1011) and position (6,1) is floor type 2,
+(1:1013) and position (70,12) is object type 0,
+(1:1013) and position (72,14) is object type 0,
+	(3:2) at position (70,12) on the map,
+	(5:4) place object type 202.
+	(3:2) at position (72,14) on the map,
+	(5:4) place object type 202.
+	(3:2) at position (6,1) on the map,
+	(5:1) set the floor to type 1.
+
+*when opening: open fully
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (68,10),
+(1:1011) and position (6,1) is floor type 3,
+	(3:2) at position (70,12) on the map,
+	(5:4) place object type 0.
+	(3:2) at position (72,14) on the map,
+	(5:4) place object type 0.
+	(3:2) at position (6,1) on the map,
+	(5:1) set the floor to type 2.
+
+*close loop:
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (68,10),
+(1:1011) and position (6,1) is floor type 4,
+	(3:2) at position (6,1) on the map,
+	(5:1) set the floor to type 3.
+
+YELLOW ROOM:
+
+open door
+
+(0:19) When somebody uses object type 422,
+(1:18) and they (moved from/are standing at) object type 529,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 537.
+	(3:2) at position (62,60) on the map,
+	(5:4) place object type 537.
+	(5:12) play sound 3 to everyone on the map.
+
+close door
+
+(0:19) When somebody uses object type 422,
+(1:18) and they (moved from/are standing at) object type 537,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 529.
+	(3:2) at position (62,60) on the map,
+	(5:4) place object type 529.
+	(5:12) play sound 3 to everyone on the map.
+
+through open door from hallway
+
+(0:7) When somebody moves into position (38,102),
+(1:1014) and position (38,103) is not object type 529,
+	(5:14) move the triggering furre to (64,59) if there's nobody already there.
+
+through closed door from hallway
+
+(0:7) When somebody moves into position (38,102),
+(1:1013) and position (38,103) is object type 529,
+(1:1002) and they are holding item 422 in their paws,
+	(5:14) move the triggering furre to (64,59) if there's nobody already there.
+	(5:12) play sound 4 to everyone on the map.
+
+from room, door closed
+
+(0:7) When somebody moves into position (62,60),
+(1:1013) and position (38,103) is object type 529,
+	(5:14) move the triggering furre to (38,103) if there's nobody already there.
+	(5:12) play sound 4 to everyone on the map.
+
+from room, door open
+
+(0:7) When somebody moves into position (62,60),
+(1:1013) and position (38,103) is object type 537,
+	(5:14) move the triggering furre to (38,103) if there's nobody already there.
+
+curtains
+
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (68,44),
+	(5:8) play sound 11 to whoever set off the trigger.
+
+*when closed: open a little
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (68,44),
+(1:1011) and position (6,2) is floor type 0,
+	(3:2) at position (72,47) on the map,
+	(5:4) place object type 0.
+	(3:2) at position (6,2) on the map,
+	(5:1) set the floor to type 4.
+
+*when closing: close fully
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (68,44),
+(1:1011) and position (6,2) is floor type 1,
+(1:1013) and position (72,47) is object type 0,
+	(3:2) at position (72,47) on the map,
+	(5:4) place object type 202.
+	(3:2) at position (6,2) on the map,
+	(5:1) set the floor to type 0.
+
+*when fully open: close a little
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (68,44),
+(1:1011) and position (6,2) is floor type 2,
+(1:1013) and position (70,46) is object type 0,
+(1:1013) and position (72,48) is object type 0,
+	(3:2) at position (70,46) on the map,
+	(5:4) place object type 202.
+	(3:2) at position (72,48) on the map,
+	(5:4) place object type 202.
+	(3:2) at position (6,2) on the map,
+	(5:1) set the floor to type 1.
+
+*when opening: open fully
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (68,44),
+(1:1011) and position (6,2) is floor type 3,
+	(3:2) at position (70,46) on the map,
+	(5:4) place object type 0.
+	(3:2) at position (72,48) on the map,
+	(5:4) place object type 0.
+	(3:2) at position (6,2) on the map,
+	(5:1) set the floor to type 2.
+
+*close loop:
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (68,44),
+(1:1011) and position (6,2) is floor type 4,
+	(3:2) at position (6,2) on the map,
+	(5:1) set the floor to type 3.
+
+BLUE ROOM:
+
+open door
+
+(0:19) When somebody uses object type 421,
+(1:18) and they (moved from/are standing at) object type 531,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 539.
+	(3:2) at position (62,94) on the map,
+	(5:4) place object type 539.
+	(5:12) play sound 3 to everyone on the map.
+
+close door
+
+(0:19) When somebody uses object type 421,
+(1:18) and they (moved from/are standing at) object type 539,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 531.
+	(3:2) at position (62,94) on the map,
+	(5:4) place object type 531.
+	(5:12) play sound 3 to everyone on the map.
+
+through open door from hallway
+
+(0:7) When somebody moves into position (52,116),
+(1:1014) and position (52,117) is not object type 531,
+	(5:14) move the triggering furre to (64,93) if there's nobody already there.
+
+through closed door from hallway
+
+(0:7) When somebody moves into position (52,116),
+(1:1013) and position (52,117) is object type 531,
+(1:1002) and they are holding item 421 in their paws,
+	(5:14) move the triggering furre to (64,93) if there's nobody already there.
+	(5:12) play sound 4 to everyone on the map.
+
+from room, door closed
+
+(0:7) When somebody moves into position (62,94),
+(1:1013) and position (52,117) is object type 531,
+	(5:14) move the triggering furre to (52,117) if there's nobody already there.
+	(5:12) play sound 4 to everyone on the map.
+
+from room, door open
+
+(0:7) When somebody moves into position (62,94),
+(1:1013) and position (52,117) is object type 539,
+	(5:14) move the triggering furre to (52,117) if there's nobody already there.
+
+curtains
+
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (68,78),
+	(5:8) play sound 11 to whoever set off the trigger.
+
+*when closed: open a little
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (68,78),
+(1:1011) and position (8,3) is floor type 0,
+	(3:2) at position (72,81) on the map,
+	(5:4) place object type 0.
+	(3:2) at position (8,3) on the map,
+	(5:1) set the floor to type 4.
+
+*when closing: close fully
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (68,78),
+(1:1011) and position (8,3) is floor type 1,
+(1:1013) and position (72,81) is object type 0,
+	(3:2) at position (72,81) on the map,
+	(5:4) place object type 202.
+	(3:2) at position (8,3) on the map,
+	(5:1) set the floor to type 0.
+
+*when fully open: close a little
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (68,78),
+(1:1011) and position (8,3) is floor type 2,
+(1:1013) and position (70,80) is object type 0,
+(1:1013) and position (72,82) is object type 0,
+	(3:2) at position (70,80) on the map,
+	(5:4) place object type 202.
+	(3:2) at position (72,82) on the map,
+	(5:4) place object type 202.
+	(3:2) at position (8,3) on the map,
+	(5:1) set the floor to type 1.
+
+*when opening: open fully
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (68,78),
+(1:1011) and position (8,3) is floor type 3,
+	(3:2) at position (70,80) on the map,
+	(5:4) place object type 0.
+	(3:2) at position (72,82) on the map,
+	(5:4) place object type 0.
+	(3:2) at position (8,3) on the map,
+	(5:1) set the floor to type 2.
+
+*close loop:
+(0:19) When somebody uses object type 0,
+(1:19) and they (moved from/are standing at) position (68,78),
+(1:1011) and position (8,3) is floor type 4,
+	(3:2) at position (8,3) on the map,
+	(5:1) set the floor to type 3.
+
+***************************************************************
+
+FOOD SERVICE:
+
+food is forty-two
+empty table is sixty-one
+full table is one ninety-one
+
+(0:3) When somebody moves into object type 61,
+(1:18) and they (moved from/are standing at) object type 42,
+	(3:6) where the triggering furre moved into,
+	(5:4) place object type 191.
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 0.
+	(5:12) play sound 23 to everyone on the map.
+
+(0:3) When somebody moves into object type 191,
+(1:18) and they (moved from/are standing at) object type 0,
+	(3:6) where the triggering furre moved into,
+	(5:4) place object type 61.
+	(3:5) where the triggering furre (moved from/is standing at),
+	(4:2) only where the floor is not type 179,
+	(5:4) place object type 42.
+	(5:12) play sound 43 to everyone on the map.
+
+(0:3) When somebody moves into object type 61,
+(1:17) and they (moved from/are standing at) floor type 179,
+	(3:6) where the triggering furre moved into,
+	(5:4) place object type 191.
+	(5:12) play sound 23 to everyone on the map.
+
+(0:3) When somebody moves into object type 191,
+(1:17) and they (moved from/are standing at) floor type 179,
+	(3:6) where the triggering furre moved into,
+	(5:4) place object type 61.
+	(5:12) play sound 43 to everyone on the map.
+
+*Endtriggers* 8888 *Endtriggers*

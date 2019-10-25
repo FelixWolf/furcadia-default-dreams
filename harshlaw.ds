@@ -1,0 +1,37 @@
+DSPK V01.00 Furcadia
+
+CLICK ON COBBLES
+(0:2) When somebody moves into floor type 8,
+	(5:8) play sound 26 to whoever set off the trigger.
+
+SOFT CLICK ON GRAY
+(0:2) When somebody moves into floor type 172,
+	(5:8) play sound 20 to whoever set off the trigger.
+
+GOING OVER SEWER GRATES
+(0:2) When somebody moves into floor type 160,
+	(5:8) play sound 33 to whoever set off the trigger.
+
+CURTAINED DOORWAYS
+(0:3) When somebody moves into object type 236,
+	(5:8) play sound 42 to whoever set off the trigger.
+(0:3) When somebody moves into object type 240,
+	(5:8) play sound 42 to whoever set off the trigger.
+
+WOOD DOORWAYS
+(0:3) When somebody moves into object type 260,
+	(5:8) play sound 42 to whoever set off the trigger.
+(0:3) When somebody moves into object type 259,
+	(5:8) play sound 42 to whoever set off the trigger.
+
+
+COOKING GRATES
+(0:3) When somebody moves into object type 54,
+	(5:8) play sound 56 to whoever set off the trigger.
+
+COPPER KETTLES
+(0:3) When somebody moves into object type 48,
+	(5:8) play sound 55 to whoever set off the trigger.
+
+*Endtriggers* 8888 *Endtriggers*
+

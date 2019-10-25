@@ -1,0 +1,770 @@
+DSPK V01.00 Furcadia
+
+FURCADIA CON by RAFF
+
+GLOBAL EFFECTS:
+
+begin at the beginning
+
+(0:9) When a furre arrives in the dream,
+	(5:15) move the triggering furre to (30,56), or to someplace nearby if it's occupied.
+	(5:12) play sound 64 to everyone on the map.
+
+collect dropped keys
+
+(0:18) When somebody drops object type 33,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 0.
+
+(0:18) When somebody drops object type 46,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 0.
+
+(0:18) When somebody drops object type 47,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 0.
+
+(0:18) When somebody drops object type 50,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 0.
+
+(0:18) When somebody drops object type 52,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 0.
+
+(0:18) When somebody drops object type 53,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 0.
+
+(0:18) When somebody drops object type 255,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 0.
+
+(0:18) When somebody drops object type 381,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 0.
+
+(0:18) When somebody drops object type 421,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 0.
+
+(0:18) When somebody drops object type 427,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 0.
+
+pillow dispensers
+
+(0:3) When somebody moves into object type 56,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 1.
+
+change pillows
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 1,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 2.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 2,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 3.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 3,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 4.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 4,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 5.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 5,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 6.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 6,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 7.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 7,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 8.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 8,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 9.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 9,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 10.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 10,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 11.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 11,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 12.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 12,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 14.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 14,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 15.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 15,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 16.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 16,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 17.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 17,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 18.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 18,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 19.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 19,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 20.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 20,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 21.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 21,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 22.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 22,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 23.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 23,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 24.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 24,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 25.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 25,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 26.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 26,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 27.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 27,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 28.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 28,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 29.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 29,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 30.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 30,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 31.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 31,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 32.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 32,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 1.
+
+keep aisles clear
+
+(0:17) When somebody picks up object type 0,
+(1:17) and they (moved from/are standing at) floor type 166,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 0.
+
+change decor: nw walls
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 203,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 204.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 204,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 225.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 225,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 226.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 226,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 227.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 227,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 228.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 228,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 233.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 233,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 234.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 234,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 235.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 235,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 323.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 323,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 324.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 324,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 328.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 328,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 337.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 337,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 339.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 339,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 341.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 341,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 343.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 343,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 345.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 345,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 347.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 347,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 349.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 349,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 351.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 351,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 423.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 423,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 203.
+
+change decor: ne walls
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 202,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 229.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 229,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 230.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 230,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 231.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 231,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 232.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 232,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 237.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 237,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 238.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 238,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 239.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 239,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 325.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 325,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 326.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 326,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 327.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 327,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 338.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 338,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 340.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 340,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 342.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 342,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 344.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 344,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 346.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 346,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 348.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 348,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 350.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 350,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 352.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 352,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 424.
+
+(0:19) When somebody uses object type 0,
+(1:18) and they (moved from/are standing at) object type 424,
+	(3:5) where the triggering furre (moved from/is standing at),
+	(5:4) place object type 202.
+
+gate ajar, warning
+
+(0:100) When 1800 seconds have passed, offset by 0,
+	(3:1) everywhere on the whole map,
+	(5:5) change object type 61 to type 73.
+	(5:12) play sound 58 to everyone on the map.
+
+open gates which are already ajar
+
+(0:100) When 1800 seconds have passed, offset by 30,
+	(3:1) everywhere on the whole map,
+	(5:5) change object type 73 to type 0.
+	(5:12) play sound 3 to everyone on the map.
+
+
+
+BOOTH ONE:
+
+infinite key supply
+
+(0:17) When somebody picks up object type 33,
+	(3:2) at position (12,35) on the map,
+	(5:4) place object type 33.
+
+close the gate
+
+(0:19) When somebody uses object type 33,
+(1:1014) and position (18,37) is not object type 61,
+        (5:12) play sound 42 to everyone on the map.
+	(3:2) at position (18,37) on the map,
+	(5:4) place object type 61.
+
+open the gate
+
+(0:3) When somebody moves into object type 61,
+(1:7) and they move into position (18,37),
+(1:1002) and they are holding item 33 in their paws,
+        (3:6) where the triggering furre moved into,
+	(5:4) place object type 0.
+        (5:12) play sound 3 to everyone on the map.
+
+(0:3) When somebody moves into object type 73,
+(1:7) and they move into position (18,37),
+(1:1002) and they are holding item 33 in their paws,
+        (3:6) where the triggering furre moved into,
+	(5:4) place object type 0.
+        (5:12) play sound 3 to everyone on the map.
+
+BOOTH TWO:
+
+infinite key supply
+
+(0:17) When somebody picks up object type 46,
+	(3:2) at position (18,29) on the map,
+	(5:4) place object type 46.
+
+close the gate
+
+(0:19) When somebody uses object type 46,
+(1:1014) and position (24,31) is not object type 61,
+        (5:12) play sound 42 to everyone on the map.
+	(3:2) at position (24,31) on the map,
+	(5:4) place object type 61.
+
+open the gate
+
+(0:3) When somebody moves into object type 61,
+(1:7) and they move into position (24,31),
+(1:1002) and they are holding item 46 in their paws,
+        (3:6) where the triggering furre moved into,
+	(5:4) place object type 0.
+        (5:12) play sound 3 to everyone on the map.
+
+(0:3) When somebody moves into object type 73,
+(1:7) and they move into position (24,31),
+(1:1002) and they are holding item 46 in their paws,
+        (3:6) where the triggering furre moved into,
+	(5:4) place object type 0.
+        (5:12) play sound 3 to everyone on the map.
+
+BOOTH THREE:
+
+infinite key supply
+
+(0:17) When somebody picks up object type 47,
+	(3:2) at position (24,23) on the map,
+	(5:4) place object type 47.
+
+close the gate
+
+(0:19) When somebody uses object type 47,
+(1:1014) and position (30,23) is not object type 61,
+        (5:12) play sound 42 to everyone on the map.
+	(3:2) at position (30,23) on the map,
+	(5:4) place object type 61.
+
+open the gate
+
+(0:3) When somebody moves into object type 61,
+(1:7) and they move into position (30,23),
+(1:1002) and they are holding item 47 in their paws,
+        (3:6) where the triggering furre moved into,
+	(5:4) place object type 0.
+        (5:12) play sound 3 to everyone on the map.
+
+(0:3) When somebody moves into object type 73,
+(1:7) and they move into position (30,23),
+(1:1002) and they are holding item 47 in their paws,
+        (3:6) where the triggering furre moved into,
+	(5:4) place object type 0.
+        (5:12) play sound 3 to everyone on the map.
+
+BOOTH FOUR:
+
+infinite key supply
+
+(0:17) When somebody picks up object type 50,
+	(3:2) at position (36,11) on the map,
+	(5:4) place object type 50.
+
+close the gate
+
+(0:19) When somebody uses object type 50,
+(1:1014) and position (40,18) is not object type 61,
+        (5:12) play sound 42 to everyone on the map.
+	(3:2) at position (40,18) on the map,
+	(5:4) place object type 61.
+
+open the gate
+
+(0:3) When somebody moves into object type 61,
+(1:7) and they move into position (40,18),
+(1:1002) and they are holding item 50 in their paws,
+        (3:6) where the triggering furre moved into,
+	(5:4) place object type 0.
+        (5:12) play sound 3 to everyone on the map.
+
+(0:3) When somebody moves into object type 73,
+(1:7) and they move into position (40,18),
+(1:1002) and they are holding item 50 in their paws,
+        (3:6) where the triggering furre moved into,
+	(5:4) place object type 0.
+        (5:12) play sound 3 to everyone on the map.
+
+BOOTH FIVE:
+
+infinite key supply
+
+(0:17) When somebody picks up object type 52,
+	(3:2) at position (26,44) on the map,
+	(5:4) place object type 52.
+
+close the gate
+
+(0:19) When somebody uses object type 52,
+(1:1014) and position (22,43) is not object type 61,
+        (5:12) play sound 42 to everyone on the map.
+	(3:2) at position (22,43) on the map,
+	(5:4) place object type 61.
+
+open the gate
+
+(0:3) When somebody moves into object type 61,
+(1:7) and they move into position (22,43),
+(1:1002) and they are holding item 52 in their paws,
+        (3:6) where the triggering furre moved into,
+	(5:4) place object type 0.
+        (5:12) play sound 3 to everyone on the map.
+
+(0:3) When somebody moves into object type 73,
+(1:7) and they move into position (22,43),
+(1:1002) and they are holding item 52 in their paws,
+        (3:6) where the triggering furre moved into,
+	(5:4) place object type 0.
+        (5:12) play sound 3 to everyone on the map.
+
+BOOTH SIX:
+
+infinite key supply
+
+(0:17) When somebody picks up object type 53,
+	(3:2) at position (36,33) on the map,
+	(5:4) place object type 53.
+
+close the gate
+
+(0:19) When somebody uses object type 53,
+(1:1014) and position (32,36) is not object type 61,
+        (5:12) play sound 42 to everyone on the map.
+	(3:2) at position (32,36) on the map,
+	(5:4) place object type 61.
+
+open the gate
+
+(0:3) When somebody moves into object type 61,
+(1:7) and they move into position (32,36),
+(1:1002) and they are holding item 53 in their paws,
+        (3:6) where the triggering furre moved into,
+	(5:4) place object type 0.
+        (5:12) play sound 3 to everyone on the map.
+
+(0:3) When somebody moves into object type 73,
+(1:7) and they move into position (32,36),
+(1:1002) and they are holding item 53 in their paws,
+        (3:6) where the triggering furre moved into,
+	(5:4) place object type 0.
+        (5:12) play sound 3 to everyone on the map.
+
+BOOTH SEVEN:
+
+infinite key supply
+
+(0:17) When somebody picks up object type 255,
+	(3:2) at position (48,23) on the map,
+	(5:4) place object type 255.
+
+close the gate
+
+(0:19) When somebody uses object type 255,
+(1:1014) and position (46,29) is not object type 61,
+        (5:12) play sound 42 to everyone on the map.
+	(3:2) at position (46,29) on the map,
+	(5:4) place object type 61.
+
+open the gate
+
+(0:3) When somebody moves into object type 61,
+(1:7) and they move into position (46,29),
+(1:1002) and they are holding item 255 in their paws,
+        (3:6) where the triggering furre moved into,
+	(5:4) place object type 0.
+        (5:12) play sound 3 to everyone on the map.
+
+(0:3) When somebody moves into object type 73,
+(1:7) and they move into position (46,29),
+(1:1002) and they are holding item 255 in their paws,
+        (3:6) where the triggering furre moved into,
+	(5:4) place object type 0.
+        (5:12) play sound 3 to everyone on the map.
+
+BOOTH EIGHT:
+
+infinite key supply
+
+(0:17) When somebody picks up object type 381,
+	(3:2) at position (32,45) on the map,
+	(5:4) place object type 381.
+
+close the gate
+
+(0:19) When somebody uses object type 381,
+(1:1014) and position (26,48) is not object type 61,
+        (5:12) play sound 42 to everyone on the map.
+	(3:2) at position (26,48) on the map,
+	(5:4) place object type 61.
+
+open the gate
+
+(0:3) When somebody moves into object type 61,
+(1:7) and they move into position (26,48),
+(1:1002) and they are holding item 381 in their paws,
+        (3:6) where the triggering furre moved into,
+	(5:4) place object type 0.
+        (5:12) play sound 3 to everyone on the map.
+
+(0:3) When somebody moves into object type 73,
+(1:7) and they move into position (26,48),
+(1:1002) and they are holding item 381 in their paws,
+        (3:6) where the triggering furre moved into,
+	(5:4) place object type 0.
+        (5:12) play sound 3 to everyone on the map.
+
+BOOTH NINE:
+
+infinite key supply
+
+(0:17) When somebody picks up object type 421,
+	(3:2) at position (40,37) on the map,
+	(5:4) place object type 421.
+
+close the gate
+
+(0:19) When somebody uses object type 421,
+(1:1014) and position (42,40) is not object type 61,
+        (5:12) play sound 42 to everyone on the map.
+	(3:2) at position (42,40) on the map,
+	(5:4) place object type 61.
+
+open the gate
+
+(0:3) When somebody moves into object type 61,
+(1:7) and they move into position (42,40),
+(1:1002) and they are holding item 421 in their paws,
+        (3:6) where the triggering furre moved into,
+	(5:4) place object type 0.
+        (5:12) play sound 3 to everyone on the map.
+
+(0:3) When somebody moves into object type 73,
+(1:7) and they move into position (42,40),
+(1:1002) and they are holding item 421 in their paws,
+        (3:6) where the triggering furre moved into,
+	(5:4) place object type 0.
+        (5:12) play sound 3 to everyone on the map.
+
+BOOTH TEN:
+
+infinite key supply
+
+(0:17) When somebody picks up object type 427,
+	(3:2) at position (52,27) on the map,
+	(5:4) place object type 427.
+
+close the gate
+
+(0:19) When somebody uses object type 427,
+(1:1014) and position (52,33) is not object type 61,
+        (5:12) play sound 42 to everyone on the map.
+	(3:2) at position (52,33) on the map,
+	(5:4) place object type 61.
+
+open the gate
+
+(0:3) When somebody moves into object type 61,
+(1:7) and they move into position (52,33),
+(1:1002) and they are holding item 427 in their paws,
+        (3:6) where the triggering furre moved into,
+	(5:4) place object type 0.
+        (5:12) play sound 3 to everyone on the map.
+
+(0:3) When somebody moves into object type 73,
+(1:7) and they move into position (52,33),
+(1:1002) and they are holding item 427 in their paws,
+        (3:6) where the triggering furre moved into,
+	(5:4) place object type 0.
+        (5:12) play sound 3 to everyone on the map.
+
+*Endtriggers* 8888 *Endtriggers*

@@ -1,0 +1,146 @@
+DSPK V01.00 Furcadia
+THE DRAGONLANDS, Map One: The Town of Solace
+
+(0:0) When everything is starting up,
+            (5:210) set entrytext to {Welcome to <a href=http://www.furcadia.com/maps/goldwyn.jpg>Goldwyn</a>, in Kasuria. This area is for Persona Play (Freeform roleplay). By entering, you agree to keep all "Out Of Character" chatter in whispers. The Consent Rule  applies:  If somebody does something that implies your consent, that you don't like, you may choose to ignore it. Roleplaying info: (URL: http://www.furcadia.com/roleplay/)}
+
+
+Dream Entrance CTRL-U Protection - normal usage brings user near entrance
+
+(0:19) 0 
+(1:119) (0,0) 
+(5:15) (48,120)
+
+UPON ARRIVAL
+  (0:9) When a furre arrives in the dream,
+ (5:15) move the furre to (52,111) if there's nobody already there.
+
+THE GOODMOTHER INN
+   Tavern Back door Exit Only
+   (0:7) When somebody moves into position (102,87),
+   (1:19) and they (moved from/are standing at) position (100,88),
+ (5:8) play sound 42 to whoever set off the trigger.
+ (5:14) move the triggering furre to (102,87) if there's nobody already there.
+   (0:7) When somebody moves into position (100,88),
+   (1:19) and they (moved from/are standing at) position (102,87),
+ (5:8) play sound 25 to whoever set off the trigger.
+
+  Tavern Side Door Exit Only
+  (0:7) When somebody moves into position (80,77),
+   (1:19) and they (moved from/are standing at) position (80,78),
+ (5:8) play sound 42 to whoever set off the trigger.
+ (5:14) move the triggering furre to (80,77) if there's nobody already there.
+   (0:7) When somebody moves into position (80,78),
+   (1:19) and they (moved from/are standing at) position (80,77),
+ (5:8) play sound 25 to whoever set off the trigger.
+
+   Stairs
+   (0:7) When somebody moves into position (90,87),
+ (5:15) move the triggering furre to (24,156), or to someplace nearby if it's occupied.
+   (0:7) When somebody moves into position (24,157),
+ (5:15) move the triggering furre to (88,88), or to someplace nearby if it's occupied.
+   (0:7) When somebody moves into position (98,95),
+ (5:15) move the triggering furre to (32,164), or to someplace nearby if it's occupied.
+   (0:7) When somebody moves into position (32,165),
+ (5:15) move the triggering furre to (96,96), or to someplace nearby if it's occupied.
+
+The Sheriff's Office
+   The left red knight cycles through choices of doors one thru four.
+   (0:3) When somebody moves into object type 171,
+ (3:2) at position (30,89) on the map,
+ (5:5) change object type 485 to type 487.
+   (0:3) When somebody moves into object type 171,
+ (3:2) at position (30,89) on the map,
+ (5:5) change object type 484 to type 485.
+   (0:3) When somebody moves into object type 171,
+ (3:2) at position (30,89) on the map,
+ (5:5) change object type 483 to type 484.
+   (0:3) When somebody moves into object type 171,
+ (3:2) at position (30,89) on the map,
+ (5:5) change object type 482 to type 483.
+   (0:3) When somebody moves into object type 171,
+ (3:2) at position (30,89) on the map,
+ (5:5) change object type 465 to type 482.
+   (0:3) When somebody moves into object type 171,
+ (3:2) at position (30,89) on the map,
+ (5:5) change object type 487 to type 465.
+
+      Door One of the Sheriff's Office
+      ** Opening or closing a door: The "Leapfrog" Principle
+      (0:3) When somebody moves into object type 169,
+      ** When you bump the right red chess knight
+      (1:1013) and position (30,89) is object type 482,
+      ** And the number between knights is a circled blue one
+      (1:1013) and position (30,99) is object type 536,
+           ** And the door is closed,
+    (3:2) at position (30,99) on the map,
+    (5:5) change object type 536 to type 1.
+           ** Turn the closed door into a pillow.
+           ** Okay so now I've made a closed door a PILLOW?!
+           ** Why would I do that?  Well, if I just opened it now,
+           ** this NEXT instruction would close it again...
+      (0:3) When somebody moves into object type 169,
+      (1:1013) and position (30,89) is object type 482,
+      (1:1013) and position (30,99) is object type 544,
+      ** and the door is an open door
+       (5:8) play sound 44 to whoever set off the trigger.
+    (3:2) at position (30,98) on the map,
+    (5:17) move any furre present to (32,92), or to 
+              someplace nearby if it's occupied.
+              ** Awright you, out of the way of the locking door.
+    (5:4) place object type 165.
+           ** an' stick in a chess knight to block the way!
+    (3:2) at position (30,99) on the map,
+    (5:5) change object type 544 to type 536.
+           ** make the closed door an open one...
+      (0:3) When somebody moves into object type 169,
+      (1:1013) and position (30,89) is object type 482,
+      (1:1013) and position (30,99) is object type 1,
+      ** Is there a pillow?
+    (5:8) play sound 44 to whoever set off the trigger.
+    (3:2) at position (30,99) on the map,
+    (5:5) change object type 1 to type 544.
+           ** then make it an open door.
+    (3:2) at position (30,98) on the map,
+    (5:4) place object type 0.
+           ** remove the chess knight to blocks the way.
+      Door Two 
+      ** This is just like Door One, only the coordinates are
+      ** changed and all the words are stripped out to save space.
+      (0:3)169(1:1013)(30,89)483(1:1013)(26,95)536(3:2)(26,95)
+         (5:5) 536 1(0:3) 169(1:1013)(30,89)483(1:1013)(26,95)544
+         (5:8)44(3:2)(26,94)(5:17)(32,92)(5:4) 165(3:2)(26,95)
+         (5:5)544 536(0:3)169(1:1013) (30,89)483(1:1013)(26,95)
+         1(5:8)44(3:2)(26,95)(5:5)1 544(3:2)(26,94)(5:4)0
+
+      Door Three
+      (0:3)169(1:1013)(30,89)484(1:1013)(26,87)536(3:2)(26,87)
+         (5:5) 536 1(0:3) 169(1:1013)(30,89)484(1:1013)(26,87)544
+         (5:8)44(3:2)(26,86)(5:17)(32,92)(5:4) 165(3:2)(26,87)
+         (5:5)544 536(0:3)169(1:1013) (30,89)484(1:1013)(26,87)
+         1(5:8)44(3:2)(26,87)(5:5)1 544(3:2)(26,86)(5:4)0
+
+      Door Four
+      ** Again, the same code, but this time- the open and closed
+      ** door numbers were reversed.  To do this, I cut and pasted
+      ** this section to Wordpad.  All occurences of a the number
+      ** for a closed door were replaced with the world "lemon".
+      ** Then all the numbers for an open door were replaced with
+      ** the number for a closed door-- this time using the
+      ** leapfrog principle to switch the two numbers.
+      (0:3)169(1:1013)(30,89)485(1:1013)(28,83)544(3:2)(28,83)
+         (5:5) 544 1(0:3) 169(1:1013)(30,89)485(1:1013)(28,83)536
+         (5:8)44(3:2)(26,82)(5:17)(32,92)(5:4) 165(3:2)(28,83)
+         (5:5)536 544(0:3)169(1:1013) (30,89)485(1:1013)(28,83)
+         1(5:8)44(3:2)(28,83)(5:5)1 536(3:2)(26,82)(5:4)0
+
+THE CHAPEL OF LIGHT
+     (0:7) When somebody moves into position (128,180)
+ (5:14) move the triggering furre to (46,56) if there's nobody already there.
+     (0:7) When somebody moves into position (46,55)
+ (5:14) move the triggering furre to (128,179) if there's nobody already there.
+     (0:7) When somebody moves into position (158,170)
+ (5:14) move the triggering furre to (118,176) if there's nobody already there.
+     (0:7) When somebody moves into position (118,175)
+ (5:14) move the triggering furre to (158,169) if there's nobody already there.
+*Endtriggers* 8888 *Endtriggers*

@@ -1,0 +1,367 @@
+DSPK V01.00 Furcadia
+IMAGINARIUM
+Tuning Variables
+*Number of furres before start position transitions.
+*Time Limit for Idle Furres
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXX Moving arrival point XXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+(0:0)
+            (5:300) set variable %FurreMax to the value 3.
+            (5:300) set variable %IdleLimit to the value 120.
+             (5:300) set variable %StartPos.x is equal to 16.
+            (5:300) set variable %StartPos.y is equal to 104.
+            (5:300) set variable %ReturnTrip to the value 1.
+            (5:5) change object type 97 to type 1337.
+            (5:210) set entrytext to {You've discovered <a href=http://www.furcadia.com/maps/imaginarium.jpg>Imaginarium</a>. Play here follows the Consent Rule. As it's more of a back-stage area, feel free to discuss in-character, "IC", action, and upload roleplay-oriented Dreams. The Imaginarium has entrances to two additional main areas suited for roleplaying, Theriopolis and Goldwyn. Use F3 to move between multiple points around the dream. }
+
+(0:31) When a furre says {entryoff},
+   (1:70) and the triggering furre's name is {emerald|flame},
+(0:31) When a furre says {entryoff},
+   (1:70) and the triggering furre's name is {felorin},
+            (5:210) set entrytext to {}
+Place a furre
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+            (5:15) move the triggering furre to (%StartPos), or to someplace nearby if it's occupied.
+            (5:302) take variable %FurreNumber and add 1 to it.
+Too many furres? Time to move!
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %FurreNumber is equal to %FurreMax.
+            (5:300) set variable %FurreNumber to the value 0.
+            (5:300) set variable %StartPosMove to the value 1.
+West End
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosMove is equal to 1.
+   (1:200) and variable %StartPos.x is equal to 16.
+   (1:200) and variable %ReturnTrip is equal to 1.
+            (5:352) move the position in variable %StartPos northeast (up and right) 3 step(s).
+            (5:300) set variable %StartPosMove to the value 0.
+            (5:300) set variable %ReturnTrip to the value 0.
+Frst Road
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosMove is equal to 1.
+   (1:202) and variable %StartPos.x is less than 86.
+   (1:201) and variable %StartPos.x is greater than 16.
+   (1:200) and variable %ReturnTrip is equal to 0.
+            (5:352) move the position in variable %StartPos northeast (up and right) 3 step(s).
+            (5:300) set variable %StartPosMove to the value 0.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosMove is equal to 1.
+   (1:202) and variable %StartPos.x is less than 88.
+   (1:201) and variable %StartPos.x is greater than 16.
+   (1:200) and variable %ReturnTrip is equal to 1.
+            (5:354) move the position in variable %StartPos southwest (down and left) 3 step(s).
+            (5:300) set variable %StartPosMove to the value 0.
+Second Road
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosMove is equal to 1.
+   (1:202) and variable %StartPos.x is less than 130.
+   (1:201) and variable %StartPos.x is greater than 84.
+   (1:200) and variable %ReturnTrip is equal to 0.
+            (5:353) move the position in variable %StartPos southeast (down and right) 4 step(s).
+            (5:300) set variable %StartPosMove to the value 0.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosMove is equal to 1.
+   (1:202) and variable %StartPos.x is less than 132.
+   (1:201) and variable %StartPos.x is greater than 86.
+   (1:200) and variable %ReturnTrip is equal to 1.
+            (5:355) move the position in variable %StartPos northwest (up and left) 4 step(s).
+            (5:300) set variable %StartPosMove to the value 0.
+Third Road
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosMove is equal to 1.
+   (1:202) and variable %StartPos.x is less than 144.
+   (1:201) and variable %StartPos.x is greater than 130.
+   (1:200) and variable %ReturnTrip is equal to 1.
+            (5:354) move the position in variable %StartPos southwest (down and left) 3 step(s).
+            (5:300) set variable %StartPosMove to the value 0.
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosMove is equal to 1.
+   (1:202) and variable %StartPos.x is less than 144.
+   (1:201) and variable %StartPos.x is greater than 128.
+   (1:200) and variable %ReturnTrip is equal to 0.
+            (5:352) move the position in variable %StartPos northeast (up and right) 3 step(s).
+            (5:300) set variable %StartPosMove to the value 0.
+
+(0:9) When a furre arrives in the dream,
+   (1:92) and the triggering furre's entry code is less than 10,
+   (1:200) and variable %StartPosMove is equal to 1.
+   (1:200) and variable %StartPos.x is equal to 144.
+   (1:200) and variable %ReturnTrip is equal to 0.
+            (5:354) move the position in variable %StartPos southwest (down and left) 3 step(s).
+            (5:300) set variable %StartPosMove to the value 0.
+            (5:300) set variable %ReturnTrip to the value 1.
+
+Anti Idle DS
+(0:71) When a furre stays in the same square for %IdleLimit seconds,
+   (1:17) and they (moved from/are standing at) floor type 8,
+(5:521) set variable %IdlePos to the X,Y position of a random spot where the floor is not type 8 that is onscreen for the triggering furre,
+            (5:15) move the triggering furre to (%IdlePos), or to someplace nearby if it's occupied.
+
+
+Animation
+Fires
+(0:3) When somebody moves into object type 79,
+      (3:6) where the triggering furre moved into,
+            (5:4) place object type 1357.
+(0:3) When somebody moves into object type 1357,
+      (3:6) where the triggering furre moved into,
+            (5:4) place object type 79.
+
+One: HOURGLASS
+(0:7) When somebody moves into position (24,76),
+ (5:15) move the triggering furre to (90,170), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (28,79),
+ (5:15) move the triggering furre to (94,173), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (90,171),
+ (5:15) move the triggering furre to (24,77), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (92,174),
+ (5:15) move the triggering furre to (26,80), or to someplace nearby if it's occupied.
+
+
+Two: THE X
+(0:7) When somebody moves into position (14,50),
+ (5:15) move the triggering furre to (180,120), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (24,50),
+ (5:15) move the triggering furre to (192,120), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (182,119),
+ (5:15) move the triggering furre to (16,49), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (192,119),
+ (5:15) move the triggering furre to (24,49), or to someplace nearby if it's occupied.
+
+Three: BLACK
+(0:7) When somebody moves into position (30,20),
+ (5:15) move the triggering furre to (52,171), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (28,23),
+ (5:15) move the triggering furre to (48,174), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (52,172),
+ (5:15) move the triggering furre to (32,21), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (50,175),
+ (5:15) move the triggering furre to (28,24), or to someplace nearby if it's occupied.
+
+Four: ARROW
+(0:7) When somebody moves into position (64,22),
+ (5:15) move the triggering furre to (112,172), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (70,22),
+ (5:15) move the triggering furre to (118,172), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (114,173),
+ (5:15) move the triggering furre to (66,23), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (118,173),
+ (5:15) move the triggering furre to (70,23), or to someplace nearby if it's occupied.
+
+Five: CASTLE-ISH
+(0:7) When somebody moves into position (126,22),
+ (5:15) move the triggering furre to (150,172), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (132,27),
+ (5:15) move the triggering furre to (152,174), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (128,31),
+ (5:15) move the triggering furre to (148,178), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (122,26),
+ (5:15) move the triggering furre to (146,176), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (150,171),
+ (5:15) move the triggering furre to (126,21), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (154,175),
+ (5:15) move the triggering furre to (132,28), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (150,179),
+ (5:15) move the triggering furre to (128,32), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (146,175),
+ (5:15) move the triggering furre to (122,25), or to someplace nearby if it's occupied.
+
+Six: L SAND ARENA
+(0:7) When somebody moves into position (164,88),
+ (5:15) move the triggering furre to (104,152), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (104,153),
+ (5:15) move the triggering furre to (164,89), or to someplace nearby if it's occupied.
+
+Seven: HEART
+(0:7) When somebody moves into position (136,99),
+ (5:15) move the triggering furre to (190,177), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (126,109),
+ (5:15) move the triggering furre to (180,187), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (190,178),
+ (5:15) move the triggering furre to (136,100), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (180,188),
+ (5:15) move the triggering furre to (126,110), or to someplace nearby if it's occupied.
+
+Eight: GALLERY
+(0:7) When somebody moves into position (100,59),
+ (5:15) move the triggering furre to (166,144), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (96,63),
+ (5:15) move the triggering furre to (164,146), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (168,143),
+ (5:15) move the triggering furre to (100,58), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (164,147),
+ (5:15) move the triggering furre to (94,64), or to someplace nearby if it's occupied.
+
+Nine: CHAOS
+(0:7) When somebody moves into position (82,18),
+ (5:15) move the triggering furre to (78,91), or to someplace nearby if it's occupied.
+(0:7) When somebody moves into position (78,91),
+ (5:15) move the triggering furre to (82,18), or to someplace nearby if it's occupied.
+
+Ten: THE KEY
+(0:7) When somebody moves into position (24,105),
+ (5:15) move the triggering furre to (124,149), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (28,109),
+ (5:15) move the triggering furre to (128,153), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (122,150),
+ (5:15) move the triggering furre to (22,106), or to someplace nearby if it's occupied.
+
+(0:7) When somebody moves into position (126,154),
+ (5:15) move the triggering furre to (26,110), or to someplace nearby if it's occupied.
+
+*F3 Spots
+(0:0) When everything is starting up
+(5:41) place object type 254 at (0,0)
+
+(0:19) When someone uses object type 0 
+(3:5) where the triggering furre (moved from/is standing at),
+(5:23) swap the object with the object at (0,0).
+(4:3) only where object type 254 is
+(3:3) within the diamond (84,27) - (86,47),
+(5:201) emit message {Cross Hall} to any furre present.
+(5:17) move any furre present to (30,65), or to someplace nearby if it's occupied.
+(3:3) within the diamond (32,57) - (30,74),
+(5:201) emit message {Graveyard} to any furre present.
+(5:17) move any furre present to (42,31), or to someplace nearby if it's occupied.
+(3:3) within the diamond (42,25) - (42,38),
+(5:201) emit message {Arrow Hall} to any furre present.
+(5:17) move any furre present to (66,46), or to someplace nearby if it's occupied.
+(3:3) within the diamond (68,39) - (68,51),
+(5:201) emit message {Orange Hall} to any furre present.
+(5:17) move any furre present to (118,36), or to someplace nearby if it's occupied.
+(3:3) within the diamond (120,27) - (118,44),
+(5:201) emit message {Eastern Hall} to any furre present.
+(5:17) move any furre present to (142,65), or to someplace nearby if it's occupied.
+(3:3) within the diamond (142,54) - (140,74),
+(5:201) emit message {Heart Hall} to any furre present.
+(5:17) move any furre present to (124,92), or to someplace nearby if it's occupied.
+(3:3) within the diamond (126,83) - (124,99),
+(5:201) emit message {Key Hall} to any furre present.
+(5:17) move any furre present to (28,92), or to someplace nearby if it's occupied.
+(3:1) everywhere on the whole map
+(5:201) emit message {Street Corner} to any furre present.
+(5:17) move any furre present to (84,36), or to someplace nearby if it's occupied.
+(3:5) where the triggering furre (moved from/is standing at),
+(5:23) swap the object with the object at (0,0).
+
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 11,
+            (5:15) move the triggering furre to (30,65), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 12,
+            (5:15) move the triggering furre to (42,31), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 13,
+            (5:15) move the triggering furre to (66,46), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 14,
+            (5:15) move the triggering furre to (118,36), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 15,
+            (5:15) move the triggering furre to (142,65), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 16,
+            (5:15) move the triggering furre to (124,92), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 16,
+            (5:15) move the triggering furre to (28,92), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 16,
+            (5:15) move the triggering furre to (84,36), or to someplace nearby if it's occupied.
+
+Eleven: THE DIVING BOARD
+(0:7) When somebody moves into position (150,40),
+(1:19) and they (moved from/are standing at) position (152,39),
+     (3:2) at position (150,43) on the map,
+     (5:17) move any furre present to (150,43), or to someplace nearby if it's occupied.
+     (4:0) clear all filtering,
+     (5:14) move the furre to (150,43) if there's nobody already there.
+     (5:8) play sound (37) to whoever set off the trigger.
+(0:7) When somebody moves into position (152,39),
+ (1:119) and they (didn't move from/aren't standing at) position (152,38),
+     (5:15) move the furre to (150,43), or to someplace nearby if it's occupied.
+     (5:8) play sound (36) to whoever set off the trigger.
+(0:7) When somebody moves into position (152,38),
+ (1:119) and they (didn't move from/aren't standing at) position (154,37),
+     (5:15) move the furre to (150,43), or to someplace nearby if it's occupied.
+     (5:8) play sound (36) to whoever set off the trigger.
+
+*****************************************************
+* ANTI-ENTRANCE BLOCKING
+*****************************************************
+
+0:7 90 40 5:50 1 30 0:50 1 3:2 90 40 5:17 94 43
+0:7 90 41 5:50 2 30 0:50 2 3:2 90 41 5:17 94 43
+0:7 92 39 5:50 3 30 0:50 3 3:2 92 39 5:17 94 43
+0:7 88 40 5:50 4 30 0:50 4 3:2 88 40 5:17 94 43
+0:7 90 39 5:50 5 30 0:50 5 3:2 90 39 5:17 94 43
+0:7 90 38 5:50 6 30 0:50 6 3:2 90 38 5:17 94 43
+0:7 88 39 5:50 7 30 0:50 7 3:2 88 39 5:17 94 43
+0:7 88 38 5:50 8 30 0:50 8 3:2 88 38 5:17 94 43
+0:7 90 37 5:50 9 30 0:50 9 3:2 90 37 5:17 94 43
+0:7 86 38 5:50 10 30 0:50 10 3:2 86 38 5:17 94 43
+0:7 88 37 5:50 11 30 0:50 11 3:2 88 37 5:17 94 43
+0:7 88 36 5:50 12 30 0:50 12 3:2 88 36 5:17 94 43
+0:7 86 37 5:50 13 30 0:50 13 3:2 86 37 5:17 94 43
+0:7 86 36 5:50 14 30 0:50 14 3:2 86 36 5:17 94 43
+0:7 88 35 5:50 15 30 0:50 15 3:2 88 35 5:17 94 43
+0:7 86 35 5:50 16 30 0:50 16 3:2 86 35 5:17 94 43
+0:7 86 34 5:50 17 30 0:50 17 3:2 86 34 5:17 94 43
+0:7 86 33 5:50 18 30 0:50 18 3:2 86 33 5:17 94 43
+0:7 82 41 5:50 19 30 0:50 19 3:2 82 41 5:17 72 46
+0:7 80 40 5:50 20 30 0:50 20 3:2 80 40 5:17 72 46
+0:7 80 39 5:50 21 30 0:50 21 3:2 80 39 5:17 72 46
+0:7 82 40 5:50 22 30 0:50 22 3:2 82 40 5:17 72 46
+0:7 82 39 5:50 23 30 0:50 23 3:2 82 39 5:17 72 46
+0:7 80 38 5:50 24 30 0:50 24 3:2 80 38 5:17 72 46
+0:7 84 39 5:50 25 30 0:50 25 3:2 84 39 5:17 72 46
+0:7 82 38 5:50 26 30 0:50 26 3:2 82 38 5:17 72 46
+0:7 82 37 5:50 27 30 0:50 27 3:2 82 37 5:17 72 46
+0:7 84 38 5:50 28 30 0:50 28 3:2 84 38 5:17 72 46
+0:7 84 37 5:50 29 30 0:50 29 3:2 84 37 5:17 72 46
+0:7 82 36 5:50 30 30 0:50 30 3:2 82 36 5:17 72 46
+0:7 84 36 5:50 31 30 0:50 31 3:2 84 36 5:17 72 46
+0:7 84 35 5:50 32 30 0:50 32 3:2 84 35 5:17 72 46
+0:7 84 34 5:50 33 30 0:50 33 3:2 84 34 5:17 72 46
+
+
+*Endtriggers* 8888 *Endtriggers*

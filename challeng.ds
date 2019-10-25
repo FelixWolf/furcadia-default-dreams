@@ -1,0 +1,573 @@
+DSPK V01.00 Furcadia
+
+** CHALLENGES MAIN MAP by Carrie O'Kaye **
+ <Modified by Xaa>
+ <Modified again by Matimeo>
+ <All the entrances to the sub-maps are noted 
+ by name, the entrances marked as a stairwell 
+ down.  The returns from the Chess, Checkers 
+ and Go maps are stairwells up.   The '????' 
+ stairwell leads to the combat game map, which 
+ in turn leads to three other challenge maps by 
+ vets.>
+
+(0:0) When everything is starting up,
+ (5:50) set countdown timer 1 to go off in 1800 seconds.
+ (5:50) set countdown timer 2 to go off in 60 seconds.
+ (5:100) turn on "classic" mode and update the screen after each trigger.
+            (5:210) set entrytext to {Like a <a href=http://www.furcadia.com/maps/challenges.jpg>challenge</a>? You've found the right place! Enjoy some Chess, Checkers, or Pillow Wars, or see what other players have dreamed up today! *This area is under construction* (Dream by Carrie O'Kaye  and Xaa)}
+(0:31) When a furre says {entryoff},
+   (1:70) and the triggering furre's name is {emerald|flame},
+(0:31) When a furre says {entryoff},
+   (1:70) and the triggering furre's name is {felorin},
+            (5:210) set entrytext to {}
+ENTRY TO MAP
+(0:9) When a furre arrives in the dream,
+ (5:15) move the triggering furre to (76,18), or to someplace nearby if it's occupied.
+
+*splashes*
+(0:2) 132
+(5:8) 36
+*mystery switch*
+(0:7) (32,45)
+(1:3) 161
+(3:2) (32,45)
+(5:4) 162
+(3:2) (32,46)
+(5:4) 208
+(0:7) (32,46)
+(3:2) (32,45)
+(5:4) 161
+
+
+FACE OF GOATLAMYTI
+
+*Eyes
+(0:2) When somebody moves into floor type 166,
+ (3:2) at position (64,30) on the map,
+ (5:1) set the floor to type 192.
+ (3:2) at position (66,30) on the map,
+ (5:1) set the floor to type 192.
+(0:2) When somebody moves into floor type 167,
+ (3:2) at position (64,30) on the map,
+ (5:1) set the floor to type 194.
+ (3:2) at position (66,30) on the map,
+ (5:1) set the floor to type 194.
+(0:2) When somebody moves into floor type 164,
+ (3:2) at position (64,30) on the map,
+ (5:1) set the floor to type 201.
+ (3:2) at position (66,30) on the map,
+ (5:1) set the floor to type 201.
+(0:2) When somebody moves into floor type 165,
+ (3:2) at position (64,30) on the map,
+ (5:1) set the floor to type 200.
+ (3:2) at position (66,30) on the map,
+ (5:1) set the floor to type 200.
+(0:2) When somebody moves into floor type 169,
+ (3:2) at position (64,30) on the map,
+ (5:1) set the floor to type 196.
+ (3:2) at position (66,30) on the map,
+ (5:1) set the floor to type 196.
+(0:2) When somebody moves into floor type 170.
+ (3:2) at position (64,30) on the map,
+ (5:1) set the floor to type 202.
+ (3:2) at position (66,30) on the map,
+ (5:1) set the floor to type 202.
+(0:2) When somebody moves into floor type 171,
+ (3:2) at position (64,30) on the map,
+ (5:1) set the floor to type 203.
+ (3:2) at position (66,30) on the map,
+ (5:1) set the floor to type 203.
+(0:2) When somebody moves into floor type 168,
+ (3:2) at position (64,30) on the map,
+ (5:1) set the floor to type 198.
+ (3:2) at position (66,30) on the map,
+ (5:1) set the floor to type 198.
+(0:7) When somebody moves into position (66,33),
+ (3:2) at position (64,30) on the map,
+ (5:1) set the floor to type 200.
+ (3:2) at position (66,30) on the map,
+ (5:1) set the floor to type 201.
+
+*Mouth
+(0:50) When countdown timer 2 goes off,
+ (5:50) set countdown timer 2 to go off in 60 seconds.
+ (3:2) at position (66,35) on the map,
+ (5:3) swap floor types 196 and 199.
+
+
+PIT
+
+*Stairs
+(0:7) When somebody moves into position (48,44),
+ (5:14) move the triggering furre to (110,10) if there's nobody already there.
+(0:7) When somebody moves into position (50,46),
+ (5:14) move the triggering furre to (112,12) if there's nobody already there.
+(0:7) When somebody moves into position (112,9),
+ (5:14) move the triggering furre to (50,43) if there's nobody already there.
+(0:7) When somebody moves into position (114,11),
+ (5:14) move the triggering furre to (52,45) if there's nobody already there.
+
+*Give Bridge Part
+(0:17) When somebody picks up object type 208,
+(1:17) and they (moved from/are standing at) floor type 147,
+ (3:5) where the triggering furre (moved from/is standing at),
+ (5:4) place object type 208.
+
+*Fix Pit
+(0:2) When somebody moves into floor type 162,
+ (3:6) where the triggering furre moved into,
+ (5:1) set the floor to type 160.
+*Fall
+(0:2) When somebody moves into floor type 160,
+(1:18) and they (moved from/are standing at) object type 0,
+        (5:15) move the furre to (106,17), or to someplace nearby if it's occupied.
+ (5:8) 37
+
+
+RESET
+(0:50) When countdown timer 1 goes off,
+ (5:50) set countdown timer 1 to go off in 1800 seconds.
+
+*Reset Pit
+ (3:4) within the rectangle (36,48) - (46,58),
+ (5:5) change object type 208 to type 0.
+ (5:2) change floor type 162 to type 160.
+ (4:1) only where the floor is type 147,
+ (5:4) place object type 208.
+ 
+*Fruity-Levers
+ (4:0) clear all filtering,
+ (3:4) within the rectangle (54,18) - (56,20),
+ (4:1) only where the floor is type 18,
+ (5:4) place object type 397.
+ (4:0) clear all filtering,
+ (3:4) within the rectangle (52,16) - (62,26),
+ (5:6) swap object types 108 and 112.
+ (4:1) only where the floor is type 37,
+ (5:4) place object type 163.
+
+
+FRUITY-LEVERS
+
+*Switch Switch
+(0:2) When somebody moves into floor type 37,
+ (3:6) where the triggering furre moved into,
+ (5:6) swap object types 163 and 164.
+
+*Obelisk Up
+(0:2) When somebody moves into floor type 37,
+(1:1011) and position (104,57) is floor type 1,
+ (3:4) within the rectangle (54,18) - (56,20),
+ (4:1) only where the floor is type 18,
+ (5:4) place object type 397.
+ (4:0) clear all filtering,
+ (3:2) at position (104,57) on the map,
+ (5:1) set the floor to type 0.
+
+*Obelisk Down
+(0:2) When somebody moves into floor type 37,
+(1:1013) and position (60,16) is object type 112,
+(1:1013) and position (58,18) is object type 164,
+(1:1013) and position (60,19) is object type 164,
+(1:1013) and position (60,20) is object type 163,
+(1:1013) and position (54,22) is object type 163,
+(1:1013) and position (56,23) is object type 163,
+(1:1013) and position (56,24) is object type 164,
+ (3:4) within the rectangle (54,18) - (56,20),
+ (4:1) only where the floor is type 18,
+ (5:4) place object type 398.
+ (4:0) clear all filtering,
+ (3:2) at position (104,57) on the map,
+ (5:1) set the floor to type 1.
+(0:2) When somebody moves into floor type 37,
+(1:1013) and position (60,16) is object type 108,
+(1:1013) and position (58,18) is object type 163,
+(1:1013) and position (60,19) is object type 163,
+(1:1013) and position (60,20) is object type 164,
+(1:1013) and position (54,22) is object type 164,
+(1:1013) and position (56,23) is object type 164,
+(1:1013) and position (56,24) is object type 163,
+ (3:4) within the rectangle (54,18) - (56,20),
+ (4:1) only where the floor is type 18,
+ (5:4) place object type 398.
+ (4:0) clear all filtering,
+ (3:2) at position (104,57) on the map,
+ (5:1) set the floor to type 1.
+*Override for the monoliths*
+(0:7) (54,18)
+(3:4) (54,18) - (56,20),
+(4:1) 18
+(5:4) 398
+(4:0) 
+(3:2) (104,57)
+(5:1) 1
+
+
+SPIRAL
+
+*Block
+(0:2) When somebody moves into floor type 10,
+ (3:4) within the rectangle (34,32) - (46,44),
+ (4:1) only where the floor is type 9,
+ (5:4) place object type 73.
+
+*Reset
+(0:2) When somebody moves into floor type 150,
+ (3:2) at position (46,37) on the map,
+ (5:4) place object type 97.
+ (3:2) at position (40,41) on the map,
+ (5:4) place object type 97.
+ (3:4) within the rectangle (34,32) - (46,44),
+ (4:1) only where the floor is type 9,
+ (5:4) place object type 0.
+
+*Finis
+(0:7) When somebody moves into position (40,36),
+ (5:15) move the triggering furre to (32,29), or to someplace nearby if it's occupied.
+
+*The Diatryma keeps you from going back.
+(0:7) When somebody moves into position (32,30),
+(5:8) play sound 70 to whoever set off the trigger.
+(5:15) move the triggering furre to (30,30), or to someplace nearby if it's occupied.
+
+CANDLES
+
+(0:3) When somebody moves into object type 384,
+ (3:6) where the triggering furre moved into,
+ (5:4) place object type 383.
+(0:3) When somebody moves into object type 383,
+ (3:6) where the triggering furre moved into,
+ (5:4) place object type 384.
+
+
+THRONE
+
+(0:7) When somebody moves into position (14,18),
+(1:19) and they (moved from/are standing at) position (16,19),
+ (5:14) move the triggering furre to (14,13) if there's nobody already there.
+(0:7) When somebody moves into position (16,17),
+ (5:14) move the triggering furre to (14,13) if there's nobody already there.
+(0:7) When somebody moves into position (16,16),
+(1:19) and they (moved from/are standing at) position (18,17),
+ (5:14) move the triggering furre to (14,12) if there's nobody already there.
+(0:7) When somebody moves into position (14,14),
+ (5:14) move the triggering furre to (16,19) if there's nobody already there.
+(0:7) When somebody moves into position (16,13),
+ (5:14) move the triggering furre to (18,17) if there's nobody already there.
+
+
+BRIDGE
+
+*Up to Roof
+(0:7) When somebody moves into position (70,51),
+(1:19) and they (moved from/are standing at) position (68,52),
+ (5:14) move the triggering furre to (70,46) if there's nobody already there.
+(0:7) When somebody moves into position (70,44),
+(1:19) and they (moved from/are standing at) position (70,45),
+ (5:14) move the triggering furre to (72,39) if there's nobody already there.
+(0:7) When somebody moves into position (70,40),
+ (5:14) move the triggering furre to (70,45) if there's nobody already there.
+(0:7) When somebody moves into position (70,47),
+ (5:14) move the triggering furre to (68,52) if there's nobody already there.
+
+*Down from Roof
+(0:7) When somebody moves into position (86,47),
+ (5:14) move the triggering furre to (110,41) if there's nobody already there.
+(0:7) When somebody moves into position (108,42),
+ (5:14) move the triggering furre to (108,47) if there's nobody already there.
+(0:7) When somebody moves into position (108,46),
+(1:19) and they (moved from/are standing at) position (108,47),
+ (5:14) move the triggering furre to (110,41) if there's nobody already there.
+(0:7) When somebody moves into position (110,40),
+ (5:14) move the triggering furre to (86,46) if there's nobody already there.
+
+*Out
+(0:7) When somebody moves into position (102,46),
+ (5:14) move the triggering furre to (78,57) if there's nobody already there.
+(0:7) When somebody moves into position (104,47),
+ (5:14) move the triggering furre to (78,58) if there's nobody already there.
+(0:7) When somebody moves into position (104,48),
+ (5:14) move the triggering furre to (80,59) if there's nobody already there.
+(0:7) When somebody moves into position (78,56),
+ (5:14) move the triggering furre to (104,45) if there's nobody already there.
+(0:7) When somebody moves into position (80,57),
+ (5:14) move the triggering furre to (104,46) if there's nobody already there.
+(0:7) When somebody moves into position (80,58),
+ (5:14) move the triggering furre to (106,47) if there's nobody already there.
+
+
+
+RESTROOMS
+(0:2) When somebody moves into floor type 1,
+(1:19) and they (moved from/are standing at) position (8,42),
+ (5:8) play sound 40 to whoever set off the trigger.
+(0:2) When somebody moves into floor type 1,
+(1:19) and they (moved from/are standing at) position (10,40),
+ (5:8) play sound 35 to whoever set off the trigger.
+(0:2) When somebody moves into floor type 1,
+(1:19) and they (moved from/are standing at) position (18,33),
+ (5:8) play sound 37 to whoever set off the trigger.
+
+PUZZLES
+*Motion
+(0:2) When somebody moves into floor type 159,
+(1:17) and they (moved from/are standing at) floor type 159,
+ (3:5) where the triggering furre (moved from/is standing at),
+ (5:22) copy the object to (104,57).
+ (5:4) place object type 41.
+ (4:0) clear all filtering,
+ (3:6) where the triggering furre moved into,
+ (5:23) swap the object with the object at (104,57).
+ (4:0) clear all filtering,
+ (3:4) within the rectangle (20,42) - (32,67),
+ (4:3) only where an object type 41 is,
+ (5:23) swap the object with the object at (104,57).
+*Reset Puzzles
+(0:7) When somebody moves into position (20,50),
+ (4:9) only in places where someone can walk,
+ (5:5) change object type 193 to type 0.
+ (5:5) change object type 194 to type 0.
+ (5:5) change object type 195 to type 0.
+ (5:5) change object type 196 to type 0.
+ (5:5) change object type 197 to type 0.
+ (5:5) change object type 198 to type 0.
+ (5:5) change object type 199 to type 0.
+ (5:5) change object type 200 to type 0.
+ (5:5) change object type 201 to type 0.
+ (3:2) at position (22,42) on the map,
+ (5:4) place object type 197.
+ (3:2) at position (24,43) on the map,
+ (5:4) place object type 199.
+ (3:2) at position (24,44) on the map,
+ (5:4) place object type 200.
+ (3:2) at position (22,43) on the map,
+ (5:4) place object type 201.
+ (3:2) at position (22,44) on the map,
+ (5:4) place object type 194.
+ (3:2) at position (24,45) on the map,
+ (5:4) place object type 198.
+ (3:2) at position (20,44) on the map,
+ (5:4) place object type 193.
+ (3:2) at position (22,45) on the map,
+ (5:4) place object type 196.
+ (3:2) at position (22,46) on the map,
+ (5:4) place object type 195.
+(0:7) When somebody moves into position (22,62),
+ (4:9) only in places where someone can walk,
+ (5:5) change object type 209 to type 0.
+ (5:5) change object type 210 to type 0.
+ (5:5) change object type 211 to type 0.
+ (5:5) change object type 212 to type 0.
+ (5:5) change object type 213 to type 0.
+ (5:5) change object type 214 to type 0.
+ (5:5) change object type 215 to type 0.
+ (5:5) change object type 216 to type 0.
+ (5:5) change object type 217 to type 0.
+ (5:5) change object type 218 to type 0.
+ (5:5) change object type 219 to type 0.
+ (5:5) change object type 220 to type 0.
+ (5:5) change object type 221 to type 0.
+ (5:5) change object type 222 to type 0.
+ (5:5) change object type 223 to type 0.
+ (5:5) change object type 224 to type 0.
+ (3:2) at position (30,61) on the map,
+ (5:4) place object type 213.
+ (3:2) at position (30,62) on the map,
+ (5:4) place object type 219.
+ (3:2) at position (32,63) on the map,
+ (5:4) place object type 210.
+ (3:2) at position (32,64) on the map,
+ (5:4) place object type 214.
+ (3:2) at position (28,62) on the map,
+ (5:4) place object type 218.
+ (3:2) at position (30,63) on the map,
+ (5:4) place object type 211.
+ (3:2) at position (30,64) on the map,
+ (5:4) place object type 215.
+ (3:2) at position (32,65) on the map,
+ (5:4) place object type 222.
+ (3:2) at position (28,63) on the map,
+ (5:4) place object type 217.
+ (3:2) at position (28,64) on the map,
+ (5:4) place object type 209.
+ (3:2) at position (30,65) on the map,
+ (5:4) place object type 220.
+ (3:2) at position (30,66) on the map,
+ (5:4) place object type 223.
+ (3:2) at position (26,64) on the map,
+ (5:4) place object type 216.
+ (3:2) at position (28,65) on the map,
+ (5:4) place object type 221.
+ (3:2) at position (28,66) on the map,
+ (5:4) place object type 224.
+ (3:2) at position (30,67) on the map,
+ (5:4) place object type 212.
+
+BUMPER-SPIDERS
+(0:2) When somebody moves into floor type 210,
+(1:103) and they didn't move into object type 411,
+ (3:5) where the triggering furre (moved from/is standing at),
+ (5:4) place object type 0.
+ (3:6) where the triggering furre moved into,
+ (5:4) place object type 411.
+(0:2) When somebody moves into floor type 211,
+(1:103) and they didn't move into object type 411,
+ (3:5) where the triggering furre (moved from/is standing at),
+ (5:4) place object type 0.
+ (3:6) where the triggering furre moved into,
+ (5:4) place object type 411.
+(0:2) When somebody moves into floor type 212,
+(1:103) and they didn't move into object type 411,
+ (3:5) where the triggering furre (moved from/is standing at),
+ (5:4) place object type 0.
+ (3:6) where the triggering furre moved into,
+ (5:4) place object type 411.
+(0:2) When somebody moves into floor type 213,
+(1:103) and they didn't move into object type 411,
+ (3:5) where the triggering furre (moved from/is standing at),
+ (5:4) place object type 0.
+ (3:6) where the triggering furre moved into,
+ (5:4) place object type 411.
+
+*Exit Area
+(0:2) When somebody moves into floor type 214,
+(1:18) and they (moved from/are standing at) object type 411,
+(3:5) where the triggering furre (moved from/is standing at),
+            (5:5) change object type 411 to type 0.
+
+*Bumping
+(0:3) When somebody moves into object type 411,
+(1:17) and they (moved from/are standing at) floor type 210,
+(1:1000) and a random dice roll comes up (50 percent of the time),
+(3:6) where the triggering furre moved into,
+(5:4) place object type 0.
+(5:17) move any furre present to (44,72), or to someplace nearby if it's occupied.
+
+(0:3) When somebody moves into object type 411,
+(1:17) and they (moved from/are standing at) floor type 211,
+(1:1000) and a random dice roll comes up (50 percent of the time),
+(3:6) where the triggering furre moved into,
+(5:4) place object type 0.
+(5:17) move any furre present to (46,80), or to someplace nearby if it's occupied.
+
+(0:3) When somebody moves into object type 411,
+(1:17) and they (moved from/are standing at) floor type 212,
+(1:1000) and a random dice roll comes up (50 percent of the time),
+(3:6) where the triggering furre moved into,
+(5:4) place object type 0.
+(5:17) move any furre present to (56,71), or to someplace nearby if it's occupied.
+
+(0:3) When somebody moves into object type 411,
+(1:17) and they (moved from/are standing at) floor type 213,
+(1:1000) and a random dice roll comes up (50 percent of the time),
+(3:6) where the triggering furre moved into,
+(5:4) place object type 0.
+(5:17) move any furre present to (52,75), or to someplace nearby if it's occupied.
+
+Bridge the Canal
+(0:7) When somebody moves into position (54,61),
+(3:2) 54,61
+(5:5) change object type 162 to type 161.
+(3:2) 52,58
+(5:1) 32
+(5:50) set countdown timer 50 to go off in 60 seconds.
+
+(0:50) When countdown timer 50 goes off,
+(3:2) 52,58
+(5:1) 85
+(3:2) 54,61
+(5:5) change object type 161 to type 162.
+
+Dream Entrance CTRL-U Protection - normal usage brings near the wisdom tree
+
+(0:19) 0 
+(1:119) (0,0) 
+(5:15) (76,18)
+
+THE BROKEN PATTERN BOARDWALK (A SEQUEL TO THE FURRE WASH)
+      (0:100) When 2 seconds have passed, offset by 0,
+      (3:4) within the rectangle (32,9) - (58,38),
+      (5:2) change floor type 171 to type 170.
+      (5:2) change floor type 151 to type 171.
+      (5:2) change floor type 150 to type 151.
+      (5:2) change floor type 162 to type 150.
+      (5:2) change floor type 160 to type 162.
+      (5:2) change floor type 170 to type 160.
+
+   A grating goes "Plip". 
+      (3:4) within the rectangle (32,9) - (58,38),
+      (0:2) When somebody moves into floor type 160,
+      (5:12) play sound 34 to everyone on the map.
+   A dark quilt carpet goes "Drip".
+      (3:4) within the rectangle (32,9) - (58,38),
+      (0:2) When somebody moves into floor type 151,
+      (5:12) play sound 32 to everyone on the map.
+   A light quilt carpet goes "Drip2".
+      (3:4) within the rectangle (32,9) - (58,38),
+      (0:2) When somebody moves into floor type 150,
+      (5:12) play sound 74 to everyone on the map.
+   A white carpet goes "".
+      (3:4) within the rectangle (32,9) - (58,38),
+      (0:2) When somebody moves into floor type 171,
+      (5:12) play sound 35 to everyone on the map.
+   The center dot goes "drop".
+      (3:4) within the rectangle (32,9) - (58,38),
+      (0:2) When somebody moves into floor type 178,
+      (5:12) play sound 33 to everyone on the map.
+
+   The OPEN hole drops you into the water!
+      (3:4) within the rectangle (32,9) - (58,38),
+      (0:2) When somebody moves into floor type 162,
+      (5:12) play sound 37 to everyone on the map.
+      (5:15) move the triggering furre to (106,18), or to someplace nearby if it's occupied.
+
+
+The Royal Thrones
+(0:2) When somebody moves into floor type 116,
+   (1:19) and they (moved from/are standing at) position (14,12),
+      (5:12) play sound 66 to everyone on the map.
+   (3:2) at position (16,18) on the map,
+   (5:17) move any furre present to (42,53), or to someplace nearby if it's occupied.
+(0:2) When somebody moves into floor type 116,
+   (1:19) and they (moved from/are standing at) position (14,13),
+      (5:12) play sound 66 to everyone on the map.
+   (3:2) at position (16,18) on the map,
+   (5:17) move any furre present to (42,53), or to someplace nearby if it's occupied.
+
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 11,
+            (5:15) move the triggering furre to (76,19), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 12,
+            (5:15) move the triggering furre to (30,36), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 13,
+            (5:15) move the triggering furre to (24,70), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 14,
+            (5:15) move the triggering furre to (54,94), or to someplace nearby if it's occupied.
+(0:9) When a furre arrives in the dream,
+   (1:90) and the triggering furre's entry code is 15,
+            (5:15) move the triggering furre to (78,62), or to someplace nearby if it's occupied.
+
+
+Animation
+Fires
+(0:3) When somebody moves into object type 79,
+      (3:6) where the triggering furre moved into,
+            (5:4) place object type 1357.
+            (5:351) set variable %fireSmoke to the X,Y position the triggering furre moved to.
+            (5:352) move the position in variable %fireSmoke northeast (up and right) 1 step(s).
+            (5:355) move the position in variable %fireSmoke northwest (up and left) 1 step(s).
+            (5:151) set location (%fireSmoke) to overlay effect 48.
+(0:3) When somebody moves into object type 1357,
+      (3:6) where the triggering furre moved into,
+            (5:4) place object type 79.
+            (5:351) set variable %fireSmoke to the X,Y position the triggering furre moved to.
+            (5:352) move the position in variable %fireSmoke northeast (up and right) 1 step(s).
+            (5:355) move the position in variable %fireSmoke northwest (up and left) 1 step(s).
+            (5:151) set location (%fireSmoke) to overlay effect 0.
+
+*Endtriggers* 9999 *Endtriggers*
+
